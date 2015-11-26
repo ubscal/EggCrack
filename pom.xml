@@ -97,8 +97,8 @@
 
         <!-- Dependencies not provided by Maven -->
         <dependency>
-            <artifactId>authlib</artifactId>
             <groupId>com.mojang.authlib</groupId>
+            <artifactId>authlib</artifactId>
             <version>1.5.17</version>
         </dependency>
 

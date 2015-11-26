@@ -13,6 +13,7 @@ import java.util.UUID;
 
 public class FileAccountOutput extends AccountOutput {
     private final File file;
+    private String lineSeparator = "\r\n";
 
     public FileAccountOutput(File file) {
         this.file = file;
@@ -23,7 +24,7 @@ public class FileAccountOutput extends AccountOutput {
         synchronized (file) {
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, true));
 
-            bufferedWriter.write(account.getUsername() + ":" + account.getCredential().toString() + "\n");
+            bufferedWriter.write(account.getUsername() + ":" + account.getCredential().toString() + lineSeparator);
 
             bufferedWriter.flush();
             bufferedWriter.close();

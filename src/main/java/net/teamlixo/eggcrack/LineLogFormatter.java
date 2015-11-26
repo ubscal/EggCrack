@@ -6,7 +6,7 @@ import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 public class LineLogFormatter extends Formatter {
-    private String lineSeparator = "\n";
+    private String lineSeparator = "\r\n";
     public synchronized String format(LogRecord record) {
         StringBuilder sb = new StringBuilder();
         String message = formatMessage(record);

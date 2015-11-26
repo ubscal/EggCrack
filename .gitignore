@@ -42,6 +42,9 @@ cracked.txt
 checked.txt
 recovered.txt
 log.txt
+accounts.txt
+accounts.checked.txt
+proxies.checked.txt
 
 # Maven              #
 ######################
