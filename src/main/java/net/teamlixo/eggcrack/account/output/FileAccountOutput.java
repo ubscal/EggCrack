@@ -23,7 +23,7 @@ public class FileAccountOutput extends AccountOutput {
         synchronized (file) {
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, true));
 
-            bufferedWriter.write(account.getUsername() + ":" + account.getCredential().toString() + "\n");
+            bufferedWriter.write(account.getUsername() + ":" + account.getCredential().toString() + System.lineSeparator());
 
             bufferedWriter.flush();
             bufferedWriter.close();

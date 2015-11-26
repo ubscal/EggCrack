@@ -6,7 +6,6 @@ import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 public class LineLogFormatter extends Formatter {
-    private String lineSeparator = "\n";
     public synchronized String format(LogRecord record) {
         StringBuilder sb = new StringBuilder();
         String message = formatMessage(record);
@@ -15,7 +14,7 @@ public class LineLogFormatter extends Formatter {
         sb.append("[" + record.getLevel().getLocalizedName() + "] ");
 
         sb.append(message);
-        sb.append(lineSeparator);
+        sb.append(System.lineSeparator());
 
         if (record.getThrown() != null) {
             try {
