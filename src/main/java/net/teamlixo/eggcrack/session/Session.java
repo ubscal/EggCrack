@@ -2,22 +2,27 @@ package net.teamlixo.eggcrack.session;
 
 import net.teamlixo.eggcrack.EggCrack;
 import net.teamlixo.eggcrack.account.Account;
+import net.teamlixo.eggcrack.account.AccountListener;
 import net.teamlixo.eggcrack.account.AuthenticatedAccount;
 import net.teamlixo.eggcrack.account.output.AccountOutput;
+import net.teamlixo.eggcrack.account.output.AttemptedAccount;
 import net.teamlixo.eggcrack.authentication.AuthenticationCallback;
 import net.teamlixo.eggcrack.authentication.AuthenticationService;
 import net.teamlixo.eggcrack.authentication.RunnableAuthenticator;
 import net.teamlixo.eggcrack.credential.Credential;
+import net.teamlixo.eggcrack.credential.Credentials;
 import net.teamlixo.eggcrack.list.ExtendedList;
 import net.teamlixo.eggcrack.list.array.ExtendedArrayList;
 import net.teamlixo.eggcrack.objective.Objective;
 import net.teamlixo.eggcrack.proxy.ProxyCallback;
 import net.teamlixo.eggcrack.proxy.RunnableProxyChecker;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.Proxy;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
@@ -264,5 +269,107 @@ public class Session implements Runnable, AuthenticationCallback, ProxyCallback 
 
     private interface FutureRunnable {
         public boolean run(float progress);
+    }
+
+
+    public static Session loadSession(File file,
+                                      ThreadPoolExecutor executorService,
+                                      AuthenticationService authenticationService,
+                                      ExtendedList<Proxy> proxyList,
+                                      ExtendedList<Objective> objectiveList,
+                                      ExtendedList<AccountOutput> outputList,
+                                      Tracker tracker,
+                                      URL checkUrl,
+                                      int proxyTimeout,
+                                      AccountListener listener) throws IOException {
+        DataInputStream dataInputStream = new DataInputStream(new FileInputStream(file));
+
+        int magic = dataInputStream.readInt();
+        if (magic != 0xEDDCDAC) throw new IOException("Invalid format.");
+
+        // Read accounts from file
+        ExtendedList<Account> accountList = new ExtendedArrayList<Account>();
+        int accounts = dataInputStream.readInt();
+        int firstIndex = Integer.MAX_VALUE;
+
+        for (int i = 0; i < accounts; i ++) {
+            String username = dataInputStream.readUTF();
+            boolean b = dataInputStream.readBoolean();
+            int passwordIndex = 0;
+            if (!b) {
+                passwordIndex = dataInputStream.readInt();
+                firstIndex = Math.min(passwordIndex, firstIndex);
+
+                Account account = new AttemptedAccount(username);
+                account.setPasswordIndex(passwordIndex);
+                account.setState(b ? Account.State.FINISHED : Account.State.WAITING);
+                account.setListener(listener);
+
+                boolean hasPassword = dataInputStream.readBoolean();
+                if (hasPassword) account.setUncheckedPassword(dataInputStream.readUTF());
+
+                accountList.add(account);
+            } else firstIndex = passwordIndex;
+        }
+
+        // Read credentials from file
+        ExtendedList<Credential> credentialList = new ExtendedArrayList<Credential>();
+        int passwords = dataInputStream.readInt();
+
+        for (int i = firstIndex; i < passwords; i ++)
+            credentialList.add(Credentials.createPassword(dataInputStream.readUTF()));
+
+        // Adjust the entire account list by the first password index known.
+        for (Account account : accountList.toList())
+            account.setPasswordIndex(account.getPasswordIndex() - firstIndex);
+
+        return new Session(
+                executorService,
+                authenticationService,
+                accountList,
+                credentialList,
+                proxyList,
+                objectiveList,
+                outputList,
+                tracker,
+                checkUrl,
+                proxyTimeout
+        );
+    }
+
+    public static void saveSession(Session session, File file) throws IOException {
+        DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(file));
+
+        dataOutputStream.writeInt(0xEDDCDAC);
+
+        // Write accounts to file
+        List<Account> accountList = session.accountList.toList();
+        dataOutputStream.writeInt(accountList.size());
+        int firstIndex = Integer.MAX_VALUE;
+
+        for (Account account : accountList) {
+            dataOutputStream.writeUTF(account.getUsername());
+
+            boolean b = account.getState() == Account.State.FINISHED;
+            dataOutputStream.writeBoolean(b);
+            if (!b) {
+                firstIndex = Math.min(account.getPasswordIndex(), firstIndex);
+                dataOutputStream.writeInt(account.getPasswordIndex());
+
+                dataOutputStream.writeBoolean(account.getUncheckedPassword() != null);
+                if (account.getUncheckedPassword() != null)
+                    dataOutputStream.writeUTF(account.getUncheckedPassword());
+            } else
+                firstIndex = 0;
+        }
+
+        // Write passwords to file
+        List<Credential> credentialList = session.credentialList.toList();
+        dataOutputStream.writeInt(credentialList.size());
+        for (int i = firstIndex; i < credentialList.size(); i ++) {
+            dataOutputStream.writeUTF(credentialList.get(i).toString());
+        }
+
+        dataOutputStream.close();
     }
 }

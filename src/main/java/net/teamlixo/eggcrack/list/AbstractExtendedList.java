@@ -39,6 +39,11 @@ public abstract class AbstractExtendedList<T> implements ExtendedList<T> {
         list.clear();
     }
 
+    @Override
+    public List<T> toList() {
+        return list;
+    }
+
     private void remove(int i) {
         list.remove(i);
     }

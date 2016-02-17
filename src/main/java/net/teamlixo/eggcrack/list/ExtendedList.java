@@ -1,6 +1,7 @@
 package net.teamlixo.eggcrack.list;
 
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * Provides looping iterators to the extended list object; used when looping through an array of proxies, among other
@@ -13,4 +14,5 @@ public interface ExtendedList<T> {
     public void remove(T object);
     public void clear();
     public int size();
+    public List<T> toList();
 }

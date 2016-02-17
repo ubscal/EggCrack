@@ -59,21 +59,24 @@ public class RunnableAuthenticator implements Runnable {
 
         Credential credential = account.getUncheckedPassword() != null ?
                 Credentials.createPassword(account.getUncheckedPassword()) : null;
+
         if (credential != null && accountListener != null)
             accountListener.onAccountAttempting(account, credential);
+        else if (credential == null) { // Restore password index and progress values.
+            for (int i = 0; i < account.getPasswordIndex(); i++) credential = credentialIterator.next();
+            account.setProgress(((AbstractExtendedList.LoopedIterator)credentialIterator).getProgress());
+        }
 
         while (proxyIterator.hasNext() && session.isRunning()) {
             try {
                 if (credential == null) {
-                    if (accountListener != null && session.isRunning())
+                    if (accountListener != null)
                         accountListener.onAccountTried(account, credential);
 
                     credential = credentialIterator.next();
 
                     if (accountListener != null && session.isRunning())
                         accountListener.onAccountAttempting(account, credential);
-
-
                 }
 
                 EggCrack.LOGGER.finest("[Account: " + account.getUsername() +
@@ -118,6 +121,8 @@ public class RunnableAuthenticator implements Runnable {
                             credential = credentialIterator.next();
                             if (accountListener != null && session.isRunning())
                                 accountListener.onAccountAttempting(account, credential);
+
+                            account.setPasswordIndex(account.getPasswordIndex() + 1);
                         } else
                             break; // Checker only tries one password.
                     }

@@ -6,8 +6,10 @@ public abstract class Account {
     private final String username;
     private String uncheckedPassword;
     private AccountListener accountListener;
+
     private volatile State state = State.WAITING;
     private volatile float progress = 0f;
+    private volatile int passwordIndex = 0;
 
     public Account(String username) {
         this.username = username;
@@ -71,6 +73,14 @@ public abstract class Account {
         else if (state == State.FINISHED) setProgress(1F);
 
         this.state = state;
+    }
+
+    public void setPasswordIndex(int index) {
+        this.passwordIndex = index;
+    }
+
+    public int getPasswordIndex() {
+        return passwordIndex;
     }
 
     public State getState() {

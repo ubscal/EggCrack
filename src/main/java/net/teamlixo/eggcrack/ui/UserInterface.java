@@ -36,7 +36,6 @@ import java.net.Proxy;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -88,7 +87,9 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
     private JButton configureButton;
     private JCheckBox enableConsoleDebuggingCheckBox;
     private JCheckBox sortCheckBox;
+    private JRadioButton restore;
     private ProxiesInterface proxiesInterface = new ProxiesInterface();
+    private final JFileChooser chooser = new JFileChooser();
 
     private volatile Session activeSession;
 
@@ -139,8 +140,15 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (start.getText().equals("Stop")) {
-                    if (activeSession != null) activeSession.setRunning(false);
-                    else start.setText("Start");
+                    if (activeSession != null) {
+                        activeSession.setRunning(false);
+
+                        try {
+                            Session.saveSession(activeSession, new File("backup.session"));
+                        } catch (Exception e1) {
+                            // Failed to save settings, ignore.
+                        }
+                    } else start.setText("Start");
                     return;
                 }
 
@@ -184,57 +192,6 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
                         JOptionPane.showMessageDialog(null, "URL provided is malformed.", "Error", JOptionPane.ERROR_MESSAGE);
                     }
 
-                //Import accounts from file.
-                ExtendedList<Account> accountList = new ExtendedArrayList<Account>();
-                try {
-                    File usernameFile = new File(usernamesFile.getText());
-                    BufferedReader usernameReader = new BufferedReader(new FileReader(usernameFile));
-                    while (usernameReader.ready()) {
-                        String line = usernameReader.readLine();
-                        if (line.trim().length() <= 0) continue;
-                        if (cracking.isSelected()) {
-                            Account account = new AttemptedAccount(line.trim());
-                            account.setListener(accountListener);
-                            accountList.add(account);
-                        } else if (checking.isSelected()) {
-                            String[] args = line.split(":");
-                            if (args.length < 2) continue;
-                            Account account = new AttemptedAccount(args[0].trim());
-                            account.setUncheckedPassword(args[1]);
-                            account.setListener(accountListener);
-                            accountList.add(account);
-                        }
-
-                    }
-                    usernameReader.close();
-                    EggCrack.LOGGER.info("Loaded " + accountList.size() + " accounts (" + usernameFile.getAbsolutePath() + ").");
-                } catch (FileNotFoundException ex) {
-                    JOptionPane.showMessageDialog(null, "Username file not found.", "Error", JOptionPane.ERROR_MESSAGE);
-                    return;
-                } catch (IOException e1) {
-                    JOptionPane.showMessageDialog(null, "Username file could not be read: " + e1.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-
-                //Import credentials from file.
-                ExtendedList<Credential> credentialList = new ExtendedArrayList<Credential>();
-                if (cracking.isSelected()) {
-                    try {
-                        File passwordFile = new File(passwordsFile.getText());
-                        BufferedReader passwordReader = new BufferedReader(new FileReader(passwordFile));
-                        while (passwordReader.ready())
-                            credentialList.add(Credentials.createPassword(passwordReader.readLine().trim()));
-                        passwordReader.close();
-                        EggCrack.LOGGER.info("Loaded " + credentialList.size() + " passwords (" + passwordFile.getAbsolutePath() + ").");
-                    } catch (FileNotFoundException ex) {
-                        JOptionPane.showMessageDialog(null, "Password file not found.", "Error", JOptionPane.ERROR_MESSAGE);
-                        return;
-                    } catch (IOException e1) {
-                        JOptionPane.showMessageDialog(null, "Password file could not be read: " + e1.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-                        return;
-                    }
-                }
-
                 //Import proxies from file.
                 ExtendedList<Proxy> proxyList = new ExtendedArrayList<Proxy>();
                 try {
@@ -259,6 +216,7 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
                     JOptionPane.showMessageDialog(null, "HTTP proxy file could not be read: " + e1.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
+
                 try {
                     if (socksProxies.getText() != null && socksProxies.getText().trim().length() > 0) {
                         File proxyFile = new File(socksProxies.getText());
@@ -282,18 +240,101 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
                     return;
                 }
 
+                if (proxyList.size() <= 0) {
+                    JOptionPane.showMessageDialog(null, "No proxies were loaded.", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                if (restore.isSelected()) {
+                    try {
+                        Session session = Session.loadSession(
+                                new File(usernamesFile.getText()),
+                                executorService,
+                                authenticationService,
+                                proxyList,
+                                objectiveList,
+                                outputList,
+                                tracker,
+                                checkProxies.isSelected() ? URI.create("http://google.com/").toURL() : null,
+                                checkProxies.isSelected() ? Integer.parseInt(proxyTimeout.getValue().toString()) : 0,
+                                accountListener
+                        );
+
+                        session.setListener(UserInterface.this);
+
+                        Thread thread = new Thread(session);
+                        thread.setDaemon(true);
+                        thread.start();
+
+                        activeSession = session;
+                        start.setText("Stop");
+                    } catch (Exception e1) {
+                        JOptionPane.showMessageDialog(null, e1.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+
+                    return;
+                }
+
+                //Import accounts from file.
+                ExtendedList<Account> accountList = new ExtendedArrayList<Account>();
+                if (checking.isSelected() || cracking.isSelected()) {
+                    try {
+                        File usernameFile = new File(usernamesFile.getText());
+                        BufferedReader usernameReader = new BufferedReader(new FileReader(usernameFile));
+                        while (usernameReader.ready()) {
+                            String line = usernameReader.readLine();
+                            if (line.trim().length() <= 0) continue;
+                            if (cracking.isSelected()) {
+                                Account account = new AttemptedAccount(line.trim());
+                                account.setListener(accountListener);
+                                accountList.add(account);
+                            } else if (checking.isSelected()) {
+                                String[] args = line.split(":");
+                                if (args.length < 2) continue;
+                                Account account = new AttemptedAccount(args[0].trim());
+                                account.setUncheckedPassword(args[1]);
+                                account.setListener(accountListener);
+                                accountList.add(account);
+                            }
+
+                        }
+                        usernameReader.close();
+                        EggCrack.LOGGER.info("Loaded " + accountList.size() + " accounts (" + usernameFile.getAbsolutePath() + ").");
+                    } catch (FileNotFoundException ex) {
+                        JOptionPane.showMessageDialog(null, "Username file not found.", "Error", JOptionPane.ERROR_MESSAGE);
+                        return;
+                    } catch (IOException e1) {
+                        JOptionPane.showMessageDialog(null, "Username file could not be read: " + e1.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                        return;
+                    }
+                }
+
                 if (accountList.size() <= 0) {
                     JOptionPane.showMessageDialog(null, "No accounts were loaded.", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
-                if (cracking.isSelected() && credentialList.size() <= 0) {
-                    JOptionPane.showMessageDialog(null, "No passwords were loaded.", "Error", JOptionPane.ERROR_MESSAGE);
-                    return;
+                //Import credentials from file.
+                ExtendedList<Credential> credentialList = new ExtendedArrayList<Credential>();
+                if (cracking.isSelected()) {
+                    try {
+                        File passwordFile = new File(passwordsFile.getText());
+                        BufferedReader passwordReader = new BufferedReader(new FileReader(passwordFile));
+                        while (passwordReader.ready())
+                            credentialList.add(Credentials.createPassword(passwordReader.readLine().trim()));
+                        passwordReader.close();
+                        EggCrack.LOGGER.info("Loaded " + credentialList.size() + " passwords (" + passwordFile.getAbsolutePath() + ").");
+                    } catch (FileNotFoundException ex) {
+                        JOptionPane.showMessageDialog(null, "Password file not found.", "Error", JOptionPane.ERROR_MESSAGE);
+                        return;
+                    } catch (IOException e1) {
+                        JOptionPane.showMessageDialog(null, "Password file could not be read: " + e1.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                        return;
+                    }
                 }
 
-                if (proxyList.size() <= 0) {
-                    JOptionPane.showMessageDialog(null, "No proxies were loaded.", "Error", JOptionPane.ERROR_MESSAGE);
+                if (cracking.isSelected() && credentialList.size() <= 0) {
+                    JOptionPane.showMessageDialog(null, "No passwords were loaded.", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -319,7 +360,7 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
 
                     activeSession = session;
                     start.setText("Stop");
-                } catch (MalformedURLException e1) {
+                } catch (Exception e1) {
                     JOptionPane.showMessageDialog(null, e1.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
@@ -336,7 +377,6 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
                     table1.scrollRectToVisible(table1.getCellRect(table1.getRowCount() - 1, 0, true));
             }
         });
-        final JFileChooser chooser = new JFileChooser();
         ul.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -392,12 +432,24 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
                 }
             }
         });
-        exit.addActionListener(new ActionListener() {
+
+        ActionListener quitListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+                if (exit()) setVisible(false); // Exit.
+
+            }
+        };
+
+        exit.addActionListener(quitListener);
+
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent windowEvent) {
+                if (exit()) setVisible(false); // Exit.
             }
         });
+
         checking.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -418,6 +470,17 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
                 passwordsFile.setVisible(true);
                 plbl.setVisible(true);
                 ulbl.setText("Usernames:");
+            }
+        });
+        restore.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                passwordsFile.setEnabled(false);
+                pl.setEnabled(false);
+                pl.setVisible(false);
+                passwordsFile.setVisible(false);
+                plbl.setVisible(false);
+                ulbl.setText("Session:");
             }
         });
         checkProxies.addActionListener(new ActionListener() {
@@ -492,8 +555,10 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
         }
 
         UserInterface dialog = new UserInterface();
+
         dialog.pack();
         dialog.setLocationRelativeTo(null);
+        dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         dialog.setVisible(true); //Show.
     }
 
@@ -770,7 +835,7 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
         panel2.setBackground(new Color(-1));
         tabs.addTab("Control", panel2);
         final JPanel panel3 = new JPanel();
-        panel3.setLayout(new GridLayoutManager(2, 4, new Insets(0, 0, 15, 0), -1, -1));
+        panel3.setLayout(new GridLayoutManager(2, 5, new Insets(0, 0, 15, 0), -1, -1));
         panel3.setBackground(new Color(-1));
         panel2.add(panel3, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         cracking = new JRadioButton();
@@ -779,11 +844,11 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
         panel3.add(cracking, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         checking = new JRadioButton();
         checking.setText("Checking");
-        panel3.add(checking, new GridConstraints(1, 2, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        panel3.add(checking, new GridConstraints(1, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JPanel panel4 = new JPanel();
         panel4.setLayout(new BorderLayout(10, 0));
         panel4.setBackground(new Color(-1));
-        panel3.add(panel4, new GridConstraints(0, 0, 1, 4, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        panel3.add(panel4, new GridConstraints(0, 0, 1, 5, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         final JLabel label1 = new JLabel();
         label1.setText("Login API:");
         panel4.add(label1, BorderLayout.WEST);
@@ -797,6 +862,9 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
         configureButton.setEnabled(false);
         configureButton.setText("Configure...");
         panel4.add(configureButton, BorderLayout.EAST);
+        restore = new JRadioButton();
+        restore.setText("Restore");
+        panel3.add(restore, new GridConstraints(1, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer1 = new Spacer();
         panel2.add(spacer1, new GridConstraints(6, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final JPanel panel5 = new JPanel();
@@ -1091,7 +1159,7 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
         final JLabel label13 = new JLabel();
         label13.setFocusable(false);
         label13.setFont(new Font(label13.getFont().getName(), label13.getFont().getStyle(), 14));
-        label13.setText("October 10th, 2015");
+        label13.setText("February 17th, 2016");
         panel26.add(label13, new GridConstraints(2, 2, 1, 2, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JLabel label14 = new JLabel();
         label14.setFocusable(false);
@@ -1141,6 +1209,7 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
         buttonGroup.add(checking);
         buttonGroup.add(checking);
         buttonGroup.add(cracking);
+        buttonGroup.add(restore);
     }
 
     /**
@@ -1190,5 +1259,39 @@ public class UserInterface extends JDialog implements AccountListener, SessionLi
         public void sort() {
             getTableModel().moveRow(rowIndex, rowIndex, getTableModel().getRowCount() - 1);
         }
+    }
+
+    private boolean exit() {
+        if (activeSession != null && activeSession.isRunning()) {
+            int r = JOptionPane.showConfirmDialog(
+                    null,
+                    "You have a running job. Do you want to save your progress?", "Warning",
+                    JOptionPane.YES_NO_CANCEL_OPTION
+            );
+
+            switch (r) {
+                case JOptionPane.YES_OPTION:
+                    // Save and exit.
+                    try {
+                        int returnVal = chooser.showOpenDialog(UserInterface.this);
+                        if (returnVal == JFileChooser.APPROVE_OPTION)
+                            Session.saveSession(activeSession, chooser.getSelectedFile());
+                        else return false;
+                    } catch (IOException e1) {
+                        JOptionPane.showMessageDialog(
+                                null, "Problem saving session: " + e1.getMessage(),
+                                "Error", JOptionPane.ERROR_MESSAGE
+                        );
+
+                        return false; // Bail out :C
+                    }
+                case JOptionPane.NO_OPTION:
+                    break; // Exit.
+                default:
+                    return false; // Cancel.
+            }
+        }
+
+        return true;
     }
 }
