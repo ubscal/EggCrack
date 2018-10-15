@@ -1,0 +1,3825 @@
+
+--Converted with ttyyuu12345's model to script plugin v4
+function sandbox(var,func)
+	local env = getfenv(func)
+	local newenv = setmetatable({},{
+		__index = function(self,k)
+			if k=="script" then
+				return var
+			else
+				return env[k]
+			end
+		end,
+	})
+	setfenv(func,newenv)
+	return func
+end
+cors = {}
+mas = Instance.new("Model",game:GetService("Lighting"))
+Model0 = Instance.new("Model")
+Tool1 = Instance.new("Tool")
+Part2 = Instance.new("Part")
+CylinderMesh3 = Instance.new("CylinderMesh")
+Weld4 = Instance.new("Weld")
+Script5 = Instance.new("Script")
+ModuleScript6 = Instance.new("ModuleScript")
+Folder7 = Instance.new("Folder")
+RemoteEvent8 = Instance.new("RemoteEvent")
+RemoteEvent9 = Instance.new("RemoteEvent")
+RemoteEvent10 = Instance.new("RemoteEvent")
+RemoteFunction11 = Instance.new("RemoteFunction")
+RemoteEvent12 = Instance.new("RemoteEvent")
+RemoteEvent13 = Instance.new("RemoteEvent")
+RemoteEvent14 = Instance.new("RemoteEvent")
+RemoteEvent15 = Instance.new("RemoteEvent")
+RemoteEvent16 = Instance.new("RemoteEvent")
+RemoteEvent17 = Instance.new("RemoteEvent")
+RemoteEvent18 = Instance.new("RemoteEvent")
+RemoteEvent19 = Instance.new("RemoteEvent")
+RemoteEvent20 = Instance.new("RemoteEvent")
+RemoteEvent21 = Instance.new("RemoteEvent")
+Folder22 = Instance.new("Folder")
+NumberValue23 = Instance.new("NumberValue")
+NumberValue24 = Instance.new("NumberValue")
+BrickColorValue25 = Instance.new("BrickColorValue")
+BoolValue26 = Instance.new("BoolValue")
+BoolValue27 = Instance.new("BoolValue")
+Folder28 = Instance.new("Folder")
+BoolValue29 = Instance.new("BoolValue")
+ObjectValue30 = Instance.new("ObjectValue")
+ObjectValue31 = Instance.new("ObjectValue")
+ObjectValue32 = Instance.new("ObjectValue")
+ObjectValue33 = Instance.new("ObjectValue")
+ObjectValue34 = Instance.new("ObjectValue")
+ObjectValue35 = Instance.new("ObjectValue")
+IntValue36 = Instance.new("IntValue")
+LocalScript37 = Instance.new("LocalScript")
+ScreenGui38 = Instance.new("ScreenGui")
+Frame39 = Instance.new("Frame")
+ImageButton40 = Instance.new("ImageButton")
+ImageButton41 = Instance.new("ImageButton")
+Frame42 = Instance.new("Frame")
+ImageButton43 = Instance.new("ImageButton")
+ImageButton44 = Instance.new("ImageButton")
+ImageButton45 = Instance.new("ImageButton")
+ScreenGui46 = Instance.new("ScreenGui")
+Frame47 = Instance.new("Frame")
+ImageButton48 = Instance.new("ImageButton")
+BrickColorValue49 = Instance.new("BrickColorValue")
+ImageButton50 = Instance.new("ImageButton")
+BrickColorValue51 = Instance.new("BrickColorValue")
+ImageButton52 = Instance.new("ImageButton")
+BrickColorValue53 = Instance.new("BrickColorValue")
+ImageButton54 = Instance.new("ImageButton")
+BrickColorValue55 = Instance.new("BrickColorValue")
+ImageButton56 = Instance.new("ImageButton")
+BrickColorValue57 = Instance.new("BrickColorValue")
+ImageLabel58 = Instance.new("ImageLabel")
+ImageButton59 = Instance.new("ImageButton")
+BrickColorValue60 = Instance.new("BrickColorValue")
+ImageButton61 = Instance.new("ImageButton")
+BrickColorValue62 = Instance.new("BrickColorValue")
+ImageButton63 = Instance.new("ImageButton")
+BrickColorValue64 = Instance.new("BrickColorValue")
+ImageButton65 = Instance.new("ImageButton")
+BrickColorValue66 = Instance.new("BrickColorValue")
+ImageButton67 = Instance.new("ImageButton")
+BrickColorValue68 = Instance.new("BrickColorValue")
+ImageButton69 = Instance.new("ImageButton")
+BrickColorValue70 = Instance.new("BrickColorValue")
+ImageButton71 = Instance.new("ImageButton")
+BrickColorValue72 = Instance.new("BrickColorValue")
+ImageButton73 = Instance.new("ImageButton")
+BrickColorValue74 = Instance.new("BrickColorValue")
+ImageButton75 = Instance.new("ImageButton")
+BrickColorValue76 = Instance.new("BrickColorValue")
+ImageButton77 = Instance.new("ImageButton")
+BrickColorValue78 = Instance.new("BrickColorValue")
+ImageButton79 = Instance.new("ImageButton")
+BrickColorValue80 = Instance.new("BrickColorValue")
+ImageButton81 = Instance.new("ImageButton")
+BrickColorValue82 = Instance.new("BrickColorValue")
+ImageButton83 = Instance.new("ImageButton")
+BrickColorValue84 = Instance.new("BrickColorValue")
+ImageButton85 = Instance.new("ImageButton")
+BrickColorValue86 = Instance.new("BrickColorValue")
+ImageButton87 = Instance.new("ImageButton")
+BrickColorValue88 = Instance.new("BrickColorValue")
+ImageButton89 = Instance.new("ImageButton")
+BrickColorValue90 = Instance.new("BrickColorValue")
+ImageButton91 = Instance.new("ImageButton")
+BrickColorValue92 = Instance.new("BrickColorValue")
+ImageButton93 = Instance.new("ImageButton")
+BrickColorValue94 = Instance.new("BrickColorValue")
+ImageButton95 = Instance.new("ImageButton")
+BrickColorValue96 = Instance.new("BrickColorValue")
+ImageButton97 = Instance.new("ImageButton")
+BrickColorValue98 = Instance.new("BrickColorValue")
+ImageButton99 = Instance.new("ImageButton")
+BrickColorValue100 = Instance.new("BrickColorValue")
+ImageButton101 = Instance.new("ImageButton")
+BrickColorValue102 = Instance.new("BrickColorValue")
+ImageButton103 = Instance.new("ImageButton")
+BrickColorValue104 = Instance.new("BrickColorValue")
+ImageButton105 = Instance.new("ImageButton")
+BrickColorValue106 = Instance.new("BrickColorValue")
+ImageButton107 = Instance.new("ImageButton")
+BrickColorValue108 = Instance.new("BrickColorValue")
+ImageButton109 = Instance.new("ImageButton")
+BrickColorValue110 = Instance.new("BrickColorValue")
+ImageButton111 = Instance.new("ImageButton")
+BrickColorValue112 = Instance.new("BrickColorValue")
+ImageButton113 = Instance.new("ImageButton")
+BrickColorValue114 = Instance.new("BrickColorValue")
+ImageButton115 = Instance.new("ImageButton")
+BrickColorValue116 = Instance.new("BrickColorValue")
+ImageButton117 = Instance.new("ImageButton")
+BrickColorValue118 = Instance.new("BrickColorValue")
+ImageButton119 = Instance.new("ImageButton")
+BrickColorValue120 = Instance.new("BrickColorValue")
+ImageButton121 = Instance.new("ImageButton")
+BrickColorValue122 = Instance.new("BrickColorValue")
+ImageButton123 = Instance.new("ImageButton")
+BrickColorValue124 = Instance.new("BrickColorValue")
+ImageButton125 = Instance.new("ImageButton")
+BrickColorValue126 = Instance.new("BrickColorValue")
+ImageButton127 = Instance.new("ImageButton")
+BrickColorValue128 = Instance.new("BrickColorValue")
+ImageButton129 = Instance.new("ImageButton")
+BrickColorValue130 = Instance.new("BrickColorValue")
+ImageButton131 = Instance.new("ImageButton")
+BrickColorValue132 = Instance.new("BrickColorValue")
+ImageButton133 = Instance.new("ImageButton")
+BrickColorValue134 = Instance.new("BrickColorValue")
+ImageButton135 = Instance.new("ImageButton")
+BrickColorValue136 = Instance.new("BrickColorValue")
+ImageButton137 = Instance.new("ImageButton")
+BrickColorValue138 = Instance.new("BrickColorValue")
+ImageButton139 = Instance.new("ImageButton")
+BrickColorValue140 = Instance.new("BrickColorValue")
+ImageButton141 = Instance.new("ImageButton")
+BrickColorValue142 = Instance.new("BrickColorValue")
+ImageButton143 = Instance.new("ImageButton")
+BrickColorValue144 = Instance.new("BrickColorValue")
+ImageButton145 = Instance.new("ImageButton")
+BrickColorValue146 = Instance.new("BrickColorValue")
+ImageButton147 = Instance.new("ImageButton")
+BrickColorValue148 = Instance.new("BrickColorValue")
+ImageButton149 = Instance.new("ImageButton")
+BrickColorValue150 = Instance.new("BrickColorValue")
+ImageButton151 = Instance.new("ImageButton")
+BrickColorValue152 = Instance.new("BrickColorValue")
+ImageButton153 = Instance.new("ImageButton")
+BrickColorValue154 = Instance.new("BrickColorValue")
+ImageButton155 = Instance.new("ImageButton")
+BrickColorValue156 = Instance.new("BrickColorValue")
+ImageButton157 = Instance.new("ImageButton")
+BrickColorValue158 = Instance.new("BrickColorValue")
+ImageButton159 = Instance.new("ImageButton")
+BrickColorValue160 = Instance.new("BrickColorValue")
+ImageButton161 = Instance.new("ImageButton")
+BrickColorValue162 = Instance.new("BrickColorValue")
+ImageButton163 = Instance.new("ImageButton")
+BrickColorValue164 = Instance.new("BrickColorValue")
+ImageButton165 = Instance.new("ImageButton")
+BrickColorValue166 = Instance.new("BrickColorValue")
+ImageButton167 = Instance.new("ImageButton")
+BrickColorValue168 = Instance.new("BrickColorValue")
+ImageButton169 = Instance.new("ImageButton")
+BrickColorValue170 = Instance.new("BrickColorValue")
+ImageButton171 = Instance.new("ImageButton")
+BrickColorValue172 = Instance.new("BrickColorValue")
+ImageButton173 = Instance.new("ImageButton")
+BrickColorValue174 = Instance.new("BrickColorValue")
+ImageButton175 = Instance.new("ImageButton")
+BrickColorValue176 = Instance.new("BrickColorValue")
+ImageButton177 = Instance.new("ImageButton")
+BrickColorValue178 = Instance.new("BrickColorValue")
+ImageButton179 = Instance.new("ImageButton")
+BrickColorValue180 = Instance.new("BrickColorValue")
+ImageButton181 = Instance.new("ImageButton")
+BrickColorValue182 = Instance.new("BrickColorValue")
+ImageButton183 = Instance.new("ImageButton")
+BrickColorValue184 = Instance.new("BrickColorValue")
+ImageButton185 = Instance.new("ImageButton")
+BrickColorValue186 = Instance.new("BrickColorValue")
+ImageButton187 = Instance.new("ImageButton")
+BrickColorValue188 = Instance.new("BrickColorValue")
+ImageButton189 = Instance.new("ImageButton")
+BrickColorValue190 = Instance.new("BrickColorValue")
+ImageButton191 = Instance.new("ImageButton")
+BrickColorValue192 = Instance.new("BrickColorValue")
+ImageButton193 = Instance.new("ImageButton")
+BrickColorValue194 = Instance.new("BrickColorValue")
+ImageButton195 = Instance.new("ImageButton")
+BrickColorValue196 = Instance.new("BrickColorValue")
+ImageButton197 = Instance.new("ImageButton")
+BrickColorValue198 = Instance.new("BrickColorValue")
+ImageButton199 = Instance.new("ImageButton")
+BrickColorValue200 = Instance.new("BrickColorValue")
+ImageButton201 = Instance.new("ImageButton")
+BrickColorValue202 = Instance.new("BrickColorValue")
+ImageButton203 = Instance.new("ImageButton")
+BrickColorValue204 = Instance.new("BrickColorValue")
+ImageButton205 = Instance.new("ImageButton")
+BrickColorValue206 = Instance.new("BrickColorValue")
+ImageButton207 = Instance.new("ImageButton")
+BrickColorValue208 = Instance.new("BrickColorValue")
+ImageButton209 = Instance.new("ImageButton")
+BrickColorValue210 = Instance.new("BrickColorValue")
+ImageButton211 = Instance.new("ImageButton")
+BrickColorValue212 = Instance.new("BrickColorValue")
+ImageButton213 = Instance.new("ImageButton")
+BrickColorValue214 = Instance.new("BrickColorValue")
+ImageButton215 = Instance.new("ImageButton")
+BrickColorValue216 = Instance.new("BrickColorValue")
+ImageButton217 = Instance.new("ImageButton")
+BrickColorValue218 = Instance.new("BrickColorValue")
+ImageButton219 = Instance.new("ImageButton")
+BrickColorValue220 = Instance.new("BrickColorValue")
+ImageButton221 = Instance.new("ImageButton")
+BrickColorValue222 = Instance.new("BrickColorValue")
+ImageButton223 = Instance.new("ImageButton")
+BrickColorValue224 = Instance.new("BrickColorValue")
+ImageButton225 = Instance.new("ImageButton")
+BrickColorValue226 = Instance.new("BrickColorValue")
+ImageButton227 = Instance.new("ImageButton")
+BrickColorValue228 = Instance.new("BrickColorValue")
+ImageButton229 = Instance.new("ImageButton")
+BrickColorValue230 = Instance.new("BrickColorValue")
+ImageButton231 = Instance.new("ImageButton")
+BrickColorValue232 = Instance.new("BrickColorValue")
+ImageButton233 = Instance.new("ImageButton")
+BrickColorValue234 = Instance.new("BrickColorValue")
+ImageButton235 = Instance.new("ImageButton")
+BrickColorValue236 = Instance.new("BrickColorValue")
+ImageButton237 = Instance.new("ImageButton")
+BrickColorValue238 = Instance.new("BrickColorValue")
+ImageButton239 = Instance.new("ImageButton")
+BrickColorValue240 = Instance.new("BrickColorValue")
+ImageButton241 = Instance.new("ImageButton")
+BrickColorValue242 = Instance.new("BrickColorValue")
+ImageButton243 = Instance.new("ImageButton")
+BrickColorValue244 = Instance.new("BrickColorValue")
+ImageButton245 = Instance.new("ImageButton")
+BrickColorValue246 = Instance.new("BrickColorValue")
+ImageButton247 = Instance.new("ImageButton")
+BrickColorValue248 = Instance.new("BrickColorValue")
+ImageButton249 = Instance.new("ImageButton")
+BrickColorValue250 = Instance.new("BrickColorValue")
+ImageButton251 = Instance.new("ImageButton")
+BrickColorValue252 = Instance.new("BrickColorValue")
+ImageButton253 = Instance.new("ImageButton")
+BrickColorValue254 = Instance.new("BrickColorValue")
+ImageButton255 = Instance.new("ImageButton")
+BrickColorValue256 = Instance.new("BrickColorValue")
+ImageButton257 = Instance.new("ImageButton")
+BrickColorValue258 = Instance.new("BrickColorValue")
+ImageButton259 = Instance.new("ImageButton")
+BrickColorValue260 = Instance.new("BrickColorValue")
+ImageButton261 = Instance.new("ImageButton")
+BrickColorValue262 = Instance.new("BrickColorValue")
+ImageButton263 = Instance.new("ImageButton")
+BrickColorValue264 = Instance.new("BrickColorValue")
+ImageButton265 = Instance.new("ImageButton")
+BrickColorValue266 = Instance.new("BrickColorValue")
+ImageButton267 = Instance.new("ImageButton")
+BrickColorValue268 = Instance.new("BrickColorValue")
+ImageButton269 = Instance.new("ImageButton")
+BrickColorValue270 = Instance.new("BrickColorValue")
+ImageButton271 = Instance.new("ImageButton")
+BrickColorValue272 = Instance.new("BrickColorValue")
+ImageButton273 = Instance.new("ImageButton")
+BrickColorValue274 = Instance.new("BrickColorValue")
+ImageButton275 = Instance.new("ImageButton")
+BrickColorValue276 = Instance.new("BrickColorValue")
+ImageButton277 = Instance.new("ImageButton")
+BrickColorValue278 = Instance.new("BrickColorValue")
+ImageButton279 = Instance.new("ImageButton")
+BrickColorValue280 = Instance.new("BrickColorValue")
+ImageButton281 = Instance.new("ImageButton")
+BrickColorValue282 = Instance.new("BrickColorValue")
+ImageButton283 = Instance.new("ImageButton")
+BrickColorValue284 = Instance.new("BrickColorValue")
+ImageButton285 = Instance.new("ImageButton")
+BrickColorValue286 = Instance.new("BrickColorValue")
+ImageButton287 = Instance.new("ImageButton")
+BrickColorValue288 = Instance.new("BrickColorValue")
+ImageButton289 = Instance.new("ImageButton")
+BrickColorValue290 = Instance.new("BrickColorValue")
+ImageButton291 = Instance.new("ImageButton")
+BrickColorValue292 = Instance.new("BrickColorValue")
+ImageButton293 = Instance.new("ImageButton")
+BrickColorValue294 = Instance.new("BrickColorValue")
+ImageButton295 = Instance.new("ImageButton")
+BrickColorValue296 = Instance.new("BrickColorValue")
+ImageButton297 = Instance.new("ImageButton")
+BrickColorValue298 = Instance.new("BrickColorValue")
+ImageButton299 = Instance.new("ImageButton")
+BrickColorValue300 = Instance.new("BrickColorValue")
+ImageButton301 = Instance.new("ImageButton")
+BrickColorValue302 = Instance.new("BrickColorValue")
+ImageLabel303 = Instance.new("ImageLabel")
+ImageButton304 = Instance.new("ImageButton")
+ImageLabel305 = Instance.new("ImageLabel")
+LocalScript306 = Instance.new("LocalScript")
+ObjectValue307 = Instance.new("ObjectValue")
+ScreenGui308 = Instance.new("ScreenGui")
+ImageButton309 = Instance.new("ImageButton")
+Frame310 = Instance.new("Frame")
+TextLabel311 = Instance.new("TextLabel")
+TextLabel312 = Instance.new("TextLabel")
+TextLabel313 = Instance.new("TextLabel")
+TextButton314 = Instance.new("TextButton")
+ImageLabel315 = Instance.new("ImageLabel")
+LocalScript316 = Instance.new("LocalScript")
+ModuleScript317 = Instance.new("ModuleScript")
+LocalScript318 = Instance.new("LocalScript")
+UnionOperation319 = Instance.new("UnionOperation")
+Weld320 = Instance.new("Weld")
+UnionOperation321 = Instance.new("UnionOperation")
+Weld322 = Instance.new("Weld")
+UnionOperation323 = Instance.new("UnionOperation")
+Weld324 = Instance.new("Weld")
+UnionOperation325 = Instance.new("UnionOperation")
+Weld326 = Instance.new("Weld")
+UnionOperation327 = Instance.new("UnionOperation")
+Weld328 = Instance.new("Weld")
+UnionOperation329 = Instance.new("UnionOperation")
+Weld330 = Instance.new("Weld")
+UnionOperation331 = Instance.new("UnionOperation")
+Weld332 = Instance.new("Weld")
+UnionOperation333 = Instance.new("UnionOperation")
+Weld334 = Instance.new("Weld")
+UnionOperation335 = Instance.new("UnionOperation")
+Weld336 = Instance.new("Weld")
+UnionOperation337 = Instance.new("UnionOperation")
+Weld338 = Instance.new("Weld")
+UnionOperation339 = Instance.new("UnionOperation")
+Weld340 = Instance.new("Weld")
+UnionOperation341 = Instance.new("UnionOperation")
+Weld342 = Instance.new("Weld")
+UnionOperation343 = Instance.new("UnionOperation")
+Camera344 = Instance.new("Camera")
+Model0.Name = "SegwayKit"
+Model0.Parent = mas
+Tool1.Name = "HandlessSegway"
+Tool1.Parent = Model0
+Tool1.TextureId = "rbxassetid://352276672"
+Tool1.Grip = CFrame.new(0, 0, 0, 3.26636873e-05, 1, 4.80205764e-10, 1, -3.26636873e-05, 4.31586013e-05, 4.31586013e-05, -9.29513244e-10, -1)
+Tool1.GripForward = Vector3.new(-4.80205764e-10, -4.31586013e-05, 1)
+Tool1.GripRight = Vector3.new(3.26636873e-05, 1, 4.31586013e-05)
+Tool1.GripUp = Vector3.new(1, -3.26636873e-05, -9.29513244e-10)
+Tool1.ToolTip = "Handless Segway"
+Part2.Name = "Handle"
+Part2.Parent = Tool1
+Part2.CFrame = CFrame.new(-34.4831467, 2.36528397, 77.3125916, -7.85456941e-05, -0.999995232, -6.70956624e-09, 0.999995232, -7.8548459e-05, -8.76711681e-08, 8.71770141e-08, -6.81249546e-09, 1)
+Part2.Orientation = Vector3.new(0, 0, 90)
+Part2.Position = Vector3.new(-34.4831467, 2.36528397, 77.3125916)
+Part2.Rotation = Vector3.new(0, 0, 90)
+Part2.Color = Color3.new(0.905882, 0.905882, 0.92549)
+Part2.Size = Vector3.new(0.5, 2.5, 0.899999976)
+Part2.BrickColor = BrickColor.new("Pearl")
+Part2.Material = Enum.Material.SmoothPlastic
+Part2.Reflectance = 0.15000000596046
+Part2.brickColor = BrickColor.new("Pearl")
+Part2.FormFactor = Enum.FormFactor.Custom
+Part2.formFactor = Enum.FormFactor.Custom
+CylinderMesh3.Parent = Part2
+CylinderMesh3.Offset = Vector3.new(0.0500000007, 0, 0)
+CylinderMesh3.Scale = Vector3.new(0.479999989, 0.200000003, 0.479999989)
+Weld4.Parent = Part2
+Weld4.C0 = CFrame.new(-17.8069973, -0.0370008312, 22.4170017, -4.37113883e-08, 1, -8.74227766e-08, 1, 4.37113883e-08, -3.82137093e-15, 0, -8.74227766e-08, -1)
+Weld4.C1 = CFrame.new(0.516348898, -17.8066444, -22.416605, 1, 2.98465146e-08, 2.38738291e-08, -2.98465181e-08, 1, 7.27595273e-09, -2.38738309e-08, -7.27595362e-09, 1)
+Weld4.Part0 = Part2
+Weld4.Part1 = UnionOperation319
+Weld4.part1 = UnionOperation319
+Script5.Name = "Listeners"
+Script5.Parent = Tool1
+table.insert(cors,sandbox(Script5,function()
+-- This script listens for RemoteEvents that will be called from the client ("Main" script)
+local Home = script.Parent
+
+-- ModuleScript that holds all the functions that are tied with the RemoteEvents
+local Functions = require(script:WaitForChild("ServerFunctions"))
+
+-- Folder that contains the RemoteEvents
+local RemoteFolder = Home:WaitForChild("RemoteEvents")
+
+-- Define each RemoteEvent individually
+local SpawnSegway = RemoteFolder:WaitForChild("SpawnSegway") -- Spawning segway
+local ConfigTool = RemoteFolder:WaitForChild("ConfigTool") -- Coloring segway
+local DestroySegway = RemoteFolder:WaitForChild("DestroySegway") -- Coloring segway
+local TiltRemote = RemoteFolder:WaitForChild("TiltRemote")
+local PlaySound = RemoteFolder:WaitForChild("PlaySound")
+local StopSound = RemoteFolder:WaitForChild("StopSound")
+local ChangeSound = RemoteFolder:WaitForChild("ChangeSound")
+local AnchorSegway = RemoteFolder:WaitForChild("AnchorSegway")
+local UndoTags = RemoteFolder:WaitForChild("UndoTags")
+local UndoHasWelded = RemoteFolder:WaitForChild("UndoHasWelded")
+local DeleteWelds = RemoteFolder:WaitForChild("DeleteWelds")
+local ConfigHumanoid = RemoteFolder:WaitForChild("ConfigHumanoid")
+local ConfigLights = RemoteFolder:WaitForChild("ConfigLights")
+
+-- Listeners
+SpawnSegway.OnServerEvent:connect(function(Player,Character,MaxSpeed,TurnSpeed,Tool,SpawnedSegway,Color)
+	Functions.SpawnSegway(Player,Character,MaxSpeed,TurnSpeed,Tool,SpawnedSegway,Color)
+end)
+
+ConfigTool.OnServerEvent:connect(function(Player,Transparency,Tool,ShouldColor,Color)
+	Functions.ConfigTool(Transparency,Tool,ShouldColor,Color)
+end)
+
+DestroySegway.OnServerEvent:connect(function(Player,Character,SpawnedSegway)
+	Functions.DestroySegway(Character,SpawnedSegway)
+end)
+
+PlaySound.OnServerEvent:connect(function(Player,Sound,Pitch,Volume)
+	Functions.PlaySound(Sound,Pitch,Volume)
+end)
+
+StopSound.OnServerEvent:connect(function(Player,Sound,Volume)
+	Functions.StopSound(Sound,Volume)
+end)
+
+ChangeSound.OnServerEvent:connect(function(Player,Sound,Pitch,Volume,ShouldPitch,ShouldVolume)
+	Functions.ChangeSound(Sound,Pitch,Volume,ShouldPitch,ShouldVolume)
+end)
+
+TiltRemote.OnServerEvent:connect(function(Player,Motor,Angle)
+	Functions.TiltMotor(Motor,Angle)
+end)
+
+AnchorSegway.OnServerEvent:connect(function(Player,PrimaryPart,Anchored)
+	Functions.AnchorPart(PrimaryPart,Anchored)
+end)
+
+UndoTags.OnServerEvent:connect(function(Player,SegwayObject,WeldObject,Thruster,TiltMotor)
+	Functions.UndoTags(SegwayObject,WeldObject,Thruster,TiltMotor)
+end)
+
+UndoHasWelded.OnServerEvent:connect(function(Player,SeaterObject)
+	Functions.UndoHasWelded(SeaterObject)
+end)
+
+function DeleteWelds.OnServerInvoke(Player,Part)
+	Functions.DeleteWelds(Part)
+	return true
+end
+
+ConfigHumanoid.OnServerEvent:connect(function(Player,Humanoid,PlatformStand,Jump,AutoRotate)
+	Functions.ConfigHumanoid(Player.Character,Humanoid,PlatformStand,Jump,AutoRotate)
+end)
+
+ConfigLights.OnServerEvent:connect(function(Player,Transparency,Color,Bool,Material,Lights,Notifiers)
+	Functions.ConfigLights(Transparency,Color,Bool,Material,Lights,Notifiers)
+end)
+
+end))
+ModuleScript6.Name = "ServerFunctions"
+ModuleScript6.Parent = Script5
+table.insert(cors,sandbox(ModuleScript6,function()
+local Functions = {}
+
+-- General variables
+local ThisTool = script.Parent.Parent
+local MainScript = ThisTool:WaitForChild("Main")
+local SegwayController = MainScript:WaitForChild("SegwayController")
+local ToolStatus = ThisTool:WaitForChild("ToolStatus")
+local Wings = {"Left Wing","Right Wing"}
+
+-- Create base segway to clone from
+local SegID = 581150091
+local Segway = require(SegID)
+
+local function Get_des(instance, func)
+	func(instance)
+	for _, child in next, instance:GetChildren() do
+		Get_des(child, func)
+	end
+end
+
+Functions.PlaySound = function(Sound,Pitch,Volume)
+	if Sound and Sound.Parent.Name == "Seat" then
+		Sound.Pitch = Pitch
+		Sound.Volume = Volume
+		Sound:Play()
+	end
+end
+
+Functions.StopSound = function(Sound,Volume)
+	if Sound and Sound.Parent.Name == "Seat" then
+		Sound.Volume = Volume
+		Sound:Stop()
+	end
+end
+
+Functions.ChangeSound = function(Sound,Pitch,Volume,ShouldPitch,ShouldVolume)
+	if Sound and Sound.Parent.Name == "Seat" then
+		if ShouldPitch == true then
+		Sound.Pitch = Pitch
+		end
+			if ShouldVolume == true then
+			Sound.Volume = Volume
+			end
+	end
+end
+
+Functions.AnchorPart = function(Part,Anchored)
+	if Part and Part:IsA("BasePart") and Part.Name == "Seat" then
+		Part.Anchored = Anchored
+	end
+end
+
+Functions.UndoTags = function(SegwayObject,WeldObject,TiltMotor)
+	WeldObject.Value = nil
+	TiltMotor.Value = nil
+	SegwayObject.Value = nil
+end
+
+Functions.UndoHasWelded = function(SeaterObject)
+	if SeaterObject.Value and SeaterObject.Value.Parent then
+		SeaterObject.Value.Parent.HasWelded.Value = false
+		SeaterObject.Value = nil
+	end
+end
+
+Functions.TiltMotor = function(Motor,Angle)
+	if Motor and Motor.Name == "TiltMotor" then
+		Motor.DesiredAngle = Angle
+	end
+end
+
+Functions.DeleteWelds = function(Part)
+	if Part and Part:IsA("BasePart") and Part.Name == "Seat" then
+		for _,v in pairs(Part:GetChildren()) do
+			if v:IsA("Motor6D") then
+			v:Destroy()
+			end
+		end
+	end
+end
+
+Functions.ConfigHumanoid = function(Character,Humanoid,PlatformStand,Jump,AutoRotate)
+	if Humanoid and Humanoid.Parent == Character then
+		Humanoid.AutoRotate = AutoRotate
+		Humanoid.PlatformStand = PlatformStand
+		Humanoid.Jump = Jump
+		
+		Get_des(Character,function(d)
+			if d and d:IsA("CFrameValue") and d.Name == "KeptCFrame" then
+				d.Parent.C0 = d.Value
+				d:Destroy()
+			end
+		end)
+	end
+end
+
+Functions.ConfigLights = function(Transparency,Color,Bool,Material,Lights,Notifiers)
+	if Lights and Notifiers then
+	for _,v in pairs(Lights:GetChildren()) do
+		if v:IsA("BasePart") and v:FindFirstChild("SpotLight") and v:FindFirstChild("Glare") then
+		v.BrickColor = BrickColor.new(Color)
+		v.Transparency = Transparency
+		v:FindFirstChild("SpotLight").Enabled = Bool
+		v.Material = Material
+		end
+	end
+		for _,v in pairs(Notifiers:GetChildren()) do
+			if v:IsA("BasePart") and v:FindFirstChild("SurfaceGui") then
+			v:FindFirstChild("SurfaceGui").ImageLabel.Visible = Bool
+			end
+		end
+	end
+end
+
+Functions.ColorSegway = function(Model,Color)
+	for i=1, #Wings do
+		for _,v in pairs(Model[Wings[i]]:GetChildren()) do
+			if v.Name == "Base" or v.Name == "Cover" then
+			v.BrickColor = Color
+			end
+		end
+	end
+end
+
+Functions.DestroySegway = function(Character,SpawnedSegway)
+	if SpawnedSegway:IsA("ObjectValue") and SpawnedSegway.Value and SpawnedSegway.Value:FindFirstChild("SegPlatform") then
+		SpawnedSegway.Value:Destroy()
+	end
+end
+
+Functions.SpawnSegway = function(Player,Character,Tool,SpawnedSegway,Color)
+	if Character and not Character:FindFirstChild(Segway.Name) and Tool.Parent == Character then
+	local NewSegway = Segway:Clone()
+	-- Define head
+	local Head = Character:WaitForChild("Head")
+	
+	-- Get the head's rotation matrix
+	local p,p,p,xx,xy,xz,yx,yy,yz,zx,zy,zz = Head.CFrame:components()
+	
+	-- Get the position in front of player
+	local SpawnPos = Head.Position + (Head.CFrame.lookVector*4)
+	
+	ToolStatus.Thruster.Value = NewSegway:WaitForChild("Wheels"):WaitForChild("Thruster")
+	
+	-- Apply the settings called from the client
+	NewSegway:WaitForChild("Creator").Value = Player
+	NewSegway:WaitForChild("MyTool").Value = Tool
+	SpawnedSegway.Value = NewSegway
+	
+	-- Colors the segway
+	Functions.ColorSegway(NewSegway,Color)
+	
+	-- Parent segway into the player's character
+	NewSegway.Parent = Character
+	NewSegway:MakeJoints()
+		
+	-- Position segway
+	NewSegway:SetPrimaryPartCFrame(CFrame.new(0,0,0,xx,xy,xz,yx,yy,yz,zx,zy,zz)*CFrame.Angles(0,math.rad(180),0)) -- Rotate segway properly
+	NewSegway:MoveTo(SpawnPos)
+	end
+end
+
+Functions.ConfigTool = function(Transparency,Tool,ShouldColor,Color)
+	if Tool == ThisTool then
+		for _,v in pairs(Tool:GetChildren()) do
+			if v:IsA("BasePart") and ShouldColor == false then
+				v.Transparency = Transparency
+			elseif ShouldColor == true and v:IsA("BasePart") and v.Name == "ColorablePart" then
+				v.BrickColor = Color
+			end
+		end
+	end
+end
+
+return Functions
+end))
+Folder7.Name = "RemoteEvents"
+Folder7.Parent = Tool1
+RemoteEvent8.Name = "SpawnSegway"
+RemoteEvent8.Parent = Folder7
+RemoteEvent9.Name = "ConfigTool"
+RemoteEvent9.Parent = Folder7
+RemoteEvent10.Name = "DestroySegway"
+RemoteEvent10.Parent = Folder7
+RemoteFunction11.Name = "DeleteWelds"
+RemoteFunction11.Parent = Folder7
+RemoteEvent12.Name = "AnchorSegway"
+RemoteEvent12.Parent = Folder7
+RemoteEvent13.Name = "ChangeSound"
+RemoteEvent13.Parent = Folder7
+RemoteEvent14.Name = "ConfigHumanoid"
+RemoteEvent14.Parent = Folder7
+RemoteEvent15.Name = "PlaySound"
+RemoteEvent15.Parent = Folder7
+RemoteEvent16.Name = "StopSound"
+RemoteEvent16.Parent = Folder7
+RemoteEvent17.Name = "TiltRemote"
+RemoteEvent17.Parent = Folder7
+RemoteEvent18.Name = "UndoHasWelded"
+RemoteEvent18.Parent = Folder7
+RemoteEvent19.Name = "UndoTags"
+RemoteEvent19.Parent = Folder7
+RemoteEvent20.Name = "ConfigLights"
+RemoteEvent20.Parent = Folder7
+RemoteEvent21.Name = "UpdateGyro"
+RemoteEvent21.Parent = Folder7
+Folder22.Name = "Configuration"
+Folder22.Parent = Tool1
+NumberValue23.Name = "MaxSpeed"
+NumberValue23.Parent = Folder22
+NumberValue23.Value = 40
+NumberValue24.Name = "TurnSpeed"
+NumberValue24.Parent = Folder22
+NumberValue24.Value = 60
+BrickColorValue25.Name = "StartingColor"
+BrickColorValue25.Parent = Folder22
+BrickColorValue25.Value = BrickColor.new("Really red")
+BoolValue26.Name = "UseGyroSteering"
+BoolValue26.Parent = Folder22
+BoolValue27.Name = "VRUseHeadsetControls"
+BoolValue27.Parent = Folder22
+Folder28.Name = "ToolStatus"
+Folder28.Parent = Tool1
+BoolValue29.Name = "HasSpawnedSegway"
+BoolValue29.Parent = Folder28
+ObjectValue30.Name = "SpawnedSegway"
+ObjectValue30.Parent = Folder28
+ObjectValue31.Name = "PlayersWeld"
+ObjectValue31.Parent = Folder28
+ObjectValue32.Name = "SeaterScript"
+ObjectValue32.Parent = Folder28
+ObjectValue33.Name = "Segway"
+ObjectValue33.Parent = Folder28
+ObjectValue34.Name = "Thruster"
+ObjectValue34.Parent = Folder28
+ObjectValue35.Name = "TiltMotor"
+ObjectValue35.Parent = Folder28
+IntValue36.Name = "SecurityPatchLevel"
+IntValue36.Parent = Folder28
+IntValue36.Value = 3
+LocalScript37.Name = "Main"
+LocalScript37.Parent = Tool1
+table.insert(cors,sandbox(LocalScript37,function()
+-- Root variables 
+local Tool = script.Parent
+local Player = game.Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:wait()
+local Humanoid = Character:WaitForChild("Humanoid")
+local SettingsFolder = Tool:WaitForChild("Configuration")
+local MaxSpeed = SettingsFolder:WaitForChild("MaxSpeed")
+local TurnSpeed = SettingsFolder:WaitForChild("TurnSpeed")
+local StarterColor = SettingsFolder:WaitForChild("StartingColor")
+local ToolCoolDown = 2
+
+-- Tool's current status
+local ToolStatus = Tool:WaitForChild("ToolStatus")
+local SpawnedSegway = ToolStatus:WaitForChild("SpawnedSegway")
+local HasSpawnedSegway = ToolStatus:WaitForChild("HasSpawnedSegway")
+local IsCoolingDown = false
+
+-- RemoteEvents
+local RemoteEvents = Tool:WaitForChild("RemoteEvents")
+local SpawnSegway = RemoteEvents:WaitForChild("SpawnSegway")
+local ConfigTool = RemoteEvents:WaitForChild("ConfigTool")
+local DestroySegway = RemoteEvents:WaitForChild("DestroySegway")
+local ConfigHumanoid = RemoteEvents:WaitForChild("ConfigHumanoid")
+
+-- Camera
+local Camera = game.Workspace.CurrentCamera
+
+-- Player's gui and input service
+local PlayerGui = Player:WaitForChild("PlayerGui")
+local UserInputService = game:GetService("UserInputService")
+
+-- Controller script
+local SegwayController = script:WaitForChild("SegwayController")
+
+-- Gui
+local DisplayGui = script:WaitForChild("DisplayGui")
+local ColorGui = script:WaitForChild("ColorGui")
+local NewDisplayGui = nil
+local NewColorGui = nil
+
+function UndoSettings(Folder)
+	for _,v in pairs(Folder:GetChildren()) do
+		if v:IsA("NumberValue") or v:IsA("IntValue") then
+			v.Value = 0
+		elseif v:IsA("ObjectValue") and v.Name ~= "SpawnedSegway" then
+			v.Value = nil
+		end
+	end
+end
+
+function RemoveSegway()
+	-- Remove segway
+	DestroySegway:FireServer(Character,SpawnedSegway)
+	
+	-- Reset camera
+	Camera.CameraType = "Custom"
+	
+	-- Show tool
+	ConfigTool:FireServer(0,Tool,false,nil)
+	
+	-- Undo tags anyway
+	HasSpawnedSegway.Value = false
+
+	-- UnPlatformStand player
+	ConfigHumanoid:FireServer(Humanoid,false,false,true)
+	
+		-- If player has the segway controller script, we'll reset its settings
+		if PlayerGui:FindFirstChild("GuiControls") then -- Remove mobile gui
+		PlayerGui:FindFirstChild("GuiControls").Parent = script
+		end
+		UserInputService.ModalEnabled = false
+		UndoSettings(ToolStatus)
+end
+
+-- Listeners
+Tool.Equipped:connect(function()
+	
+	-- Redefine character and humanoid just in case
+	Character = Player.Character
+	Humanoid = Character:WaitForChild("Humanoid")
+	
+	-- Show the segway menu gui and color gui
+	NewDisplayGui = DisplayGui:Clone()
+	NewDisplayGui.Parent = PlayerGui
+	
+	NewColorGui = ColorGui:Clone()
+	NewColorGui.Parent = PlayerGui
+	NewColorGui:WaitForChild("MyTool").Value = Tool
+	
+	local OpenButton = NewDisplayGui:WaitForChild("OpenButton")
+	local ColorOpenButton = NewColorGui:WaitForChild("OpenButton")
+	
+	OpenButton:TweenPosition(UDim2.new(1, -92,1, -38),0,0,0.4,true)
+	ColorOpenButton:TweenPosition(UDim2.new(0, -6,0.5, -70),0,0,0.4,true)
+end)
+
+Tool.Unequipped:connect(function() -- Remove segway when tool is unequipped
+	if NewDisplayGui and NewColorGui then
+		NewDisplayGui:Destroy()
+		NewColorGui:Destroy()
+	end
+	
+	if SpawnedSegway.Value then
+		RemoveSegway()
+	end
+end)
+
+Tool.Activated:connect(function()
+	if HasSpawnedSegway.Value == false and IsCoolingDown == false then -- So workspace won't be spammed with segways
+	IsCoolingDown = true
+	HasSpawnedSegway.Value = true
+	
+	-- Hide the tool player is holding
+	ConfigTool:FireServer(1,Tool,false,nil)
+	
+	-- Spawn segway
+	SpawnSegway:FireServer(Character,Tool,SpawnedSegway,StarterColor.Value) -- Fire remote event to spawn
+	
+	-- Prevent spamming of segways which may lag the server
+	wait(ToolCoolDown)
+	IsCoolingDown = false
+	end
+end)
+
+Humanoid.Died:connect(function()
+	RemoveSegway()
+end)
+end))
+ScreenGui38.Name = "GuiControls"
+ScreenGui38.Parent = LocalScript37
+Frame39.Name = "Accelerate"
+Frame39.Parent = ScreenGui38
+Frame39.Position = UDim2.new(0, 40, 1, -160)
+Frame39.Size = UDim2.new(0, 64, 0, 128)
+Frame39.BackgroundColor = BrickColor.new("Institutional white")
+Frame39.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame39.BackgroundTransparency = 1
+ImageButton40.Name = "Up"
+ImageButton40.Parent = Frame39
+ImageButton40.Size = UDim2.new(0, 60, 0, 60)
+ImageButton40.BackgroundColor = BrickColor.new("Institutional white")
+ImageButton40.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageButton40.BackgroundTransparency = 1
+ImageButton40.ZIndex = 10
+ImageButton40.Image = "rbxasset://textures/ui/DPadSheet.png"
+ImageButton40.ImageRectOffset = Vector2.new(0, 256)
+ImageButton40.ImageRectSize = Vector2.new(128, 128)
+ImageButton41.Name = "Down"
+ImageButton41.Parent = Frame39
+ImageButton41.Position = UDim2.new(0, 0, 1, -64)
+ImageButton41.Size = UDim2.new(0, 60, 0, 60)
+ImageButton41.BackgroundColor = BrickColor.new("Institutional white")
+ImageButton41.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageButton41.BackgroundTransparency = 1
+ImageButton41.ZIndex = 10
+ImageButton41.Image = "rbxasset://textures/ui/DPadSheet.png"
+ImageButton41.ImageRectSize = Vector2.new(128, 128)
+Frame42.Name = "Steer"
+Frame42.Parent = ScreenGui38
+Frame42.Position = UDim2.new(1, -156, 1, -96)
+Frame42.Size = UDim2.new(0, 128, 0, 64)
+Frame42.BackgroundColor = BrickColor.new("Institutional white")
+Frame42.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame42.BackgroundTransparency = 1
+ImageButton43.Name = "Left"
+ImageButton43.Parent = Frame42
+ImageButton43.Size = UDim2.new(0, 60, 0, 60)
+ImageButton43.BackgroundColor = BrickColor.new("Institutional white")
+ImageButton43.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageButton43.BackgroundTransparency = 1
+ImageButton43.ZIndex = 10
+ImageButton43.Image = "rbxasset://textures/ui/DPadSheet.png"
+ImageButton43.ImageRectOffset = Vector2.new(128, 128)
+ImageButton43.ImageRectSize = Vector2.new(128, 128)
+ImageButton43.ScaleType = Enum.ScaleType.Slice
+ImageButton44.Name = "Right"
+ImageButton44.Parent = Frame42
+ImageButton44.Position = UDim2.new(1, -64, 0, 0)
+ImageButton44.Size = UDim2.new(0, 60, 0, 60)
+ImageButton44.BackgroundColor = BrickColor.new("Institutional white")
+ImageButton44.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageButton44.BackgroundTransparency = 1
+ImageButton44.ZIndex = 10
+ImageButton44.Image = "rbxasset://textures/ui/DPadSheet.png"
+ImageButton44.ImageRectOffset = Vector2.new(0, 128)
+ImageButton44.ImageRectSize = Vector2.new(128, 128)
+ImageButton44.ScaleType = Enum.ScaleType.Slice
+ImageButton45.Name = "OffButton"
+ImageButton45.Parent = ScreenGui38
+ImageButton45.Position = UDim2.new(0, 120, 1, -84)
+ImageButton45.Size = UDim2.new(0, 86, 0, 46)
+ImageButton45.BackgroundColor = BrickColor.new("Institutional white")
+ImageButton45.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageButton45.BackgroundTransparency = 1
+ImageButton45.Image = "rbxassetid://356760715"
+ScreenGui46.Name = "ColorGui"
+ScreenGui46.Parent = LocalScript37
+Frame47.Name = "Colors"
+Frame47.Parent = ScreenGui46
+Frame47.Position = UDim2.new(0, -230, 0.5, -140)
+Frame47.BackgroundColor = BrickColor.new("Institutional white")
+Frame47.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame47.BackgroundTransparency = 1
+ImageButton48.Name = "1"
+ImageButton48.Parent = Frame47
+ImageButton48.Position = UDim2.new(0, 39, 0, 15)
+ImageButton48.Size = UDim2.new(0, 14, 0, 15)
+ImageButton48.Active = false
+ImageButton48.BackgroundColor = BrickColor.new("Really black")
+ImageButton48.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton48.BackgroundTransparency = 1
+ImageButton48.BorderColor = BrickColor.new("Really black")
+ImageButton48.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton48.ZIndex = 3
+ImageButton48.AutoButtonColor = false
+BrickColorValue49.Name = "PartColor"
+BrickColorValue49.Parent = ImageButton48
+BrickColorValue49.Value = BrickColor.new("Earth green")
+ImageButton50.Name = "127"
+ImageButton50.Parent = Frame47
+ImageButton50.Position = UDim2.new(0, 146, 0, 203)
+ImageButton50.Size = UDim2.new(0, 14, 0, 15)
+ImageButton50.Active = false
+ImageButton50.BackgroundColor = BrickColor.new("Really black")
+ImageButton50.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton50.BackgroundTransparency = 1
+ImageButton50.BorderColor = BrickColor.new("Really black")
+ImageButton50.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton50.ZIndex = 3
+ImageButton50.AutoButtonColor = false
+BrickColorValue51.Name = "PartColor"
+BrickColorValue51.Parent = ImageButton50
+BrickColorValue51.Value = BrickColor.new("Burnt Sienna")
+ImageButton52.Name = "126"
+ImageButton52.Parent = Frame47
+ImageButton52.Position = UDim2.new(0, 126, 0, 203)
+ImageButton52.Size = UDim2.new(0, 14, 0, 15)
+ImageButton52.Active = false
+ImageButton52.BackgroundColor = BrickColor.new("Really black")
+ImageButton52.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton52.BackgroundTransparency = 1
+ImageButton52.BorderColor = BrickColor.new("Really black")
+ImageButton52.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton52.ZIndex = 3
+ImageButton52.AutoButtonColor = false
+BrickColorValue53.Name = "PartColor"
+BrickColorValue53.Parent = ImageButton52
+BrickColorValue53.Value = BrickColor.new("Dark taupe")
+ImageButton54.Name = "125"
+ImageButton54.Parent = Frame47
+ImageButton54.Position = UDim2.new(0, 109, 0, 203)
+ImageButton54.Size = UDim2.new(0, 14, 0, 15)
+ImageButton54.Active = false
+ImageButton54.BackgroundColor = BrickColor.new("Really black")
+ImageButton54.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton54.BackgroundTransparency = 1
+ImageButton54.BorderColor = BrickColor.new("Really black")
+ImageButton54.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton54.ZIndex = 3
+ImageButton54.AutoButtonColor = false
+BrickColorValue55.Name = "PartColor"
+BrickColorValue55.Parent = ImageButton54
+BrickColorValue55.Value = BrickColor.new("Flint")
+ImageButton56.Name = "124"
+ImageButton56.Parent = Frame47
+ImageButton56.Position = UDim2.new(0, 93, 0, 203)
+ImageButton56.Size = UDim2.new(0, 14, 0, 15)
+ImageButton56.Active = false
+ImageButton56.BackgroundColor = BrickColor.new("Really black")
+ImageButton56.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton56.BackgroundTransparency = 1
+ImageButton56.BorderColor = BrickColor.new("Really black")
+ImageButton56.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton56.ZIndex = 3
+ImageButton56.AutoButtonColor = false
+BrickColorValue57.Name = "PartColor"
+BrickColorValue57.Parent = ImageButton56
+ImageLabel58.Parent = Frame47
+ImageLabel58.Position = UDim2.new(0, -16, 0, 14)
+ImageLabel58.Size = UDim2.new(0, 229, 0, 205)
+ImageLabel58.BackgroundColor = BrickColor.new("Institutional white")
+ImageLabel58.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel58.BackgroundTransparency = 1
+ImageLabel58.ZIndex = 2
+ImageLabel58.Image = "http://www.roblox.com/asset/?id=314652053"
+ImageLabel58.ImageTransparency = 0.25
+ImageButton59.Name = "2"
+ImageButton59.Parent = Frame47
+ImageButton59.Position = UDim2.new(0, 56, 0, 15)
+ImageButton59.Size = UDim2.new(0, 14, 0, 15)
+ImageButton59.Active = false
+ImageButton59.BackgroundColor = BrickColor.new("Really black")
+ImageButton59.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton59.BackgroundTransparency = 1
+ImageButton59.BorderColor = BrickColor.new("Really black")
+ImageButton59.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton59.ZIndex = 3
+ImageButton59.AutoButtonColor = false
+BrickColorValue60.Name = "PartColor"
+BrickColorValue60.Parent = ImageButton59
+BrickColorValue60.Value = BrickColor.new("Slime green")
+ImageButton61.Name = "3"
+ImageButton61.Parent = Frame47
+ImageButton61.Position = UDim2.new(0, 75, 0, 15)
+ImageButton61.Size = UDim2.new(0, 14, 0, 15)
+ImageButton61.Active = false
+ImageButton61.BackgroundColor = BrickColor.new("Really black")
+ImageButton61.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton61.BackgroundTransparency = 1
+ImageButton61.BorderColor = BrickColor.new("Really black")
+ImageButton61.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton61.ZIndex = 3
+ImageButton61.AutoButtonColor = false
+BrickColorValue62.Name = "PartColor"
+BrickColorValue62.Parent = ImageButton61
+BrickColorValue62.Value = BrickColor.new("Bright bluish green")
+ImageButton63.Name = "4"
+ImageButton63.Parent = Frame47
+ImageButton63.Position = UDim2.new(0, 93, 0, 15)
+ImageButton63.Size = UDim2.new(0, 14, 0, 15)
+ImageButton63.Active = false
+ImageButton63.BackgroundColor = BrickColor.new("Really black")
+ImageButton63.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton63.BackgroundTransparency = 1
+ImageButton63.BorderColor = BrickColor.new("Really black")
+ImageButton63.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton63.ZIndex = 3
+ImageButton63.AutoButtonColor = false
+BrickColorValue64.Name = "PartColor"
+BrickColorValue64.Parent = ImageButton63
+BrickColorValue64.Value = BrickColor.new("Black")
+ImageButton65.Name = "5"
+ImageButton65.Parent = Frame47
+ImageButton65.Position = UDim2.new(0, 109, 0, 15)
+ImageButton65.Size = UDim2.new(0, 14, 0, 15)
+ImageButton65.Active = false
+ImageButton65.BackgroundColor = BrickColor.new("Really black")
+ImageButton65.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton65.BackgroundTransparency = 1
+ImageButton65.BorderColor = BrickColor.new("Really black")
+ImageButton65.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton65.ZIndex = 3
+ImageButton65.AutoButtonColor = false
+BrickColorValue66.Name = "PartColor"
+BrickColorValue66.Parent = ImageButton65
+BrickColorValue66.Value = BrickColor.new("Deep blue")
+ImageButton67.Name = "6"
+ImageButton67.Parent = Frame47
+ImageButton67.Position = UDim2.new(0, 126, 0, 15)
+ImageButton67.Size = UDim2.new(0, 14, 0, 15)
+ImageButton67.Active = false
+ImageButton67.BackgroundColor = BrickColor.new("Really black")
+ImageButton67.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton67.BackgroundTransparency = 1
+ImageButton67.BorderColor = BrickColor.new("Really black")
+ImageButton67.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton67.ZIndex = 3
+ImageButton67.AutoButtonColor = false
+BrickColorValue68.Name = "PartColor"
+BrickColorValue68.Parent = ImageButton67
+BrickColorValue68.Value = BrickColor.new("Dark blue")
+ImageButton69.Name = "7"
+ImageButton69.Parent = Frame47
+ImageButton69.Position = UDim2.new(0, 146, 0, 15)
+ImageButton69.Size = UDim2.new(0, 14, 0, 15)
+ImageButton69.Active = false
+ImageButton69.BackgroundColor = BrickColor.new("Really black")
+ImageButton69.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton69.BackgroundTransparency = 1
+ImageButton69.BorderColor = BrickColor.new("Really black")
+ImageButton69.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton69.ZIndex = 3
+ImageButton69.AutoButtonColor = false
+BrickColorValue70.Name = "PartColor"
+BrickColorValue70.Parent = ImageButton69
+BrickColorValue70.Value = BrickColor.new("Navy blue")
+ImageButton71.Name = "8"
+ImageButton71.Parent = Frame47
+ImageButton71.Position = UDim2.new(0, 31, 0, 31)
+ImageButton71.Size = UDim2.new(0, 14, 0, 15)
+ImageButton71.Active = false
+ImageButton71.BackgroundColor = BrickColor.new("Really black")
+ImageButton71.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton71.BackgroundTransparency = 1
+ImageButton71.BorderColor = BrickColor.new("Really black")
+ImageButton71.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton71.ZIndex = 3
+ImageButton71.AutoButtonColor = false
+BrickColorValue72.Name = "PartColor"
+BrickColorValue72.Parent = ImageButton71
+BrickColorValue72.Value = BrickColor.new("Parsley green")
+ImageButton73.Name = "9"
+ImageButton73.Parent = Frame47
+ImageButton73.Position = UDim2.new(0, 48, 0, 31)
+ImageButton73.Size = UDim2.new(0, 14, 0, 15)
+ImageButton73.Active = false
+ImageButton73.BackgroundColor = BrickColor.new("Really black")
+ImageButton73.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton73.BackgroundTransparency = 1
+ImageButton73.BorderColor = BrickColor.new("Really black")
+ImageButton73.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton73.ZIndex = 3
+ImageButton73.AutoButtonColor = false
+BrickColorValue74.Name = "PartColor"
+BrickColorValue74.Parent = ImageButton73
+BrickColorValue74.Value = BrickColor.new("Dark green")
+ImageButton75.Name = "10"
+ImageButton75.Parent = Frame47
+ImageButton75.Position = UDim2.new(0, 66, 0, 31)
+ImageButton75.Size = UDim2.new(0, 14, 0, 15)
+ImageButton75.Active = false
+ImageButton75.BackgroundColor = BrickColor.new("Really black")
+ImageButton75.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton75.BackgroundTransparency = 1
+ImageButton75.BorderColor = BrickColor.new("Really black")
+ImageButton75.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton75.ZIndex = 3
+ImageButton75.AutoButtonColor = false
+BrickColorValue76.Name = "PartColor"
+BrickColorValue76.Parent = ImageButton75
+BrickColorValue76.Value = BrickColor.new("Teal")
+ImageButton77.Name = "11"
+ImageButton77.Parent = Frame47
+ImageButton77.Position = UDim2.new(0, 85, 0, 31)
+ImageButton77.Size = UDim2.new(0, 14, 0, 15)
+ImageButton77.Active = false
+ImageButton77.BackgroundColor = BrickColor.new("Really black")
+ImageButton77.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton77.BackgroundTransparency = 1
+ImageButton77.BorderColor = BrickColor.new("Really black")
+ImageButton77.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton77.ZIndex = 3
+ImageButton77.AutoButtonColor = false
+BrickColorValue78.Name = "PartColor"
+BrickColorValue78.Parent = ImageButton77
+BrickColorValue78.Value = BrickColor.new("Smoky grey")
+ImageButton79.Name = "12"
+ImageButton79.Parent = Frame47
+ImageButton79.Position = UDim2.new(0, 102, 0, 31)
+ImageButton79.Size = UDim2.new(0, 14, 0, 15)
+ImageButton79.Active = false
+ImageButton79.BackgroundColor = BrickColor.new("Really black")
+ImageButton79.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton79.BackgroundTransparency = 1
+ImageButton79.BorderColor = BrickColor.new("Really black")
+ImageButton79.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton79.ZIndex = 3
+ImageButton79.AutoButtonColor = false
+BrickColorValue80.Name = "PartColor"
+BrickColorValue80.Parent = ImageButton79
+BrickColorValue80.Value = BrickColor.new("Steel blue")
+ImageButton81.Name = "13"
+ImageButton81.Parent = Frame47
+ImageButton81.Position = UDim2.new(0, 118, 0, 31)
+ImageButton81.Size = UDim2.new(0, 14, 0, 15)
+ImageButton81.Active = false
+ImageButton81.BackgroundColor = BrickColor.new("Really black")
+ImageButton81.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton81.BackgroundTransparency = 1
+ImageButton81.BorderColor = BrickColor.new("Really black")
+ImageButton81.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton81.ZIndex = 3
+ImageButton81.AutoButtonColor = false
+BrickColorValue82.Name = "PartColor"
+BrickColorValue82.Parent = ImageButton81
+BrickColorValue82.Value = BrickColor.new("Storm blue")
+ImageButton83.Name = "14"
+ImageButton83.Parent = Frame47
+ImageButton83.Position = UDim2.new(0, 136, 0, 31)
+ImageButton83.Size = UDim2.new(0, 14, 0, 15)
+ImageButton83.Active = false
+ImageButton83.BackgroundColor = BrickColor.new("Really black")
+ImageButton83.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton83.BackgroundTransparency = 1
+ImageButton83.BorderColor = BrickColor.new("Really black")
+ImageButton83.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton83.ZIndex = 3
+ImageButton83.AutoButtonColor = false
+BrickColorValue84.Name = "PartColor"
+BrickColorValue84.Parent = ImageButton83
+BrickColorValue84.Value = BrickColor.new("Lapis")
+ImageButton85.Name = "15"
+ImageButton85.Parent = Frame47
+ImageButton85.Position = UDim2.new(0, 153, 0, 31)
+ImageButton85.Size = UDim2.new(0, 14, 0, 15)
+ImageButton85.Active = false
+ImageButton85.BackgroundColor = BrickColor.new("Really black")
+ImageButton85.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton85.BackgroundTransparency = 1
+ImageButton85.BorderColor = BrickColor.new("Really black")
+ImageButton85.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton85.ZIndex = 3
+ImageButton85.AutoButtonColor = false
+BrickColorValue86.Name = "PartColor"
+BrickColorValue86.Parent = ImageButton85
+BrickColorValue86.Value = BrickColor.new("Dark indigo")
+ImageButton87.Name = "16"
+ImageButton87.Parent = Frame47
+ImageButton87.Position = UDim2.new(0, 23, 0, 45)
+ImageButton87.Size = UDim2.new(0, 14, 0, 15)
+ImageButton87.Active = false
+ImageButton87.BackgroundColor = BrickColor.new("Really black")
+ImageButton87.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton87.BackgroundTransparency = 1
+ImageButton87.BorderColor = BrickColor.new("Really black")
+ImageButton87.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton87.ZIndex = 3
+ImageButton87.AutoButtonColor = false
+BrickColorValue88.Name = "PartColor"
+BrickColorValue88.Parent = ImageButton87
+BrickColorValue88.Value = BrickColor.new("Camo")
+ImageButton89.Name = "17"
+ImageButton89.Parent = Frame47
+ImageButton89.Position = UDim2.new(0, 39, 0, 45)
+ImageButton89.Size = UDim2.new(0, 14, 0, 15)
+ImageButton89.Active = false
+ImageButton89.BackgroundColor = BrickColor.new("Really black")
+ImageButton89.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton89.BackgroundTransparency = 1
+ImageButton89.BorderColor = BrickColor.new("Really black")
+ImageButton89.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton89.ZIndex = 3
+ImageButton89.AutoButtonColor = false
+BrickColorValue90.Name = "PartColor"
+BrickColorValue90.Parent = ImageButton89
+BrickColorValue90.Value = BrickColor.new("Sea green")
+ImageButton91.Name = "18"
+ImageButton91.Parent = Frame47
+ImageButton91.Position = UDim2.new(0, 56, 0, 45)
+ImageButton91.Size = UDim2.new(0, 14, 0, 15)
+ImageButton91.Active = false
+ImageButton91.BackgroundColor = BrickColor.new("Really black")
+ImageButton91.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton91.BackgroundTransparency = 1
+ImageButton91.BorderColor = BrickColor.new("Really black")
+ImageButton91.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton91.ZIndex = 3
+ImageButton91.AutoButtonColor = false
+BrickColorValue92.Name = "PartColor"
+BrickColorValue92.Parent = ImageButton91
+BrickColorValue92.Value = BrickColor.new("Shamrock")
+ImageButton93.Name = "19"
+ImageButton93.Parent = Frame47
+ImageButton93.Position = UDim2.new(0, 75, 0, 45)
+ImageButton93.Size = UDim2.new(0, 14, 0, 15)
+ImageButton93.Active = false
+ImageButton93.BackgroundColor = BrickColor.new("Really black")
+ImageButton93.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton93.BackgroundTransparency = 1
+ImageButton93.BorderColor = BrickColor.new("Really black")
+ImageButton93.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton93.ZIndex = 3
+ImageButton93.AutoButtonColor = false
+BrickColorValue94.Name = "PartColor"
+BrickColorValue94.Parent = ImageButton93
+BrickColorValue94.Value = BrickColor.new("Toothpaste")
+ImageButton95.Name = "20"
+ImageButton95.Parent = Frame47
+ImageButton95.Position = UDim2.new(0, 93, 0, 45)
+ImageButton95.Size = UDim2.new(0, 14, 0, 15)
+ImageButton95.Active = false
+ImageButton95.BackgroundColor = BrickColor.new("Really black")
+ImageButton95.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton95.BackgroundTransparency = 1
+ImageButton95.BorderColor = BrickColor.new("Really black")
+ImageButton95.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton95.ZIndex = 3
+ImageButton95.AutoButtonColor = false
+BrickColorValue96.Name = "PartColor"
+BrickColorValue96.Parent = ImageButton95
+BrickColorValue96.Value = BrickColor.new("Sand blue")
+ImageButton97.Name = "21"
+ImageButton97.Parent = Frame47
+ImageButton97.Position = UDim2.new(0, 109, 0, 45)
+ImageButton97.Size = UDim2.new(0, 14, 0, 15)
+ImageButton97.Active = false
+ImageButton97.BackgroundColor = BrickColor.new("Really black")
+ImageButton97.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton97.BackgroundTransparency = 1
+ImageButton97.BorderColor = BrickColor.new("Really black")
+ImageButton97.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton97.ZIndex = 3
+ImageButton97.AutoButtonColor = false
+BrickColorValue98.Name = "PartColor"
+BrickColorValue98.Parent = ImageButton97
+BrickColorValue98.Value = BrickColor.new("Ghost grey")
+ImageButton99.Name = "22"
+ImageButton99.Parent = Frame47
+ImageButton99.Position = UDim2.new(0, 126, 0, 45)
+ImageButton99.Size = UDim2.new(0, 14, 0, 15)
+ImageButton99.Active = false
+ImageButton99.BackgroundColor = BrickColor.new("Really black")
+ImageButton99.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton99.BackgroundTransparency = 1
+ImageButton99.BorderColor = BrickColor.new("Really black")
+ImageButton99.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton99.ZIndex = 3
+ImageButton99.AutoButtonColor = false
+BrickColorValue100.Name = "PartColor"
+BrickColorValue100.Parent = ImageButton99
+BrickColorValue100.Value = BrickColor.new("Bright blue")
+ImageButton101.Name = "23"
+ImageButton101.Parent = Frame47
+ImageButton101.Position = UDim2.new(0, 145, 0, 45)
+ImageButton101.Size = UDim2.new(0, 14, 0, 15)
+ImageButton101.Active = false
+ImageButton101.BackgroundColor = BrickColor.new("Really black")
+ImageButton101.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton101.BackgroundTransparency = 1
+ImageButton101.BorderColor = BrickColor.new("Really black")
+ImageButton101.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton101.ZIndex = 3
+ImageButton101.AutoButtonColor = false
+BrickColorValue102.Name = "PartColor"
+BrickColorValue102.Parent = ImageButton101
+BrickColorValue102.Value = BrickColor.new("Really blue")
+ImageButton103.Name = "24"
+ImageButton103.Parent = Frame47
+ImageButton103.Position = UDim2.new(0, 163, 0, 45)
+ImageButton103.Size = UDim2.new(0, 14, 0, 15)
+ImageButton103.Active = false
+ImageButton103.BackgroundColor = BrickColor.new("Really black")
+ImageButton103.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton103.BackgroundTransparency = 1
+ImageButton103.BorderColor = BrickColor.new("Really black")
+ImageButton103.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton103.ZIndex = 3
+ImageButton103.AutoButtonColor = false
+BrickColorValue104.Name = "PartColor"
+BrickColorValue104.Parent = ImageButton103
+BrickColorValue104.Value = BrickColor.new("Mulberry")
+ImageButton105.Name = "25"
+ImageButton105.Parent = Frame47
+ImageButton105.Position = UDim2.new(0, 13, 0, 62)
+ImageButton105.Size = UDim2.new(0, 14, 0, 15)
+ImageButton105.Active = false
+ImageButton105.BackgroundColor = BrickColor.new("Really black")
+ImageButton105.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton105.BackgroundTransparency = 1
+ImageButton105.BorderColor = BrickColor.new("Really black")
+ImageButton105.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton105.ZIndex = 3
+ImageButton105.AutoButtonColor = false
+BrickColorValue106.Name = "PartColor"
+BrickColorValue106.Parent = ImageButton105
+BrickColorValue106.Value = BrickColor.new("Forest green")
+ImageButton107.Name = "26"
+ImageButton107.Parent = Frame47
+ImageButton107.Position = UDim2.new(0, 31, 0, 62)
+ImageButton107.Size = UDim2.new(0, 14, 0, 15)
+ImageButton107.Active = false
+ImageButton107.BackgroundColor = BrickColor.new("Really black")
+ImageButton107.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton107.BackgroundTransparency = 1
+ImageButton107.BorderColor = BrickColor.new("Really black")
+ImageButton107.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton107.ZIndex = 3
+ImageButton107.AutoButtonColor = false
+BrickColorValue108.Name = "PartColor"
+BrickColorValue108.Parent = ImageButton107
+BrickColorValue108.Value = BrickColor.new("Bright green")
+ImageButton109.Name = "27"
+ImageButton109.Parent = Frame47
+ImageButton109.Position = UDim2.new(0, 48, 0, 62)
+ImageButton109.Size = UDim2.new(0, 14, 0, 15)
+ImageButton109.Active = false
+ImageButton109.BackgroundColor = BrickColor.new("Really black")
+ImageButton109.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton109.BackgroundTransparency = 1
+ImageButton109.BorderColor = BrickColor.new("Really black")
+ImageButton109.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton109.ZIndex = 3
+ImageButton109.AutoButtonColor = false
+BrickColorValue110.Name = "PartColor"
+BrickColorValue110.Parent = ImageButton109
+BrickColorValue110.Value = BrickColor.new("Grime")
+ImageButton111.Name = "28"
+ImageButton111.Parent = Frame47
+ImageButton111.Position = UDim2.new(0, 65, 0, 62)
+ImageButton111.Size = UDim2.new(0, 14, 0, 15)
+ImageButton111.Active = false
+ImageButton111.BackgroundColor = BrickColor.new("Really black")
+ImageButton111.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton111.BackgroundTransparency = 1
+ImageButton111.BorderColor = BrickColor.new("Really black")
+ImageButton111.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton111.ZIndex = 3
+ImageButton111.AutoButtonColor = false
+BrickColorValue112.Name = "PartColor"
+BrickColorValue112.Parent = ImageButton111
+BrickColorValue112.Value = BrickColor.new("Lime green")
+ImageButton113.Name = "29"
+ImageButton113.Parent = Frame47
+ImageButton113.Position = UDim2.new(0, 85, 0, 62)
+ImageButton113.Size = UDim2.new(0, 14, 0, 15)
+ImageButton113.Active = false
+ImageButton113.BackgroundColor = BrickColor.new("Really black")
+ImageButton113.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton113.BackgroundTransparency = 1
+ImageButton113.BorderColor = BrickColor.new("Really black")
+ImageButton113.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton113.ZIndex = 3
+ImageButton113.AutoButtonColor = false
+BrickColorValue114.Name = "PartColor"
+BrickColorValue114.Parent = ImageButton113
+BrickColorValue114.Value = BrickColor.new("Pastel blue-green")
+ImageButton115.Name = "30"
+ImageButton115.Parent = Frame47
+ImageButton115.Position = UDim2.new(0, 102, 0, 62)
+ImageButton115.Size = UDim2.new(0, 14, 0, 15)
+ImageButton115.Active = false
+ImageButton115.BackgroundColor = BrickColor.new("Really black")
+ImageButton115.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton115.BackgroundTransparency = 1
+ImageButton115.BorderColor = BrickColor.new("Really black")
+ImageButton115.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton115.ZIndex = 3
+ImageButton115.AutoButtonColor = false
+BrickColorValue116.Name = "PartColor"
+BrickColorValue116.Parent = ImageButton115
+BrickColorValue116.Value = BrickColor.new("Fossil")
+ImageButton117.Name = "31"
+ImageButton117.Parent = Frame47
+ImageButton117.Position = UDim2.new(0, 118, 0, 62)
+ImageButton117.Size = UDim2.new(0, 14, 0, 15)
+ImageButton117.Active = false
+ImageButton117.BackgroundColor = BrickColor.new("Really black")
+ImageButton117.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton117.BackgroundTransparency = 1
+ImageButton117.BorderColor = BrickColor.new("Really black")
+ImageButton117.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton117.ZIndex = 3
+ImageButton117.AutoButtonColor = false
+BrickColorValue118.Name = "PartColor"
+BrickColorValue118.Parent = ImageButton117
+BrickColorValue118.Value = BrickColor.new("Electric blue")
+ImageButton119.Name = "32"
+ImageButton119.Parent = Frame47
+ImageButton119.Position = UDim2.new(0, 136, 0, 62)
+ImageButton119.Size = UDim2.new(0, 14, 0, 15)
+ImageButton119.Active = false
+ImageButton119.BackgroundColor = BrickColor.new("Really black")
+ImageButton119.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton119.BackgroundTransparency = 1
+ImageButton119.BorderColor = BrickColor.new("Really black")
+ImageButton119.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton119.ZIndex = 3
+ImageButton119.AutoButtonColor = false
+BrickColorValue120.Name = "PartColor"
+BrickColorValue120.Parent = ImageButton119
+BrickColorValue120.Value = BrickColor.new("Lavender")
+ImageButton121.Name = "33"
+ImageButton121.Parent = Frame47
+ImageButton121.Position = UDim2.new(0, 153, 0, 62)
+ImageButton121.Size = UDim2.new(0, 14, 0, 15)
+ImageButton121.Active = false
+ImageButton121.BackgroundColor = BrickColor.new("Really black")
+ImageButton121.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton121.BackgroundTransparency = 1
+ImageButton121.BorderColor = BrickColor.new("Really black")
+ImageButton121.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton121.ZIndex = 3
+ImageButton121.AutoButtonColor = false
+BrickColorValue122.Name = "PartColor"
+BrickColorValue122.Parent = ImageButton121
+BrickColorValue122.Value = BrickColor.new("Royal purple")
+ImageButton123.Name = "34"
+ImageButton123.Parent = Frame47
+ImageButton123.Position = UDim2.new(0, 172, 0, 62)
+ImageButton123.Size = UDim2.new(0, 14, 0, 15)
+ImageButton123.Active = false
+ImageButton123.BackgroundColor = BrickColor.new("Really black")
+ImageButton123.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton123.BackgroundTransparency = 1
+ImageButton123.BorderColor = BrickColor.new("Really black")
+ImageButton123.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton123.ZIndex = 3
+ImageButton123.AutoButtonColor = false
+BrickColorValue124.Name = "PartColor"
+BrickColorValue124.Parent = ImageButton123
+BrickColorValue124.Value = BrickColor.new("Eggplant")
+ImageButton125.Name = "35"
+ImageButton125.Parent = Frame47
+ImageButton125.Position = UDim2.new(0, 5, 0, 77)
+ImageButton125.Size = UDim2.new(0, 14, 0, 15)
+ImageButton125.Active = false
+ImageButton125.BackgroundColor = BrickColor.new("Really black")
+ImageButton125.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton125.BackgroundTransparency = 1
+ImageButton125.BorderColor = BrickColor.new("Really black")
+ImageButton125.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton125.ZIndex = 3
+ImageButton125.AutoButtonColor = false
+BrickColorValue126.Name = "PartColor"
+BrickColorValue126.Parent = ImageButton125
+BrickColorValue126.Value = BrickColor.new("Sand green")
+ImageButton127.Name = "36"
+ImageButton127.Parent = Frame47
+ImageButton127.Position = UDim2.new(0, 21, 0, 77)
+ImageButton127.Size = UDim2.new(0, 14, 0, 15)
+ImageButton127.Active = false
+ImageButton127.BackgroundColor = BrickColor.new("Really black")
+ImageButton127.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton127.BackgroundTransparency = 1
+ImageButton127.BorderColor = BrickColor.new("Really black")
+ImageButton127.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton127.ZIndex = 3
+ImageButton127.AutoButtonColor = false
+BrickColorValue128.Name = "PartColor"
+BrickColorValue128.Parent = ImageButton127
+BrickColorValue128.Value = BrickColor.new("Moss")
+ImageButton129.Name = "37"
+ImageButton129.Parent = Frame47
+ImageButton129.Position = UDim2.new(0, 39, 0, 77)
+ImageButton129.Size = UDim2.new(0, 14, 0, 15)
+ImageButton129.Active = false
+ImageButton129.BackgroundColor = BrickColor.new("Really black")
+ImageButton129.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton129.BackgroundTransparency = 1
+ImageButton129.BorderColor = BrickColor.new("Really black")
+ImageButton129.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton129.ZIndex = 3
+ImageButton129.AutoButtonColor = false
+BrickColorValue130.Name = "PartColor"
+BrickColorValue130.Parent = ImageButton129
+BrickColorValue130.Value = BrickColor.new("Artichoke")
+ImageButton131.Name = "38"
+ImageButton131.Parent = Frame47
+ImageButton131.Position = UDim2.new(0, 56, 0, 77)
+ImageButton131.Size = UDim2.new(0, 14, 0, 15)
+ImageButton131.Active = false
+ImageButton131.BackgroundColor = BrickColor.new("Really black")
+ImageButton131.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton131.BackgroundTransparency = 1
+ImageButton131.BorderColor = BrickColor.new("Really black")
+ImageButton131.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton131.ZIndex = 3
+ImageButton131.AutoButtonColor = false
+BrickColorValue132.Name = "PartColor"
+BrickColorValue132.Parent = ImageButton131
+BrickColorValue132.Value = BrickColor.new("Sage green")
+ImageButton133.Name = "39"
+ImageButton133.Parent = Frame47
+ImageButton133.Position = UDim2.new(0, 75, 0, 77)
+ImageButton133.Size = UDim2.new(0, 14, 0, 15)
+ImageButton133.Active = false
+ImageButton133.BackgroundColor = BrickColor.new("Really black")
+ImageButton133.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton133.BackgroundTransparency = 1
+ImageButton133.BorderColor = BrickColor.new("Really black")
+ImageButton133.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton133.ZIndex = 3
+ImageButton133.AutoButtonColor = false
+BrickColorValue134.Name = "PartColor"
+BrickColorValue134.Parent = ImageButton133
+BrickColorValue134.Value = BrickColor.new("Pastel light blue")
+ImageButton135.Name = "40"
+ImageButton135.Parent = Frame47
+ImageButton135.Position = UDim2.new(0, 93, 0, 77)
+ImageButton135.Size = UDim2.new(0, 14, 0, 15)
+ImageButton135.Active = false
+ImageButton135.BackgroundColor = BrickColor.new("Really black")
+ImageButton135.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton135.BackgroundTransparency = 1
+ImageButton135.BorderColor = BrickColor.new("Really black")
+ImageButton135.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton135.ZIndex = 3
+ImageButton135.AutoButtonColor = false
+BrickColorValue136.Name = "PartColor"
+BrickColorValue136.Parent = ImageButton135
+BrickColorValue136.Value = BrickColor.new("Cadet blue")
+ImageButton137.Name = "41"
+ImageButton137.Parent = Frame47
+ImageButton137.Position = UDim2.new(0, 109, 0, 77)
+ImageButton137.Size = UDim2.new(0, 14, 0, 15)
+ImageButton137.Active = false
+ImageButton137.BackgroundColor = BrickColor.new("Really black")
+ImageButton137.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton137.BackgroundTransparency = 1
+ImageButton137.BorderColor = BrickColor.new("Really black")
+ImageButton137.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton137.ZIndex = 3
+ImageButton137.AutoButtonColor = false
+BrickColorValue138.Name = "PartColor"
+BrickColorValue138.Parent = ImageButton137
+BrickColorValue138.Value = BrickColor.new("Cyan")
+ImageButton139.Name = "42"
+ImageButton139.Parent = Frame47
+ImageButton139.Position = UDim2.new(0, 126, 0, 77)
+ImageButton139.Size = UDim2.new(0, 14, 0, 15)
+ImageButton139.Active = false
+ImageButton139.BackgroundColor = BrickColor.new("Really black")
+ImageButton139.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton139.BackgroundTransparency = 1
+ImageButton139.BorderColor = BrickColor.new("Really black")
+ImageButton139.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton139.ZIndex = 3
+ImageButton139.AutoButtonColor = false
+BrickColorValue140.Name = "PartColor"
+BrickColorValue140.Parent = ImageButton139
+BrickColorValue140.Value = BrickColor.new("Alder")
+ImageButton141.Name = "43"
+ImageButton141.Parent = Frame47
+ImageButton141.Position = UDim2.new(0, 145, 0, 77)
+ImageButton141.Size = UDim2.new(0, 14, 0, 15)
+ImageButton141.Active = false
+ImageButton141.BackgroundColor = BrickColor.new("Really black")
+ImageButton141.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton141.BackgroundTransparency = 1
+ImageButton141.BorderColor = BrickColor.new("Really black")
+ImageButton141.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton141.ZIndex = 3
+ImageButton141.AutoButtonColor = false
+BrickColorValue142.Name = "PartColor"
+BrickColorValue142.Parent = ImageButton141
+BrickColorValue142.Value = BrickColor.new("Lilac")
+ImageButton143.Name = "44"
+ImageButton143.Parent = Frame47
+ImageButton143.Position = UDim2.new(0, 163, 0, 77)
+ImageButton143.Size = UDim2.new(0, 14, 0, 15)
+ImageButton143.Active = false
+ImageButton143.BackgroundColor = BrickColor.new("Really black")
+ImageButton143.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton143.BackgroundTransparency = 1
+ImageButton143.BorderColor = BrickColor.new("Really black")
+ImageButton143.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton143.ZIndex = 3
+ImageButton143.AutoButtonColor = false
+BrickColorValue144.Name = "PartColor"
+BrickColorValue144.Parent = ImageButton143
+BrickColorValue144.Value = BrickColor.new("Plum")
+ImageButton145.Name = "45"
+ImageButton145.Parent = Frame47
+ImageButton145.Position = UDim2.new(0, 180, 0, 77)
+ImageButton145.Size = UDim2.new(0, 14, 0, 15)
+ImageButton145.Active = false
+ImageButton145.BackgroundColor = BrickColor.new("Really black")
+ImageButton145.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton145.BackgroundTransparency = 1
+ImageButton145.BorderColor = BrickColor.new("Really black")
+ImageButton145.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton145.ZIndex = 3
+ImageButton145.AutoButtonColor = false
+BrickColorValue146.Name = "PartColor"
+BrickColorValue146.Parent = ImageButton145
+BrickColorValue146.Value = BrickColor.new("Bright violet")
+ImageButton147.Name = "46"
+ImageButton147.Parent = Frame47
+ImageButton147.Position = UDim2.new(0, -5, 0, 93)
+ImageButton147.Size = UDim2.new(0, 14, 0, 15)
+ImageButton147.Active = false
+ImageButton147.BackgroundColor = BrickColor.new("Really black")
+ImageButton147.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton147.BackgroundTransparency = 1
+ImageButton147.BorderColor = BrickColor.new("Really black")
+ImageButton147.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton147.ZIndex = 3
+ImageButton147.AutoButtonColor = false
+BrickColorValue148.Name = "PartColor"
+BrickColorValue148.Parent = ImageButton147
+BrickColorValue148.Value = BrickColor.new("Olive")
+ImageButton149.Name = "47"
+ImageButton149.Parent = Frame47
+ImageButton149.Position = UDim2.new(0, 14, 0, 93)
+ImageButton149.Size = UDim2.new(0, 14, 0, 15)
+ImageButton149.Active = false
+ImageButton149.BackgroundColor = BrickColor.new("Really black")
+ImageButton149.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton149.BackgroundTransparency = 1
+ImageButton149.BorderColor = BrickColor.new("Really black")
+ImageButton149.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton149.ZIndex = 3
+ImageButton149.AutoButtonColor = false
+BrickColorValue150.Name = "PartColor"
+BrickColorValue150.Parent = ImageButton149
+BrickColorValue150.Value = BrickColor.new("Br. yellowish green")
+ImageButton151.Name = "48"
+ImageButton151.Parent = Frame47
+ImageButton151.Position = UDim2.new(0, 31, 0, 93)
+ImageButton151.Size = UDim2.new(0, 14, 0, 15)
+ImageButton151.Active = false
+ImageButton151.BackgroundColor = BrickColor.new("Really black")
+ImageButton151.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton151.BackgroundTransparency = 1
+ImageButton151.BorderColor = BrickColor.new("Really black")
+ImageButton151.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton151.ZIndex = 3
+ImageButton151.AutoButtonColor = false
+BrickColorValue152.Name = "PartColor"
+BrickColorValue152.Parent = ImageButton151
+BrickColorValue152.Value = BrickColor.new("Olivine")
+ImageButton153.Name = "49"
+ImageButton153.Parent = Frame47
+ImageButton153.Position = UDim2.new(0, 48, 0, 93)
+ImageButton153.Size = UDim2.new(0, 14, 0, 15)
+ImageButton153.Active = false
+ImageButton153.BackgroundColor = BrickColor.new("Really black")
+ImageButton153.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton153.BackgroundTransparency = 1
+ImageButton153.BorderColor = BrickColor.new("Really black")
+ImageButton153.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton153.ZIndex = 3
+ImageButton153.AutoButtonColor = false
+BrickColorValue154.Name = "PartColor"
+BrickColorValue154.Parent = ImageButton153
+BrickColorValue154.Value = BrickColor.new("Laurel green")
+ImageButton155.Name = "50"
+ImageButton155.Parent = Frame47
+ImageButton155.Position = UDim2.new(0, 65, 0, 93)
+ImageButton155.Size = UDim2.new(0, 14, 0, 15)
+ImageButton155.Active = false
+ImageButton155.BackgroundColor = BrickColor.new("Really black")
+ImageButton155.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton155.BackgroundTransparency = 1
+ImageButton155.BorderColor = BrickColor.new("Really black")
+ImageButton155.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton155.ZIndex = 3
+ImageButton155.AutoButtonColor = false
+BrickColorValue156.Name = "PartColor"
+BrickColorValue156.Parent = ImageButton155
+BrickColorValue156.Value = BrickColor.new("Quill grey")
+ImageButton157.Name = "51"
+ImageButton157.Parent = Frame47
+ImageButton157.Position = UDim2.new(0, 85, 0, 93)
+ImageButton157.Size = UDim2.new(0, 14, 0, 15)
+ImageButton157.Active = false
+ImageButton157.BackgroundColor = BrickColor.new("Really black")
+ImageButton157.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton157.BackgroundTransparency = 1
+ImageButton157.BorderColor = BrickColor.new("Really black")
+ImageButton157.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton157.ZIndex = 3
+ImageButton157.AutoButtonColor = false
+BrickColorValue158.Name = "PartColor"
+BrickColorValue158.Parent = ImageButton157
+BrickColorValue158.Value = BrickColor.new("Ghost grey")
+ImageButton159.Name = "52"
+ImageButton159.Parent = Frame47
+ImageButton159.Position = UDim2.new(0, 101, 0, 93)
+ImageButton159.Size = UDim2.new(0, 14, 0, 15)
+ImageButton159.Active = false
+ImageButton159.BackgroundColor = BrickColor.new("Really black")
+ImageButton159.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton159.BackgroundTransparency = 1
+ImageButton159.BorderColor = BrickColor.new("Really black")
+ImageButton159.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton159.ZIndex = 3
+ImageButton159.AutoButtonColor = false
+BrickColorValue160.Name = "PartColor"
+BrickColorValue160.Parent = ImageButton159
+BrickColorValue160.Value = BrickColor.new("Pastel Blue")
+ImageButton161.Name = "53"
+ImageButton161.Parent = Frame47
+ImageButton161.Position = UDim2.new(0, 118, 0, 93)
+ImageButton161.Size = UDim2.new(0, 14, 0, 15)
+ImageButton161.Active = false
+ImageButton161.BackgroundColor = BrickColor.new("Really black")
+ImageButton161.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton161.BackgroundTransparency = 1
+ImageButton161.BorderColor = BrickColor.new("Really black")
+ImageButton161.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton161.ZIndex = 3
+ImageButton161.AutoButtonColor = false
+BrickColorValue162.Name = "PartColor"
+BrickColorValue162.Parent = ImageButton161
+BrickColorValue162.Value = BrickColor.new("Pastel violet")
+ImageButton163.Name = "54"
+ImageButton163.Parent = Frame47
+ImageButton163.Position = UDim2.new(0, 136, 0, 93)
+ImageButton163.Size = UDim2.new(0, 14, 0, 15)
+ImageButton163.Active = false
+ImageButton163.BackgroundColor = BrickColor.new("Really black")
+ImageButton163.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton163.BackgroundTransparency = 1
+ImageButton163.BorderColor = BrickColor.new("Really black")
+ImageButton163.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton163.ZIndex = 3
+ImageButton163.AutoButtonColor = false
+BrickColorValue164.Name = "PartColor"
+BrickColorValue164.Parent = ImageButton163
+BrickColorValue164.Value = BrickColor.new("Pink")
+ImageButton165.Name = "55"
+ImageButton165.Parent = Frame47
+ImageButton165.Position = UDim2.new(0, 153, 0, 93)
+ImageButton165.Size = UDim2.new(0, 14, 0, 15)
+ImageButton165.Active = false
+ImageButton165.BackgroundColor = BrickColor.new("Really black")
+ImageButton165.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton165.BackgroundTransparency = 1
+ImageButton165.BorderColor = BrickColor.new("Really black")
+ImageButton165.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton165.ZIndex = 3
+ImageButton165.AutoButtonColor = false
+BrickColorValue166.Name = "PartColor"
+BrickColorValue166.Parent = ImageButton165
+BrickColorValue166.Value = BrickColor.new("Hot pink")
+ImageButton167.Name = "56"
+ImageButton167.Parent = Frame47
+ImageButton167.Position = UDim2.new(0, 172, 0, 93)
+ImageButton167.Size = UDim2.new(0, 14, 0, 15)
+ImageButton167.Active = false
+ImageButton167.BackgroundColor = BrickColor.new("Really black")
+ImageButton167.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton167.BackgroundTransparency = 1
+ImageButton167.BorderColor = BrickColor.new("Really black")
+ImageButton167.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton167.ZIndex = 3
+ImageButton167.AutoButtonColor = false
+BrickColorValue168.Name = "PartColor"
+BrickColorValue168.Parent = ImageButton167
+BrickColorValue168.Value = BrickColor.new("Magenta")
+ImageButton169.Name = "57"
+ImageButton169.Parent = Frame47
+ImageButton169.Position = UDim2.new(0, 192, 0, 93)
+ImageButton169.Size = UDim2.new(0, 14, 0, 15)
+ImageButton169.Active = false
+ImageButton169.BackgroundColor = BrickColor.new("Really black")
+ImageButton169.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton169.BackgroundTransparency = 1
+ImageButton169.BorderColor = BrickColor.new("Really black")
+ImageButton169.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton169.ZIndex = 3
+ImageButton169.AutoButtonColor = false
+BrickColorValue170.Name = "PartColor"
+BrickColorValue170.Parent = ImageButton169
+BrickColorValue170.Value = BrickColor.new("Crimson")
+ImageButton171.Name = "58"
+ImageButton171.Parent = Frame47
+ImageButton171.Position = UDim2.new(0, -15, 0, 109)
+ImageButton171.Size = UDim2.new(0, 14, 0, 15)
+ImageButton171.Active = false
+ImageButton171.BackgroundColor = BrickColor.new("Really black")
+ImageButton171.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton171.BackgroundTransparency = 1
+ImageButton171.BorderColor = BrickColor.new("Really black")
+ImageButton171.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton171.ZIndex = 3
+ImageButton171.AutoButtonColor = false
+BrickColorValue172.Name = "PartColor"
+BrickColorValue172.Parent = ImageButton171
+BrickColorValue172.Value = BrickColor.new("Deep orange")
+ImageButton173.Name = "59"
+ImageButton173.Parent = Frame47
+ImageButton173.Position = UDim2.new(0, 5, 0, 109)
+ImageButton173.Size = UDim2.new(0, 14, 0, 15)
+ImageButton173.Active = false
+ImageButton173.BackgroundColor = BrickColor.new("Really black")
+ImageButton173.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton173.BackgroundTransparency = 1
+ImageButton173.BorderColor = BrickColor.new("Really black")
+ImageButton173.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton173.ZIndex = 3
+ImageButton173.AutoButtonColor = false
+BrickColorValue174.Name = "PartColor"
+BrickColorValue174.Parent = ImageButton173
+BrickColorValue174.Value = BrickColor.new("New Yeller")
+ImageButton175.Name = "60"
+ImageButton175.Parent = Frame47
+ImageButton175.Position = UDim2.new(0, 21, 0, 109)
+ImageButton175.Size = UDim2.new(0, 14, 0, 15)
+ImageButton175.Active = false
+ImageButton175.BackgroundColor = BrickColor.new("Really black")
+ImageButton175.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton175.BackgroundTransparency = 1
+ImageButton175.BorderColor = BrickColor.new("Really black")
+ImageButton175.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton175.ZIndex = 3
+ImageButton175.AutoButtonColor = false
+BrickColorValue176.Name = "PartColor"
+BrickColorValue176.Parent = ImageButton175
+BrickColorValue176.Value = BrickColor.new("Medium green")
+ImageButton177.Name = "61"
+ImageButton177.Parent = Frame47
+ImageButton177.Position = UDim2.new(0, 39, 0, 109)
+ImageButton177.Size = UDim2.new(0, 14, 0, 15)
+ImageButton177.Active = false
+ImageButton177.BackgroundColor = BrickColor.new("Really black")
+ImageButton177.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton177.BackgroundTransparency = 1
+ImageButton177.BorderColor = BrickColor.new("Really black")
+ImageButton177.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton177.ZIndex = 3
+ImageButton177.AutoButtonColor = false
+BrickColorValue178.Name = "PartColor"
+BrickColorValue178.Parent = ImageButton177
+BrickColorValue178.Value = BrickColor.new("Mint")
+ImageButton179.Name = "62"
+ImageButton179.Parent = Frame47
+ImageButton179.Position = UDim2.new(0, 56, 0, 109)
+ImageButton179.Size = UDim2.new(0, 14, 0, 15)
+ImageButton179.Active = false
+ImageButton179.BackgroundColor = BrickColor.new("Really black")
+ImageButton179.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton179.BackgroundTransparency = 1
+ImageButton179.BorderColor = BrickColor.new("Really black")
+ImageButton179.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton179.ZIndex = 3
+ImageButton179.AutoButtonColor = false
+BrickColorValue180.Name = "PartColor"
+BrickColorValue180.Parent = ImageButton179
+BrickColorValue180.Value = BrickColor.new("Pastel green")
+ImageButton181.Name = "63"
+ImageButton181.Parent = Frame47
+ImageButton181.Position = UDim2.new(0, 75, 0, 109)
+ImageButton181.Size = UDim2.new(0, 14, 0, 15)
+ImageButton181.Active = false
+ImageButton181.BackgroundColor = BrickColor.new("Really black")
+ImageButton181.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton181.BackgroundTransparency = 1
+ImageButton181.BorderColor = BrickColor.new("Really black")
+ImageButton181.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton181.ZIndex = 3
+ImageButton181.AutoButtonColor = false
+BrickColorValue182.Name = "PartColor"
+BrickColorValue182.Parent = ImageButton181
+BrickColorValue182.Value = BrickColor.new("Light stone grey")
+ImageButton183.Name = "64"
+ImageButton183.Parent = Frame47
+ImageButton183.Position = UDim2.new(0, 93, 0, 109)
+ImageButton183.Size = UDim2.new(0, 14, 0, 15)
+ImageButton183.Active = false
+ImageButton183.BackgroundColor = BrickColor.new("Really black")
+ImageButton183.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton183.BackgroundTransparency = 1
+ImageButton183.BorderColor = BrickColor.new("Really black")
+ImageButton183.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton183.ZIndex = 3
+ImageButton183.AutoButtonColor = false
+BrickColorValue184.Name = "PartColor"
+BrickColorValue184.Parent = ImageButton183
+BrickColorValue184.Value = BrickColor.new("Light blue")
+ImageButton185.Name = "65"
+ImageButton185.Parent = Frame47
+ImageButton185.Position = UDim2.new(0, 109, 0, 109)
+ImageButton185.Size = UDim2.new(0, 14, 0, 15)
+ImageButton185.Active = false
+ImageButton185.BackgroundColor = BrickColor.new("Really black")
+ImageButton185.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton185.BackgroundTransparency = 1
+ImageButton185.BorderColor = BrickColor.new("Really black")
+ImageButton185.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton185.ZIndex = 3
+ImageButton185.AutoButtonColor = false
+BrickColorValue186.Name = "PartColor"
+BrickColorValue186.Parent = ImageButton185
+BrickColorValue186.Value = BrickColor.new("Baby blue")
+ImageButton187.Name = "66"
+ImageButton187.Parent = Frame47
+ImageButton187.Position = UDim2.new(0, 126, 0, 109)
+ImageButton187.Size = UDim2.new(0, 14, 0, 15)
+ImageButton187.Active = false
+ImageButton187.BackgroundColor = BrickColor.new("Really black")
+ImageButton187.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton187.BackgroundTransparency = 1
+ImageButton187.BorderColor = BrickColor.new("Really black")
+ImageButton187.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton187.ZIndex = 3
+ImageButton187.AutoButtonColor = false
+BrickColorValue188.Name = "PartColor"
+BrickColorValue188.Parent = ImageButton187
+BrickColorValue188.Value = BrickColor.new("Carnation pink")
+ImageButton189.Name = "67"
+ImageButton189.Parent = Frame47
+ImageButton189.Position = UDim2.new(0, 146, 0, 109)
+ImageButton189.Size = UDim2.new(0, 14, 0, 15)
+ImageButton189.Active = false
+ImageButton189.BackgroundColor = BrickColor.new("Really black")
+ImageButton189.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton189.BackgroundTransparency = 1
+ImageButton189.BorderColor = BrickColor.new("Really black")
+ImageButton189.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton189.ZIndex = 3
+ImageButton189.AutoButtonColor = false
+BrickColorValue190.Name = "PartColor"
+BrickColorValue190.Parent = ImageButton189
+BrickColorValue190.Value = BrickColor.new("Persimmon")
+ImageButton191.Name = "68"
+ImageButton191.Parent = Frame47
+ImageButton191.Position = UDim2.new(0, 164, 0, 109)
+ImageButton191.Size = UDim2.new(0, 14, 0, 15)
+ImageButton191.Active = false
+ImageButton191.BackgroundColor = BrickColor.new("Really black")
+ImageButton191.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton191.BackgroundTransparency = 1
+ImageButton191.BorderColor = BrickColor.new("Really black")
+ImageButton191.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton191.ZIndex = 3
+ImageButton191.AutoButtonColor = false
+BrickColorValue192.Name = "PartColor"
+BrickColorValue192.Parent = ImageButton191
+BrickColorValue192.Value = BrickColor.new("Really red")
+ImageButton193.Name = "69"
+ImageButton193.Parent = Frame47
+ImageButton193.Position = UDim2.new(0, 180, 0, 109)
+ImageButton193.Size = UDim2.new(0, 14, 0, 15)
+ImageButton193.Active = false
+ImageButton193.BackgroundColor = BrickColor.new("Really black")
+ImageButton193.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton193.BackgroundTransparency = 1
+ImageButton193.BorderColor = BrickColor.new("Really black")
+ImageButton193.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton193.ZIndex = 3
+ImageButton193.AutoButtonColor = false
+BrickColorValue194.Name = "PartColor"
+BrickColorValue194.Parent = ImageButton193
+BrickColorValue194.Value = BrickColor.new("Bright red")
+ImageButton195.Name = "70"
+ImageButton195.Parent = Frame47
+ImageButton195.Position = UDim2.new(0, 198, 0, 109)
+ImageButton195.Size = UDim2.new(0, 14, 0, 15)
+ImageButton195.Active = false
+ImageButton195.BackgroundColor = BrickColor.new("Really black")
+ImageButton195.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton195.BackgroundTransparency = 1
+ImageButton195.BorderColor = BrickColor.new("Really black")
+ImageButton195.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton195.ZIndex = 3
+ImageButton195.AutoButtonColor = false
+BrickColorValue196.Name = "PartColor"
+BrickColorValue196.Parent = ImageButton195
+BrickColorValue196.Value = BrickColor.new("Maroon")
+ImageButton197.Name = "71"
+ImageButton197.Parent = Frame47
+ImageButton197.Position = UDim2.new(0, -5, 0, 124)
+ImageButton197.Size = UDim2.new(0, 14, 0, 15)
+ImageButton197.Active = false
+ImageButton197.BackgroundColor = BrickColor.new("Really black")
+ImageButton197.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton197.BackgroundTransparency = 1
+ImageButton197.BorderColor = BrickColor.new("Really black")
+ImageButton197.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton197.ZIndex = 3
+ImageButton197.AutoButtonColor = false
+BrickColorValue198.Name = "PartColor"
+BrickColorValue198.Parent = ImageButton197
+BrickColorValue198.Value = BrickColor.new("Gold")
+ImageButton199.Name = "72"
+ImageButton199.Parent = Frame47
+ImageButton199.Position = UDim2.new(0, 13, 0, 124)
+ImageButton199.Size = UDim2.new(0, 14, 0, 15)
+ImageButton199.Active = false
+ImageButton199.BackgroundColor = BrickColor.new("Really black")
+ImageButton199.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton199.BackgroundTransparency = 1
+ImageButton199.BorderColor = BrickColor.new("Really black")
+ImageButton199.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton199.ZIndex = 3
+ImageButton199.AutoButtonColor = false
+BrickColorValue200.Name = "PartColor"
+BrickColorValue200.Parent = ImageButton199
+BrickColorValue200.Value = BrickColor.new("Bright yellow")
+ImageButton201.Name = "73"
+ImageButton201.Parent = Frame47
+ImageButton201.Position = UDim2.new(0, 29, 0, 124)
+ImageButton201.Size = UDim2.new(0, 14, 0, 15)
+ImageButton201.Active = false
+ImageButton201.BackgroundColor = BrickColor.new("Really black")
+ImageButton201.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton201.BackgroundTransparency = 1
+ImageButton201.BorderColor = BrickColor.new("Really black")
+ImageButton201.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton201.ZIndex = 3
+ImageButton201.AutoButtonColor = false
+BrickColorValue202.Name = "PartColor"
+BrickColorValue202.Parent = ImageButton201
+BrickColorValue202.Value = BrickColor.new("Daisy orange")
+ImageButton203.Name = "74"
+ImageButton203.Parent = Frame47
+ImageButton203.Position = UDim2.new(0, 47, 0, 124)
+ImageButton203.Size = UDim2.new(0, 14, 0, 15)
+ImageButton203.Active = false
+ImageButton203.BackgroundColor = BrickColor.new("Really black")
+ImageButton203.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton203.BackgroundTransparency = 1
+ImageButton203.BorderColor = BrickColor.new("Really black")
+ImageButton203.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton203.ZIndex = 3
+ImageButton203.AutoButtonColor = false
+BrickColorValue204.Name = "PartColor"
+BrickColorValue204.Parent = ImageButton203
+BrickColorValue204.Value = BrickColor.new("Cool yellow")
+ImageButton205.Name = "75"
+ImageButton205.Parent = Frame47
+ImageButton205.Position = UDim2.new(0, 65, 0, 124)
+ImageButton205.Size = UDim2.new(0, 14, 0, 15)
+ImageButton205.Active = false
+ImageButton205.BackgroundColor = BrickColor.new("Really black")
+ImageButton205.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton205.BackgroundTransparency = 1
+ImageButton205.BorderColor = BrickColor.new("Really black")
+ImageButton205.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton205.ZIndex = 3
+ImageButton205.AutoButtonColor = false
+BrickColorValue206.Name = "PartColor"
+BrickColorValue206.Parent = ImageButton205
+BrickColorValue206.Value = BrickColor.new("Pastel yellow")
+ImageButton207.Name = "76"
+ImageButton207.Parent = Frame47
+ImageButton207.Position = UDim2.new(0, 85, 0, 124)
+ImageButton207.Size = UDim2.new(0, 14, 0, 15)
+ImageButton207.Active = false
+ImageButton207.BackgroundColor = BrickColor.new("Really black")
+ImageButton207.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton207.BackgroundTransparency = 1
+ImageButton207.BorderColor = BrickColor.new("Really black")
+ImageButton207.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton207.ZIndex = 3
+ImageButton207.AutoButtonColor = false
+BrickColorValue208.Name = "PartColor"
+BrickColorValue208.Parent = ImageButton207
+BrickColorValue208.Value = BrickColor.new("Pearl")
+ImageButton209.Name = "77"
+ImageButton209.Parent = Frame47
+ImageButton209.Position = UDim2.new(0, 102, 0, 124)
+ImageButton209.Size = UDim2.new(0, 14, 0, 15)
+ImageButton209.Active = false
+ImageButton209.BackgroundColor = BrickColor.new("Really black")
+ImageButton209.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton209.BackgroundTransparency = 1
+ImageButton209.BorderColor = BrickColor.new("Really black")
+ImageButton209.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton209.ZIndex = 3
+ImageButton209.AutoButtonColor = false
+BrickColorValue210.Name = "PartColor"
+BrickColorValue210.Parent = ImageButton209
+BrickColorValue210.Value = BrickColor.new("Fog")
+ImageButton211.Name = "78"
+ImageButton211.Parent = Frame47
+ImageButton211.Position = UDim2.new(0, 118, 0, 124)
+ImageButton211.Size = UDim2.new(0, 14, 0, 15)
+ImageButton211.Active = false
+ImageButton211.BackgroundColor = BrickColor.new("Really black")
+ImageButton211.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton211.BackgroundTransparency = 1
+ImageButton211.BorderColor = BrickColor.new("Really black")
+ImageButton211.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton211.ZIndex = 3
+ImageButton211.AutoButtonColor = false
+BrickColorValue212.Name = "PartColor"
+BrickColorValue212.Parent = ImageButton211
+BrickColorValue212.Value = BrickColor.new("Mauve")
+ImageButton213.Name = "79"
+ImageButton213.Parent = Frame47
+ImageButton213.Position = UDim2.new(0, 136, 0, 124)
+ImageButton213.Size = UDim2.new(0, 14, 0, 15)
+ImageButton213.Active = false
+ImageButton213.BackgroundColor = BrickColor.new("Really black")
+ImageButton213.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton213.BackgroundTransparency = 1
+ImageButton213.BorderColor = BrickColor.new("Really black")
+ImageButton213.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton213.ZIndex = 3
+ImageButton213.AutoButtonColor = false
+BrickColorValue214.Name = "PartColor"
+BrickColorValue214.Parent = ImageButton213
+BrickColorValue214.Value = BrickColor.new("Sunrise")
+ImageButton215.Name = "80"
+ImageButton215.Parent = Frame47
+ImageButton215.Position = UDim2.new(0, 153, 0, 124)
+ImageButton215.Size = UDim2.new(0, 14, 0, 15)
+ImageButton215.Active = false
+ImageButton215.BackgroundColor = BrickColor.new("Really black")
+ImageButton215.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton215.BackgroundTransparency = 1
+ImageButton215.BorderColor = BrickColor.new("Really black")
+ImageButton215.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton215.ZIndex = 3
+ImageButton215.AutoButtonColor = false
+BrickColorValue216.Name = "PartColor"
+BrickColorValue216.Parent = ImageButton215
+BrickColorValue216.Value = BrickColor.new("Terra Cotta")
+ImageButton217.Name = "81"
+ImageButton217.Parent = Frame47
+ImageButton217.Position = UDim2.new(0, 174, 0, 124)
+ImageButton217.Size = UDim2.new(0, 14, 0, 15)
+ImageButton217.Active = false
+ImageButton217.BackgroundColor = BrickColor.new("Really black")
+ImageButton217.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton217.BackgroundTransparency = 1
+ImageButton217.BorderColor = BrickColor.new("Really black")
+ImageButton217.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton217.ZIndex = 3
+ImageButton217.AutoButtonColor = false
+BrickColorValue218.Name = "PartColor"
+BrickColorValue218.Parent = ImageButton217
+BrickColorValue218.Value = BrickColor.new("Dusty Rose")
+ImageButton219.Name = "82"
+ImageButton219.Parent = Frame47
+ImageButton219.Position = UDim2.new(0, 192, 0, 124)
+ImageButton219.Size = UDim2.new(0, 14, 0, 15)
+ImageButton219.Active = false
+ImageButton219.BackgroundColor = BrickColor.new("Really black")
+ImageButton219.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton219.BackgroundTransparency = 1
+ImageButton219.BorderColor = BrickColor.new("Really black")
+ImageButton219.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton219.ZIndex = 3
+ImageButton219.AutoButtonColor = false
+BrickColorValue220.Name = "PartColor"
+BrickColorValue220.Parent = ImageButton219
+BrickColorValue220.Value = BrickColor.new("Cocoa")
+ImageButton221.Name = "83"
+ImageButton221.Parent = Frame47
+ImageButton221.Position = UDim2.new(0, 5, 0, 139)
+ImageButton221.Size = UDim2.new(0, 14, 0, 15)
+ImageButton221.Active = false
+ImageButton221.BackgroundColor = BrickColor.new("Really black")
+ImageButton221.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton221.BackgroundTransparency = 1
+ImageButton221.BorderColor = BrickColor.new("Really black")
+ImageButton221.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton221.ZIndex = 3
+ImageButton221.AutoButtonColor = false
+BrickColorValue222.Name = "PartColor"
+BrickColorValue222.Parent = ImageButton221
+BrickColorValue222.Value = BrickColor.new("Neon orange")
+ImageButton223.Name = "84"
+ImageButton223.Parent = Frame47
+ImageButton223.Position = UDim2.new(0, 21, 0, 139)
+ImageButton223.Size = UDim2.new(0, 14, 0, 15)
+ImageButton223.Active = false
+ImageButton223.BackgroundColor = BrickColor.new("Really black")
+ImageButton223.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton223.BackgroundTransparency = 1
+ImageButton223.BorderColor = BrickColor.new("Really black")
+ImageButton223.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton223.ZIndex = 3
+ImageButton223.AutoButtonColor = false
+BrickColorValue224.Name = "PartColor"
+BrickColorValue224.Parent = ImageButton223
+BrickColorValue224.Value = BrickColor.new("Bright orange")
+ImageButton225.Name = "85"
+ImageButton225.Parent = Frame47
+ImageButton225.Position = UDim2.new(0, 39, 0, 139)
+ImageButton225.Size = UDim2.new(0, 14, 0, 15)
+ImageButton225.Active = false
+ImageButton225.BackgroundColor = BrickColor.new("Really black")
+ImageButton225.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton225.BackgroundTransparency = 1
+ImageButton225.BorderColor = BrickColor.new("Really black")
+ImageButton225.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton225.ZIndex = 3
+ImageButton225.AutoButtonColor = false
+BrickColorValue226.Name = "PartColor"
+BrickColorValue226.Parent = ImageButton225
+BrickColorValue226.Value = BrickColor.new("Wheat")
+ImageButton227.Name = "86"
+ImageButton227.Parent = Frame47
+ImageButton227.Position = UDim2.new(0, 56, 0, 139)
+ImageButton227.Size = UDim2.new(0, 14, 0, 15)
+ImageButton227.Active = false
+ImageButton227.BackgroundColor = BrickColor.new("Really black")
+ImageButton227.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton227.BackgroundTransparency = 1
+ImageButton227.BorderColor = BrickColor.new("Really black")
+ImageButton227.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton227.ZIndex = 3
+ImageButton227.AutoButtonColor = false
+BrickColorValue228.Name = "PartColor"
+BrickColorValue228.Parent = ImageButton227
+BrickColorValue228.Value = BrickColor.new("Buttermilk")
+ImageButton229.Name = "87"
+ImageButton229.Parent = Frame47
+ImageButton229.Position = UDim2.new(0, 75, 0, 139)
+ImageButton229.Size = UDim2.new(0, 14, 0, 15)
+ImageButton229.Active = false
+ImageButton229.BackgroundColor = BrickColor.new("Really black")
+ImageButton229.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton229.BackgroundTransparency = 1
+ImageButton229.BorderColor = BrickColor.new("Really black")
+ImageButton229.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton229.ZIndex = 3
+ImageButton229.AutoButtonColor = false
+BrickColorValue230.Name = "PartColor"
+BrickColorValue230.Parent = ImageButton229
+BrickColorValue230.Value = BrickColor.new("Institutional white")
+ImageButton231.Name = "88"
+ImageButton231.Parent = Frame47
+ImageButton231.Position = UDim2.new(0, 93, 0, 139)
+ImageButton231.Size = UDim2.new(0, 14, 0, 15)
+ImageButton231.Active = false
+ImageButton231.BackgroundColor = BrickColor.new("Really black")
+ImageButton231.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton231.BackgroundTransparency = 1
+ImageButton231.BorderColor = BrickColor.new("Really black")
+ImageButton231.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton231.ZIndex = 3
+ImageButton231.AutoButtonColor = false
+BrickColorValue232.Name = "PartColor"
+BrickColorValue232.Parent = ImageButton231
+BrickColorValue232.Value = BrickColor.new("White")
+ImageButton233.Name = "89"
+ImageButton233.Parent = Frame47
+ImageButton233.Position = UDim2.new(0, 110, 0, 139)
+ImageButton233.Size = UDim2.new(0, 14, 0, 15)
+ImageButton233.Active = false
+ImageButton233.BackgroundColor = BrickColor.new("Really black")
+ImageButton233.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton233.BackgroundTransparency = 1
+ImageButton233.BorderColor = BrickColor.new("Really black")
+ImageButton233.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton233.ZIndex = 3
+ImageButton233.AutoButtonColor = false
+BrickColorValue234.Name = "PartColor"
+BrickColorValue234.Parent = ImageButton233
+BrickColorValue234.Value = BrickColor.new("Light reddish violet")
+ImageButton235.Name = "90"
+ImageButton235.Parent = Frame47
+ImageButton235.Position = UDim2.new(0, 130, 0, 139)
+ImageButton235.Size = UDim2.new(0, 14, 0, 15)
+ImageButton235.Active = false
+ImageButton235.BackgroundColor = BrickColor.new("Really black")
+ImageButton235.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton235.BackgroundTransparency = 1
+ImageButton235.BorderColor = BrickColor.new("Really black")
+ImageButton235.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton235.ZIndex = 3
+ImageButton235.AutoButtonColor = false
+BrickColorValue236.Name = "PartColor"
+BrickColorValue236.Parent = ImageButton235
+BrickColorValue236.Value = BrickColor.new("Pastel orange")
+ImageButton237.Name = "91"
+ImageButton237.Parent = Frame47
+ImageButton237.Position = UDim2.new(0, 146, 0, 139)
+ImageButton237.Size = UDim2.new(0, 14, 0, 15)
+ImageButton237.Active = false
+ImageButton237.BackgroundColor = BrickColor.new("Really black")
+ImageButton237.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton237.BackgroundTransparency = 1
+ImageButton237.BorderColor = BrickColor.new("Really black")
+ImageButton237.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton237.ZIndex = 3
+ImageButton237.AutoButtonColor = false
+BrickColorValue238.Name = "PartColor"
+BrickColorValue238.Parent = ImageButton237
+BrickColorValue238.Value = BrickColor.new("Salmon")
+ImageButton239.Name = "92"
+ImageButton239.Parent = Frame47
+ImageButton239.Position = UDim2.new(0, 164, 0, 139)
+ImageButton239.Size = UDim2.new(0, 14, 0, 15)
+ImageButton239.Active = false
+ImageButton239.BackgroundColor = BrickColor.new("Really black")
+ImageButton239.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton239.BackgroundTransparency = 1
+ImageButton239.BorderColor = BrickColor.new("Really black")
+ImageButton239.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton239.ZIndex = 3
+ImageButton239.AutoButtonColor = false
+BrickColorValue240.Name = "PartColor"
+BrickColorValue240.Parent = ImageButton239
+BrickColorValue240.Value = BrickColor.new("Tawny")
+ImageButton241.Name = "93"
+ImageButton241.Parent = Frame47
+ImageButton241.Position = UDim2.new(0, 180, 0, 139)
+ImageButton241.Size = UDim2.new(0, 14, 0, 15)
+ImageButton241.Active = false
+ImageButton241.BackgroundColor = BrickColor.new("Really black")
+ImageButton241.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton241.BackgroundTransparency = 1
+ImageButton241.BorderColor = BrickColor.new("Really black")
+ImageButton241.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton241.ZIndex = 3
+ImageButton241.AutoButtonColor = false
+BrickColorValue242.Name = "PartColor"
+BrickColorValue242.Parent = ImageButton241
+BrickColorValue242.Value = BrickColor.new("Rust")
+ImageButton243.Name = "94"
+ImageButton243.Parent = Frame47
+ImageButton243.Position = UDim2.new(0, 13, 0, 155)
+ImageButton243.Size = UDim2.new(0, 14, 0, 15)
+ImageButton243.Active = false
+ImageButton243.BackgroundColor = BrickColor.new("Really black")
+ImageButton243.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton243.BackgroundTransparency = 1
+ImageButton243.BorderColor = BrickColor.new("Really black")
+ImageButton243.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton243.ZIndex = 3
+ImageButton243.AutoButtonColor = false
+BrickColorValue244.Name = "PartColor"
+BrickColorValue244.Parent = ImageButton243
+BrickColorValue244.Value = BrickColor.new("CGA brown")
+ImageButton245.Name = "95"
+ImageButton245.Parent = Frame47
+ImageButton245.Position = UDim2.new(0, 31, 0, 155)
+ImageButton245.Size = UDim2.new(0, 14, 0, 15)
+ImageButton245.Active = false
+ImageButton245.BackgroundColor = BrickColor.new("Really black")
+ImageButton245.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton245.BackgroundTransparency = 1
+ImageButton245.BorderColor = BrickColor.new("Really black")
+ImageButton245.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton245.ZIndex = 3
+ImageButton245.AutoButtonColor = false
+BrickColorValue246.Name = "PartColor"
+BrickColorValue246.Parent = ImageButton245
+BrickColorValue246.Value = BrickColor.new("Br. yellowish orange")
+ImageButton247.Name = "96"
+ImageButton247.Parent = Frame47
+ImageButton247.Position = UDim2.new(0, 48, 0, 155)
+ImageButton247.Size = UDim2.new(0, 14, 0, 15)
+ImageButton247.Active = false
+ImageButton247.BackgroundColor = BrickColor.new("Really black")
+ImageButton247.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton247.BackgroundTransparency = 1
+ImageButton247.BorderColor = BrickColor.new("Really black")
+ImageButton247.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton247.ZIndex = 3
+ImageButton247.AutoButtonColor = false
+BrickColorValue248.Name = "PartColor"
+BrickColorValue248.Parent = ImageButton247
+BrickColorValue248.Value = BrickColor.new("Cashmere")
+ImageButton249.Name = "97"
+ImageButton249.Parent = Frame47
+ImageButton249.Position = UDim2.new(0, 66, 0, 155)
+ImageButton249.Size = UDim2.new(0, 14, 0, 15)
+ImageButton249.Active = false
+ImageButton249.BackgroundColor = BrickColor.new("Really black")
+ImageButton249.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton249.BackgroundTransparency = 1
+ImageButton249.BorderColor = BrickColor.new("Really black")
+ImageButton249.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton249.ZIndex = 3
+ImageButton249.AutoButtonColor = false
+BrickColorValue250.Name = "PartColor"
+BrickColorValue250.Parent = ImageButton249
+BrickColorValue250.Value = BrickColor.new("Khaki")
+ImageButton251.Name = "98"
+ImageButton251.Parent = Frame47
+ImageButton251.Position = UDim2.new(0, 85, 0, 155)
+ImageButton251.Size = UDim2.new(0, 14, 0, 15)
+ImageButton251.Active = false
+ImageButton251.BackgroundColor = BrickColor.new("Really black")
+ImageButton251.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton251.BackgroundTransparency = 1
+ImageButton251.BorderColor = BrickColor.new("Really black")
+ImageButton251.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton251.ZIndex = 3
+ImageButton251.AutoButtonColor = false
+BrickColorValue252.Name = "PartColor"
+BrickColorValue252.Parent = ImageButton251
+BrickColorValue252.Value = BrickColor.new("Lily white")
+ImageButton253.Name = "99"
+ImageButton253.Parent = Frame47
+ImageButton253.Position = UDim2.new(0, 102, 0, 155)
+ImageButton253.Size = UDim2.new(0, 14, 0, 15)
+ImageButton253.Active = false
+ImageButton253.BackgroundColor = BrickColor.new("Really black")
+ImageButton253.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton253.BackgroundTransparency = 1
+ImageButton253.BorderColor = BrickColor.new("Really black")
+ImageButton253.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton253.ZIndex = 3
+ImageButton253.AutoButtonColor = false
+BrickColorValue254.Name = "PartColor"
+BrickColorValue254.Parent = ImageButton253
+BrickColorValue254.Value = BrickColor.new("Seashell")
+ImageButton255.Name = "100"
+ImageButton255.Parent = Frame47
+ImageButton255.Position = UDim2.new(0, 118, 0, 155)
+ImageButton255.Size = UDim2.new(0, 14, 0, 15)
+ImageButton255.Active = false
+ImageButton255.BackgroundColor = BrickColor.new("Really black")
+ImageButton255.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton255.BackgroundTransparency = 1
+ImageButton255.BorderColor = BrickColor.new("Really black")
+ImageButton255.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton255.ZIndex = 3
+ImageButton255.AutoButtonColor = false
+BrickColorValue256.Name = "PartColor"
+BrickColorValue256.Parent = ImageButton255
+BrickColorValue256.Value = BrickColor.new("Pastel brown")
+ImageButton257.Name = "101"
+ImageButton257.Parent = Frame47
+ImageButton257.Position = UDim2.new(0, 136, 0, 155)
+ImageButton257.Size = UDim2.new(0, 14, 0, 15)
+ImageButton257.Active = false
+ImageButton257.BackgroundColor = BrickColor.new("Really black")
+ImageButton257.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton257.BackgroundTransparency = 1
+ImageButton257.BorderColor = BrickColor.new("Really black")
+ImageButton257.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton257.ZIndex = 3
+ImageButton257.AutoButtonColor = false
+BrickColorValue258.Name = "PartColor"
+BrickColorValue258.Parent = ImageButton257
+BrickColorValue258.Value = BrickColor.new("Light orange")
+ImageButton259.Name = "102"
+ImageButton259.Parent = Frame47
+ImageButton259.Position = UDim2.new(0, 153, 0, 155)
+ImageButton259.Size = UDim2.new(0, 14, 0, 15)
+ImageButton259.Active = false
+ImageButton259.BackgroundColor = BrickColor.new("Really black")
+ImageButton259.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton259.BackgroundTransparency = 1
+ImageButton259.BorderColor = BrickColor.new("Really black")
+ImageButton259.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton259.ZIndex = 3
+ImageButton259.AutoButtonColor = false
+BrickColorValue260.Name = "PartColor"
+BrickColorValue260.Parent = ImageButton259
+BrickColorValue260.Value = BrickColor.new("Medium red")
+ImageButton261.Name = "103"
+ImageButton261.Parent = Frame47
+ImageButton261.Position = UDim2.new(0, 172, 0, 155)
+ImageButton261.Size = UDim2.new(0, 14, 0, 15)
+ImageButton261.Active = false
+ImageButton261.BackgroundColor = BrickColor.new("Really black")
+ImageButton261.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton261.BackgroundTransparency = 1
+ImageButton261.BorderColor = BrickColor.new("Really black")
+ImageButton261.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton261.ZIndex = 3
+ImageButton261.AutoButtonColor = false
+BrickColorValue262.Name = "PartColor"
+BrickColorValue262.Parent = ImageButton261
+BrickColorValue262.Value = BrickColor.new("Burgundy")
+ImageButton263.Name = "104"
+ImageButton263.Parent = Frame47
+ImageButton263.Position = UDim2.new(0, 23, 0, 171)
+ImageButton263.Size = UDim2.new(0, 14, 0, 15)
+ImageButton263.Active = false
+ImageButton263.BackgroundColor = BrickColor.new("Really black")
+ImageButton263.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton263.BackgroundTransparency = 1
+ImageButton263.BorderColor = BrickColor.new("Really black")
+ImageButton263.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton263.ZIndex = 3
+ImageButton263.AutoButtonColor = false
+BrickColorValue264.Name = "PartColor"
+BrickColorValue264.Parent = ImageButton263
+BrickColorValue264.Value = BrickColor.new("Reddish brown")
+ImageButton265.Name = "105"
+ImageButton265.Parent = Frame47
+ImageButton265.Position = UDim2.new(0, 39, 0, 171)
+ImageButton265.Size = UDim2.new(0, 14, 0, 15)
+ImageButton265.Active = false
+ImageButton265.BackgroundColor = BrickColor.new("Really black")
+ImageButton265.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton265.BackgroundTransparency = 1
+ImageButton265.BorderColor = BrickColor.new("Really black")
+ImageButton265.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton265.ZIndex = 3
+ImageButton265.AutoButtonColor = false
+BrickColorValue266.Name = "PartColor"
+BrickColorValue266.Parent = ImageButton265
+BrickColorValue266.Value = BrickColor.new("Cork")
+ImageButton267.Name = "106"
+ImageButton267.Parent = Frame47
+ImageButton267.Position = UDim2.new(0, 56, 0, 171)
+ImageButton267.Size = UDim2.new(0, 14, 0, 15)
+ImageButton267.Active = false
+ImageButton267.BackgroundColor = BrickColor.new("Really black")
+ImageButton267.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton267.BackgroundTransparency = 1
+ImageButton267.BorderColor = BrickColor.new("Really black")
+ImageButton267.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton267.ZIndex = 3
+ImageButton267.AutoButtonColor = false
+BrickColorValue268.Name = "PartColor"
+BrickColorValue268.Parent = ImageButton267
+BrickColorValue268.Value = BrickColor.new("Burlap")
+ImageButton269.Name = "107"
+ImageButton269.Parent = Frame47
+ImageButton269.Position = UDim2.new(0, 75, 0, 171)
+ImageButton269.Size = UDim2.new(0, 14, 0, 15)
+ImageButton269.Active = false
+ImageButton269.BackgroundColor = BrickColor.new("Really black")
+ImageButton269.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton269.BackgroundTransparency = 1
+ImageButton269.BorderColor = BrickColor.new("Really black")
+ImageButton269.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton269.ZIndex = 3
+ImageButton269.AutoButtonColor = false
+BrickColorValue270.Name = "PartColor"
+BrickColorValue270.Parent = ImageButton269
+BrickColorValue270.Value = BrickColor.new("Beige")
+ImageButton271.Name = "108"
+ImageButton271.Parent = Frame47
+ImageButton271.Position = UDim2.new(0, 93, 0, 171)
+ImageButton271.Size = UDim2.new(0, 14, 0, 15)
+ImageButton271.Active = false
+ImageButton271.BackgroundColor = BrickColor.new("Really black")
+ImageButton271.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton271.BackgroundTransparency = 1
+ImageButton271.BorderColor = BrickColor.new("Really black")
+ImageButton271.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton271.ZIndex = 3
+ImageButton271.AutoButtonColor = false
+BrickColorValue272.Name = "PartColor"
+BrickColorValue272.Parent = ImageButton271
+BrickColorValue272.Value = BrickColor.new("Oyster")
+ImageButton273.Name = "109"
+ImageButton273.Parent = Frame47
+ImageButton273.Position = UDim2.new(0, 109, 0, 171)
+ImageButton273.Size = UDim2.new(0, 14, 0, 15)
+ImageButton273.Active = false
+ImageButton273.BackgroundColor = BrickColor.new("Really black")
+ImageButton273.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton273.BackgroundTransparency = 1
+ImageButton273.BorderColor = BrickColor.new("Really black")
+ImageButton273.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton273.ZIndex = 3
+ImageButton273.AutoButtonColor = false
+BrickColorValue274.Name = "PartColor"
+BrickColorValue274.Parent = ImageButton273
+BrickColorValue274.Value = BrickColor.new("Mid gray")
+ImageButton275.Name = "110"
+ImageButton275.Parent = Frame47
+ImageButton275.Position = UDim2.new(0, 126, 0, 171)
+ImageButton275.Size = UDim2.new(0, 14, 0, 15)
+ImageButton275.Active = false
+ImageButton275.BackgroundColor = BrickColor.new("Really black")
+ImageButton275.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton275.BackgroundTransparency = 1
+ImageButton275.BorderColor = BrickColor.new("Really black")
+ImageButton275.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton275.ZIndex = 3
+ImageButton275.AutoButtonColor = false
+BrickColorValue276.Name = "PartColor"
+BrickColorValue276.Parent = ImageButton275
+BrickColorValue276.Value = BrickColor.new("Brick yellow")
+ImageButton277.Name = "111"
+ImageButton277.Parent = Frame47
+ImageButton277.Position = UDim2.new(0, 145, 0, 171)
+ImageButton277.Size = UDim2.new(0, 14, 0, 15)
+ImageButton277.Active = false
+ImageButton277.BackgroundColor = BrickColor.new("Really black")
+ImageButton277.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton277.BackgroundTransparency = 1
+ImageButton277.BorderColor = BrickColor.new("Really black")
+ImageButton277.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton277.ZIndex = 3
+ImageButton277.AutoButtonColor = false
+BrickColorValue278.Name = "PartColor"
+BrickColorValue278.Parent = ImageButton277
+BrickColorValue278.Value = BrickColor.new("Nougat")
+ImageButton279.Name = "112"
+ImageButton279.Parent = Frame47
+ImageButton279.Position = UDim2.new(0, 164, 0, 171)
+ImageButton279.Size = UDim2.new(0, 14, 0, 15)
+ImageButton279.Active = false
+ImageButton279.BackgroundColor = BrickColor.new("Really black")
+ImageButton279.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton279.BackgroundTransparency = 1
+ImageButton279.BorderColor = BrickColor.new("Really black")
+ImageButton279.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton279.ZIndex = 3
+ImageButton279.AutoButtonColor = false
+BrickColorValue280.Name = "PartColor"
+BrickColorValue280.Parent = ImageButton279
+BrickColorValue280.Value = BrickColor.new("Brown")
+ImageButton281.Name = "113"
+ImageButton281.Parent = Frame47
+ImageButton281.Position = UDim2.new(0, 31, 0, 186)
+ImageButton281.Size = UDim2.new(0, 14, 0, 15)
+ImageButton281.Active = false
+ImageButton281.BackgroundColor = BrickColor.new("Really black")
+ImageButton281.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton281.BackgroundTransparency = 1
+ImageButton281.BorderColor = BrickColor.new("Really black")
+ImageButton281.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton281.ZIndex = 3
+ImageButton281.AutoButtonColor = false
+BrickColorValue282.Name = "PartColor"
+BrickColorValue282.Parent = ImageButton281
+BrickColorValue282.Value = BrickColor.new("Pine Cone")
+ImageButton283.Name = "114"
+ImageButton283.Parent = Frame47
+ImageButton283.Position = UDim2.new(0, 47, 0, 186)
+ImageButton283.Size = UDim2.new(0, 14, 0, 15)
+ImageButton283.Active = false
+ImageButton283.BackgroundColor = BrickColor.new("Really black")
+ImageButton283.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton283.BackgroundTransparency = 1
+ImageButton283.BorderColor = BrickColor.new("Really black")
+ImageButton283.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton283.ZIndex = 3
+ImageButton283.AutoButtonColor = false
+BrickColorValue284.Name = "PartColor"
+BrickColorValue284.Parent = ImageButton283
+BrickColorValue284.Value = BrickColor.new("Fawn brown")
+ImageButton285.Name = "115"
+ImageButton285.Parent = Frame47
+ImageButton285.Position = UDim2.new(0, 66, 0, 186)
+ImageButton285.Size = UDim2.new(0, 14, 0, 15)
+ImageButton285.Active = false
+ImageButton285.BackgroundColor = BrickColor.new("Really black")
+ImageButton285.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton285.BackgroundTransparency = 1
+ImageButton285.BorderColor = BrickColor.new("Really black")
+ImageButton285.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton285.ZIndex = 3
+ImageButton285.AutoButtonColor = false
+BrickColorValue286.Name = "PartColor"
+BrickColorValue286.Parent = ImageButton285
+BrickColorValue286.Value = BrickColor.new("Sand red")
+ImageButton287.Name = "116"
+ImageButton287.Parent = Frame47
+ImageButton287.Position = UDim2.new(0, 85, 0, 186)
+ImageButton287.Size = UDim2.new(0, 14, 0, 15)
+ImageButton287.Active = false
+ImageButton287.BackgroundColor = BrickColor.new("Really black")
+ImageButton287.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton287.BackgroundTransparency = 1
+ImageButton287.BorderColor = BrickColor.new("Really black")
+ImageButton287.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton287.ZIndex = 3
+ImageButton287.AutoButtonColor = false
+BrickColorValue288.Name = "PartColor"
+BrickColorValue288.Parent = ImageButton287
+BrickColorValue288.Value = BrickColor.new("Hurricane grey")
+ImageButton289.Name = "117"
+ImageButton289.Parent = Frame47
+ImageButton289.Position = UDim2.new(0, 102, 0, 186)
+ImageButton289.Size = UDim2.new(0, 14, 0, 15)
+ImageButton289.Active = false
+ImageButton289.BackgroundColor = BrickColor.new("Really black")
+ImageButton289.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton289.BackgroundTransparency = 1
+ImageButton289.BorderColor = BrickColor.new("Really black")
+ImageButton289.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton289.ZIndex = 3
+ImageButton289.AutoButtonColor = false
+BrickColorValue290.Name = "PartColor"
+BrickColorValue290.Parent = ImageButton289
+BrickColorValue290.Value = BrickColor.new("Cloudy grey")
+ImageButton291.Name = "118"
+ImageButton291.Parent = Frame47
+ImageButton291.Position = UDim2.new(0, 118, 0, 186)
+ImageButton291.Size = UDim2.new(0, 14, 0, 15)
+ImageButton291.Active = false
+ImageButton291.BackgroundColor = BrickColor.new("Really black")
+ImageButton291.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton291.BackgroundTransparency = 1
+ImageButton291.BorderColor = BrickColor.new("Really black")
+ImageButton291.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton291.ZIndex = 3
+ImageButton291.AutoButtonColor = false
+BrickColorValue292.Name = "PartColor"
+BrickColorValue292.Parent = ImageButton291
+BrickColorValue292.Value = BrickColor.new("Linen")
+ImageButton293.Name = "119"
+ImageButton293.Parent = Frame47
+ImageButton293.Position = UDim2.new(0, 136, 0, 186)
+ImageButton293.Size = UDim2.new(0, 14, 0, 15)
+ImageButton293.Active = false
+ImageButton293.BackgroundColor = BrickColor.new("Really black")
+ImageButton293.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton293.BackgroundTransparency = 1
+ImageButton293.BorderColor = BrickColor.new("Really black")
+ImageButton293.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton293.ZIndex = 3
+ImageButton293.AutoButtonColor = false
+BrickColorValue294.Name = "PartColor"
+BrickColorValue294.Parent = ImageButton293
+BrickColorValue294.Value = BrickColor.new("Copper")
+ImageButton295.Name = "120"
+ImageButton295.Parent = Frame47
+ImageButton295.Position = UDim2.new(0, 153, 0, 186)
+ImageButton295.Size = UDim2.new(0, 14, 0, 15)
+ImageButton295.Active = false
+ImageButton295.BackgroundColor = BrickColor.new("Really black")
+ImageButton295.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton295.BackgroundTransparency = 1
+ImageButton295.BorderColor = BrickColor.new("Really black")
+ImageButton295.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton295.ZIndex = 3
+ImageButton295.AutoButtonColor = false
+BrickColorValue296.Name = "PartColor"
+BrickColorValue296.Parent = ImageButton295
+BrickColorValue296.Value = BrickColor.new("Dark orange")
+ImageButton297.Name = "121"
+ImageButton297.Parent = Frame47
+ImageButton297.Position = UDim2.new(0, 40, 0, 203)
+ImageButton297.Size = UDim2.new(0, 14, 0, 15)
+ImageButton297.Active = false
+ImageButton297.BackgroundColor = BrickColor.new("Really black")
+ImageButton297.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton297.BackgroundTransparency = 1
+ImageButton297.BorderColor = BrickColor.new("Really black")
+ImageButton297.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton297.ZIndex = 3
+ImageButton297.AutoButtonColor = false
+BrickColorValue298.Name = "PartColor"
+BrickColorValue298.Parent = ImageButton297
+BrickColorValue298.Value = BrickColor.new("Dirt brown")
+ImageButton299.Name = "122"
+ImageButton299.Parent = Frame47
+ImageButton299.Position = UDim2.new(0, 56, 0, 203)
+ImageButton299.Size = UDim2.new(0, 14, 0, 15)
+ImageButton299.Active = false
+ImageButton299.BackgroundColor = BrickColor.new("Really black")
+ImageButton299.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton299.BackgroundTransparency = 1
+ImageButton299.BorderColor = BrickColor.new("Really black")
+ImageButton299.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton299.ZIndex = 3
+ImageButton299.AutoButtonColor = false
+BrickColorValue300.Name = "PartColor"
+BrickColorValue300.Parent = ImageButton299
+BrickColorValue300.Value = BrickColor.new("Bronze")
+ImageButton301.Name = "123"
+ImageButton301.Parent = Frame47
+ImageButton301.Position = UDim2.new(0, 75, 0, 203)
+ImageButton301.Size = UDim2.new(0, 14, 0, 15)
+ImageButton301.Active = false
+ImageButton301.BackgroundColor = BrickColor.new("Really black")
+ImageButton301.BackgroundColor3 = Color3.new(0, 0, 0)
+ImageButton301.BackgroundTransparency = 1
+ImageButton301.BorderColor = BrickColor.new("Really black")
+ImageButton301.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton301.ZIndex = 3
+ImageButton301.AutoButtonColor = false
+BrickColorValue302.Name = "PartColor"
+BrickColorValue302.Parent = ImageButton301
+BrickColorValue302.Value = BrickColor.new("Dark stone grey")
+ImageLabel303.Parent = Frame47
+ImageLabel303.Position = UDim2.new(0, -14, 0, 16)
+ImageLabel303.Size = UDim2.new(0, 229, 0, 205)
+ImageLabel303.BackgroundColor = BrickColor.new("Institutional white")
+ImageLabel303.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel303.BackgroundTransparency = 1
+ImageLabel303.Image = "http://www.roblox.com/asset/?id=314652053"
+ImageLabel303.ImageColor3 = Color3.new(0.247059, 0.247059, 0.247059)
+ImageLabel303.ImageTransparency = 0.25
+ImageButton304.Name = "OpenButton"
+ImageButton304.Parent = ScreenGui46
+ImageButton304.Position = UDim2.new(-1, -6, 0.5, -70)
+ImageButton304.Rotation = 90
+ImageButton304.Size = UDim2.new(0, 32, 0, 20)
+ImageButton304.BackgroundColor = BrickColor.new("Black metallic")
+ImageButton304.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+ImageButton304.BackgroundTransparency = 0.5
+ImageButton304.BorderSizePixel = 0
+ImageButton304.ZIndex = 4
+ImageLabel305.Parent = ImageButton304
+ImageLabel305.Position = UDim2.new(0, 4, 0, 1)
+ImageLabel305.Size = UDim2.new(0, 24, 0, 15)
+ImageLabel305.BackgroundColor = BrickColor.new("Institutional white")
+ImageLabel305.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel305.BackgroundTransparency = 1
+ImageLabel305.ZIndex = 4
+ImageLabel305.Image = "rbxasset://textures/ui/Backpack_Open@2x.png"
+LocalScript306.Name = "Main"
+LocalScript306.Parent = ScreenGui46
+table.insert(cors,sandbox(LocalScript306,function()
+local Colors = script.Parent:WaitForChild("Colors")
+local OpenButton = script.Parent:WaitForChild("OpenButton")
+local MyTool = script.Parent:WaitForChild("MyTool")
+while not MyTool.Value do wait() end
+local UsersTool = MyTool.Value
+local SettingsFolder = UsersTool:WaitForChild("Configuration")
+local StartingColor = SettingsFolder:WaitForChild("StartingColor")
+local RemoteFolder = UsersTool:WaitForChild("RemoteEvents")
+local ConfigTool = RemoteFolder:WaitForChild("ConfigTool")
+local Opened = false
+local Wings = {"Left Wing","Right Wing"}
+
+local ConfigTool = function(Transparency,Tool,ShouldColor,Color)
+	for _,v in pairs(Tool:GetChildren()) do
+		if v:IsA("BasePart") and ShouldColor == false then
+			v.Transparency = Transparency
+		elseif ShouldColor == true and v:IsA("BasePart") and v.Name == "ColorablePart" then
+			v.BrickColor = Color
+		end
+	end
+end
+
+for _,v in pairs(Colors:GetChildren()) do
+	if v:IsA("ImageButton") then
+	local ButtonsColor = v:WaitForChild("PartColor").Value
+		v.MouseEnter:connect(function()
+			if Opened == true then
+				ConfigTool(0,UsersTool,true,ButtonsColor)
+			end
+		end)
+			v.MouseLeave:connect(function()
+				if Opened == true then
+					ConfigTool(0,UsersTool,true,StartingColor.Value)
+				end
+			end)
+				v.MouseButton1Down:connect(function()
+					if Opened == true then
+						StartingColor.Value = ButtonsColor
+						ConfigTool(0,UsersTool,true,ButtonsColor)
+					end
+				end)
+	end
+end
+
+OpenButton.MouseButton1Click:connect(function()
+	if Opened == false then
+		Opened = true
+		OpenButton.Rotation = -90
+		Colors:TweenPosition(UDim2.new(0.5, -99,0.5, -140),0,0,0.4,true)
+	elseif Opened == true then
+		Opened = false
+		OpenButton.Rotation = 90
+		Colors:TweenPosition(UDim2.new(0, -230,0.5, -140),0,0,0.4,true)
+	end
+end)
+
+end))
+ObjectValue307.Name = "MyTool"
+ObjectValue307.Parent = ScreenGui46
+ScreenGui308.Name = "DisplayGui"
+ScreenGui308.Parent = LocalScript37
+ImageButton309.Name = "OpenButton"
+ImageButton309.Parent = ScreenGui308
+ImageButton309.Position = UDim2.new(1, -92, 1, 38)
+ImageButton309.Size = UDim2.new(0, 90, 0, 36)
+ImageButton309.BackgroundColor = BrickColor.new("Institutional white")
+ImageButton309.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageButton309.BackgroundTransparency = 1
+ImageButton309.SizeConstraint = Enum.SizeConstraint.RelativeXX
+ImageButton309.Image = "rbxassetid://357369487"
+ImageButton309.ImageColor3 = Color3.new(0.985569, 0.99451, 1)
+Frame310.Name = "InfoFrame"
+Frame310.Parent = ScreenGui308
+Frame310.Position = UDim2.new(0.5, -120, 1, 140)
+Frame310.Size = UDim2.new(0, 240, 0, 280)
+Frame310.BackgroundColor = BrickColor.new("Black metallic")
+Frame310.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+Frame310.BackgroundTransparency = 0.5
+Frame310.BorderColor = BrickColor.new("Light Royal blue")
+Frame310.BorderColor3 = Color3.new(0.627451, 0.768628, 0.941177)
+Frame310.BorderSizePixel = 0
+TextLabel311.Parent = Frame310
+TextLabel311.Position = UDim2.new(0, 0, 0.0199999996, 0)
+TextLabel311.Size = UDim2.new(1, 0, 0.200000003, 0)
+TextLabel311.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel311.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel311.BackgroundTransparency = 1
+TextLabel311.Font = Enum.Font.SourceSansBold
+TextLabel311.FontSize = Enum.FontSize.Size28
+TextLabel311.Text = "Handless Segway"
+TextLabel311.TextColor = BrickColor.new("White")
+TextLabel311.TextColor3 = Color3.new(0.960784, 0.960784, 0.960784)
+TextLabel311.TextSize = 28
+TextLabel312.Name = "CreditLabel"
+TextLabel312.Parent = Frame310
+TextLabel312.Position = UDim2.new(0, 0, 0.150000006, 0)
+TextLabel312.Size = UDim2.new(1, 0, 0.100000001, 0)
+TextLabel312.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel312.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel312.BackgroundTransparency = 1
+TextLabel312.Font = Enum.Font.SourceSansBold
+TextLabel312.FontSize = Enum.FontSize.Size14
+TextLabel312.Text = ""
+TextLabel312.TextColor = BrickColor.new("White")
+TextLabel312.TextColor3 = Color3.new(0.960784, 0.960784, 0.960784)
+TextLabel312.TextSize = 14
+TextLabel313.Parent = Frame310
+TextLabel313.Position = UDim2.new(0, 0, 0.5, 0)
+TextLabel313.Size = UDim2.new(1, 0, 0.200000003, 0)
+TextLabel313.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel313.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel313.BackgroundTransparency = 1
+TextLabel313.Font = Enum.Font.SourceSansBold
+TextLabel313.FontSize = Enum.FontSize.Size28
+TextLabel313.Text = "Want a copy?"
+TextLabel313.TextColor = BrickColor.new("White")
+TextLabel313.TextColor3 = Color3.new(0.960784, 0.960784, 0.960784)
+TextLabel313.TextSize = 28
+TextButton314.Name = "TakeOne"
+TextButton314.Parent = Frame310
+TextButton314.Position = UDim2.new(0.5, -52, 0.5, 60)
+TextButton314.Size = UDim2.new(0, 100, 0, 20)
+TextButton314.BackgroundColor = BrickColor.new("Institutional white")
+TextButton314.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton314.BorderColor = BrickColor.new("Dark stone grey")
+TextButton314.BorderColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+TextButton314.ZIndex = 2
+TextButton314.Font = Enum.Font.SourceSans
+TextButton314.FontSize = Enum.FontSize.Size14
+TextButton314.Text = "Take One!"
+TextButton314.TextColor = BrickColor.new("Flint")
+TextButton314.TextColor3 = Color3.new(0.403922, 0.403922, 0.403922)
+TextButton314.TextSize = 14
+ImageLabel315.Parent = Frame310
+ImageLabel315.Position = UDim2.new(0, 75, 0, 70)
+ImageLabel315.Size = UDim2.new(0, 85, 0, 85)
+ImageLabel315.BackgroundColor = BrickColor.new("Institutional white")
+ImageLabel315.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel315.BackgroundTransparency = 1
+ImageLabel315.Image = "rbxassetid://352276672"
+LocalScript316.Name = "Main"
+LocalScript316.Parent = ScreenGui308
+table.insert(cors,sandbox(LocalScript316,function()
+local InfoFrame = script.Parent:WaitForChild("InfoFrame")
+local CreditLabel = InfoFrame:WaitForChild("CreditLabel")
+local OpenButton = script.Parent:WaitForChild("OpenButton")
+local Opened = false
+local TakeOne = InfoFrame:WaitForChild("TakeOne")
+local Market = game:GetService("MarketplaceService")
+local ModelId = 331554374
+local PromptModule = require(script:WaitForChild("PromptPlayer"))
+local Player = game.Players.LocalPlayer
+local CreatorsName = game:GetService("InsertService"):GetUserSets(31342830)[1].CreatorName
+
+
+function ShiftColor(t,FromColor,ToColor)
+	for i=0,1,1/(t/0.03) do
+	local c = FromColor * (1-i) + ToColor * i
+	OpenButton.ImageColor3=Color3.new(c.X/255,c.Y/255,c.Z/255)
+	wait()
+	end
+end
+
+OpenButton.MouseButton1Click:connect(function()
+	if Opened == false then
+		Opened = true
+		InfoFrame:TweenPosition(UDim2.new(0.5, -120,0.5, -140),0,0,0.4,true)
+		CreditLabel.Text = "Brought to you by: " .. CreatorsName
+	elseif Opened == true then
+		Opened = false
+		InfoFrame:TweenPosition(UDim2.new(0.5, -120,1, 140),0,0,0.4,true)
+	end
+end)
+
+TakeOne.MouseButton1Down:connect(function()
+	PromptModule(Player,ModelId)
+end)
+
+while wait(2) do
+	if script.Parent.Parent and script.Parent.Parent.Name == "PlayerGui" then -- So the color won't be transitioning while not in PlayerGui
+	ShiftColor(1.5,Vector3.new(255, 255, 255),Vector3.new(71, 185, 255))
+	wait(2)
+	ShiftColor(1.5,Vector3.new(71, 185, 255),Vector3.new(255, 255, 255))
+	end
+end
+end))
+ModuleScript317.Name = "PromptPlayer"
+ModuleScript317.Parent = LocalScript316
+table.insert(cors,sandbox(ModuleScript317,function()
+local MarketService = game:GetService("MarketplaceService")
+
+local PromptPlayer = function(Player,ProductId)
+	MarketService:PromptPurchase(Player, ProductId)
+end
+
+return PromptPlayer
+end))
+LocalScript318.Name = "SegwayController"
+LocalScript318.Parent = LocalScript37
+table.insert(cors,sandbox(LocalScript318,function()
+-- Segway control script
+-- By Q_Q
+-- Updated 12/28/17
+wait(0.1)
+local Player = game.Players.LocalPlayer
+local Humanoid = nil
+local Character = nil
+local Filtering = game.Workspace.FilteringEnabled
+local Camera = game.Workspace.CurrentCamera
+
+-- Variables for objects and vehicle settings
+local SettingsFolder = script.Parent.Parent:WaitForChild("Configuration")
+local ToolStatus = script.Parent.Parent:WaitForChild("ToolStatus")
+local UserInputService = game:GetService("UserInputService")
+local VRService = game:GetService("VRService")
+local SeaterObject = ToolStatus:WaitForChild("SeaterScript")
+local SegwayObject = ToolStatus:WaitForChild("Segway")
+local WeldObject = ToolStatus:WaitForChild("PlayersWeld")
+local MaxSpeed = SettingsFolder:WaitForChild("MaxSpeed")
+local TurnSpeed = SettingsFolder:WaitForChild("TurnSpeed")
+local UseGyroSteering = SettingsFolder:WaitForChild("UseGyroSteering")
+local VRUseHeadsetControls = SettingsFolder:WaitForChild("VRUseHeadsetControls")
+local Thruster = ToolStatus:WaitForChild("Thruster")
+local TiltMotor = ToolStatus:WaitForChild("TiltMotor")
+local PlayerGui = nil
+local Lights = nil
+local Notifiers = nil
+local RayTest = nil
+
+-- Remote variables
+local RemoteFolder = script.Parent.Parent:WaitForChild("RemoteEvents")
+local TiltRemote = RemoteFolder:WaitForChild("TiltRemote")
+local PlaySound = RemoteFolder:WaitForChild("PlaySound")
+local StopSound = RemoteFolder:WaitForChild("StopSound")
+local ChangeSound = RemoteFolder:WaitForChild("ChangeSound")
+local AnchorSegway = RemoteFolder:WaitForChild("AnchorSegway")
+local UndoTags = RemoteFolder:WaitForChild("UndoTags")
+local UndoHasWelded = RemoteFolder:WaitForChild("UndoHasWelded")
+local DeleteWelds = RemoteFolder:WaitForChild("DeleteWelds")
+local ConfigHumanoid = RemoteFolder:WaitForChild("ConfigHumanoid")
+local ConfigLights = RemoteFolder:WaitForChild("ConfigLights")
+
+-- Sound variables
+local RunSoundVol = 0.5
+local RunSoundPitchLimit = 1.25
+
+-- GuiControls variables
+local PressedColor = Color3.new(79/255,185/255,255/255)
+local LiftedColor = Color3.new(255/255,255/255,255/255)
+local GuiControls = script.Parent:WaitForChild("GuiControls")
+local Accelerate = GuiControls:WaitForChild("Accelerate")
+local Steer = GuiControls:WaitForChild("Steer")
+local UpButton = Accelerate:WaitForChild("Up")
+local DownButton = Accelerate:WaitForChild("Down")
+local RightButton = Steer:WaitForChild("Right")
+local LeftButton = Steer:WaitForChild("Left")
+local OffButton = GuiControls:WaitForChild("OffButton")
+	
+-- Directional tags
+local Direction = 0
+local Steer = 0
+
+-- Other
+local IsGettingOff = false
+local IsOnSegway = false
+local Vector3new, CFramenew, Mathrad, Mathpi, CFrameangles, Raynew = Vector3.new, CFrame.new, math.rad, math.pi, CFrame.Angles, Ray.new
+
+local function Get_des(instance, func)
+	func(instance)
+	for _, child in next, instance:GetChildren() do
+		Get_des(child, func)
+	end
+end
+
+function Hopoff()
+	if SegwayObject.Value ~= nil and IsGettingOff == false and SegwayObject.Value.PrimaryPart and SeaterObject.Value ~= nil then
+	IsGettingOff = true
+	IsOnSegway = false
+	local PrimaryPart = SegwayObject.Value.PrimaryPart 
+	local px,py,pz,xx,yx,zx,xy,yy,zy,xz,yz,zz=PrimaryPart.CFrame:components()
+	
+	-- Delete welds
+	if SeaterObject.Value ~= nil then
+		repeat wait() until DeleteWelds:InvokeServer(SeaterObject.Value.Parent) == true or SeaterObject.Value == nil
+	end
+	
+	-- Resets camera's behavior
+	Camera.CameraType = "Custom"
+	
+	-- Set gyro to have power
+	if Thruster.Value then
+		Thruster.Value.BodyGyro.MaxTorque = Vector3new(400000, 0, 400000)
+	end
+	
+	-- Stops sounds
+	if SeaterObject.Value and SeaterObject.Value.Parent:FindFirstChild("Run") then
+		StopSound:FireServer(SeaterObject.Value.Parent.Run,0)
+		PlaySound:FireServer(SeaterObject.Value.Parent.Off,SeaterObject.Value.Parent.Off.Pitch,SeaterObject.Value.Parent.Off.Volume)
+	end
+	
+	-- Flips segway if fell over
+	if SegwayObject.Value then
+		SegwayObject.Value:SetPrimaryPartCFrame(CFramenew(px,py+0.1,pz,1,yx,zx,xy,1,zy,xz,yz,1))
+	end	
+	
+	-- Turn off lights
+	ConfigLights:FireServer(0.3,"Bright bluish green",false,"SmoothPlastic",Lights,Notifiers)
+	
+	-- Re-parents mobile gui and reshows mobile controls
+	GuiControls.Parent = script.Parent
+	UserInputService.ModalEnabled = false
+	OffButton.ImageColor3 = LiftedColor
+	
+	-- Shows tool UI via use with VR
+	if UserInputService.VREnabled then
+		if PlayerGui and PlayerGui:FindFirstChild("DisplayGui") and PlayerGui:FindFirstChild("ColorGui") then
+			PlayerGui:FindFirstChild("DisplayGui").Enabled = true
+			PlayerGui:FindFirstChild("ColorGui").Enabled = true
+		end
+		
+		UpdateCharTrans(0,0)
+	end
+	
+	-- Disconnect events
+	SitListener:disconnect()
+	JumpListener:disconnect()
+	
+	-- Resets the tilt motor angle
+	TiltRemote:FireServer(TiltMotor.Value,0)
+	
+	-- Makes the thruster's velocity still
+	AnchorSegway:FireServer(PrimaryPart,true)
+	
+	-- Makes object values nil
+	UndoTags:FireServer(SegwayObject,WeldObject,TiltMotor)
+	
+	-- Configures humanoid
+	ConfigHumanoid:FireServer(Humanoid,false,true,true)
+	
+	-- Unanchors segway
+	wait(1)
+	AnchorSegway:FireServer(PrimaryPart,false)
+	UndoHasWelded:FireServer(SeaterObject)
+	
+	-- Reset direction and steer tags
+	Direction = 0
+	Steer = 0
+	IsGettingOff = false
+	end
+end
+
+function UpdateCharTrans(BodyTrans,SegwayTrans)	
+	-- Changes character's body while VR
+	Get_des(Character,function(d)
+		if d and d:IsA("BasePart") then
+			if (d.Parent:FindFirstChild("Humanoid") or d.Parent:IsA("Accessory")) then
+				d.LocalTransparencyModifier = BodyTrans
+			else 
+				d.LocalTransparencyModifier = SegwayTrans
+			end
+		elseif d and d:IsA("Decal") and d.Name == "face" then
+			d.Transparency = BodyTrans
+		end
+	end)
+end
+
+function UpdateVRPos()
+	if UserInputService.VREnabled and Character and Character.Parent and Character:FindFirstChild("Head") then
+		local hpx,hpy,hpz,hxx,hxy,hxz,hyx,hyy,hyz,hzx,hzy,hzz = Character.Head.CFrame:components()
+		
+		Camera.CFrame = CFramenew(hpx,hpy,hpz,
+			hxx,0,hxz,
+			0,1,0,
+			hzx,0,hzz
+		) + (Vector3new(hxy,hyy,hzy)*2.5) --Height in studs above character's head
+	end
+end
+
+function Accelerate()
+	if IsOnSegway then
+		
+		local v = Direction*Thruster.Value.CFrame.lookVector*MaxSpeed.Value
+		local NewVelocity = Thruster.Value.Velocity:Lerp(v, 0.05) -- Thrust
+		local NewRotVelocity = Vector3new(0,-Steer*TurnSpeed.Value/10,0) -- Steering
+		local px,py,pz,xx,xy,xz,yx,yy,yz,zx,zy,zz = Thruster.Value.CFrame:components()
+		
+			if yy > 0.7 then -- If segway is upsided
+				Thruster.Value.BodyGyro.MaxTorque = Vector3new(400000, 0, 400000)
+				Thruster.Value.Velocity = NewVelocity
+				Thruster.Value.RotVelocity = NewRotVelocity
+			else
+				Thruster.Value.BodyGyro.MaxTorque = Vector3new(0,0,0)
+			end
+			
+	end
+end
+
+function CastToGround()
+	if Thruster.Value and Thruster.Value.Parent then
+		
+		-- Raycast to face segway towards ground
+		local px,py,pz,xx,xy,xz,yx,yy,yz,zx,zy,zz = Thruster.Value.CFrame:components()
+		local SegDnVect = -Vector3new(xy,yy,zy)
+		local Ray = Raynew(Thruster.Value.CFrame.p, SegDnVect*50)
+		local hit, position, normal = workspace:FindPartOnRayWithIgnoreList(Ray,{SegwayObject.Value,RayTest})
+		local HitDepth = (Thruster.Value.Position-position).magnitude
+		local NextRayAngle = (normal-SegDnVect).magnitude
+		
+		if hit and hit.CanCollide and NextRayAngle > 1.7 then
+			Thruster.Value.BodyGyro.MaxTorque = Vector3new(400000, 0, 400000)
+			Thruster.Value.BodyGyro.CFrame = CFramenew(position, position + normal) * CFrameangles(-Mathpi/2, 0, 0)
+		end
+		
+	end
+end
+
+function Sound()
+	if Thruster.Value and 0.85+Mathrad(Thruster.Value.Velocity.Magnitude/1.8) <= RunSoundPitchLimit then
+		if Filtering == true then
+			ChangeSound:FireServer(SeaterObject.Value.Parent.Run,0.85+Mathrad(Thruster.Value.Velocity.Magnitude/1.8),SeaterObject.Value.Parent.Run.Volume,true,false)
+		else -- locally change if not filtering for maximum performance
+			SeaterObject.Value.Parent.Run.Pitch = 0.85+Mathrad(Thruster.Value.Velocity.Magnitude/1.8)
+		end
+	end
+end
+
+function Tilt()
+	if Direction ~= 0 then
+		
+		-- Set tilt motor and change sound
+		if Filtering == true then
+		TiltRemote:FireServer(TiltMotor.Value,Direction/10)
+		ChangeSound:FireServer(SeaterObject.Value.Parent.Run,0,RunSoundVol,false,true)
+		else -- locally change if not filtering for maximum performance
+			TiltMotor.Value.DesiredAngle = Direction/10
+			SeaterObject.Value.Parent.Run.Volume = RunSoundVol
+		end
+		
+	else 
+		-- Set tilt motor
+		if Filtering == true then
+			TiltRemote:FireServer(TiltMotor.Value,0)
+		else -- locally change if not filtering for maximum performance
+			TiltMotor.Value.DesiredAngle = 0
+		end
+		
+		-- Change sound based on current status
+		if Steer == 0 then
+			if Filtering == true then
+				ChangeSound:FireServer(SeaterObject.Value.Parent.Run,0,0,false,true)
+			else -- locally change if not filtering for maximum performance
+				SeaterObject.Value.Parent.Run.Volume = 0
+			end
+		else --Adjusts the run sound when still and just turning
+			if Filtering == true then
+				ChangeSound:FireServer(SeaterObject.Value.Parent.Run,0.85+Mathrad(Thruster.Value.RotVelocity.Magnitude/1.8),RunSoundVol,true,true)
+			else -- locally change if not filtering for maximum performance
+				SeaterObject.Value.Parent.Run.Volume = RunSoundVol
+				SeaterObject.Value.Parent.Run.Pitch = 0.85+Mathrad(Thruster.Value.RotVelocity.Magnitude/1.8)				
+			end
+		end
+		
+	end
+end
+
+function SetGuiButtons()
+	--Exit button
+	OffButton.MouseButton1Down:connect(function() OffButton.ImageColor3 = PressedColor end)
+	OffButton.MouseButton1Up:connect(function() OffButton.ImageColor3 = LiftedColor Hopoff(Character)end)
+	OffButton.MouseLeave:connect(function()OffButton.ImageColor3 = LiftedColor end)
+	
+	--Left button pressed/lifted
+	LeftButton.MouseButton1Down:connect(function()Steer = -1 LeftButton.ImageColor3 = PressedColor end)
+	LeftButton.MouseButton1Up:connect(function()Steer = 0 LeftButton.ImageColor3 = LiftedColor end)
+	LeftButton.MouseLeave:connect(function()LeftButton.ImageColor3 = LiftedColor end)
+	
+	--Right button pressed/lifted
+	RightButton.MouseButton1Down:connect(function()Steer = 1 RightButton.ImageColor3 = PressedColor end)
+	RightButton.MouseButton1Up:connect(function()Steer = 0 RightButton.ImageColor3 = LiftedColor end)
+	RightButton.MouseLeave:connect(function()RightButton.ImageColor3 = LiftedColor end)
+	
+	--Backward button pressed/lifted
+	DownButton.MouseButton1Down:connect(function()Direction = -1 DownButton.ImageColor3 = PressedColor end)
+	DownButton.MouseButton1Up:connect(function()Direction = 0 DownButton.ImageColor3 = LiftedColor end)
+	DownButton.MouseLeave:connect(function()DownButton.ImageColor3 = LiftedColor end)
+	
+	--Forward button pressed/lifted
+	UpButton.MouseButton1Down:connect(function()Direction = 1 UpButton.ImageColor3 = PressedColor end)
+	UpButton.MouseButton1Up:connect(function()Direction = 0 UpButton.ImageColor3 = LiftedColor end)
+	UpButton.MouseLeave:connect(function()UpButton.ImageColor3 = LiftedColor end)
+end
+
+-- Game controller joystick detection
+UserInputService.InputChanged:connect(function(Key)
+	if Key.KeyCode == Enum.KeyCode.Thumbstick1 then
+		local SteerPos = Key.Position.X*0.9
+		
+		-- Start steering
+		if Steer ~= SteerPos and Key.Position.X ~= 0 then
+			Steer = SteerPos
+		end
+		-- Ends steering
+		if Key.Position.X > -0.3 and Key.Position.X < 0.3 then
+			Steer = 0
+		end
+	end
+end)
+
+-- Gyroscopic controller for mobile device (if enabled)
+if UseGyroSteering.Value == true and UserInputService.TouchEnabled == true and UserInputService.GyroscopeEnabled == true then
+-- Find the device's rotation via gyroscope and apply to the segway
+	UserInputService.DeviceRotationChanged:connect(function(rotation, rotCFrame)
+	local x,y = rotCFrame:toEulerAnglesXYZ()
+	local Sensitivity = 1.9
+	
+		-- Direction
+		if -x*Sensitivity > -1 and -x*Sensitivity < 1 then -- Makes sure the device isn't tilted too much
+			Direction = -x*Sensitivity+0.4
+		elseif -x*Sensitivity > 0 then -- Otherwise we'll go to the max speed
+			Direction = 1
+		elseif -x*Sensitivity < 0 then -- Otherwise we'll go to the max speed
+			Direction = -1
+		end
+			
+		-- Steering
+		if -y*Sensitivity > -1 and -y*Sensitivity < 1 then -- Makes sure the device isn't tilted too much
+			Steer = -y*Sensitivity
+		elseif -y*Sensitivity > 0 then -- Otherwise we'll go to the max speed
+			Steer = 1
+		elseif -y*Sensitivity < 0 then -- Otherwise we'll go to the max speed
+			Steer = -1
+		end
+	end)
+end
+
+-- If using VR
+if UserInputService.VREnabled and VRUseHeadsetControls.Value == true then
+	VRService.UserCFrameChanged:connect(function(CFrametype,VRSpot)
+		local x,y = VRSpot:toEulerAnglesXYZ()
+		local Sensitivity = 1.2
+		
+		if CFrametype == Enum.UserCFrame.Head then
+			-- Direction
+			if -x*Sensitivity > -1 and -x*Sensitivity < 1 then -- Makes sure the headset isn't tilted too much
+				Direction = -x*Sensitivity
+			elseif -x*Sensitivity > 0 then -- Otherwise we'll go to the max speed
+				Direction = 1
+			elseif -x*Sensitivity < 0 then -- Otherwise we'll go to the max speed
+				Direction = -1
+			end
+				
+			-- Steering
+			if -y > -1 and -y < 1 then -- Makes sure the headset isn't tilted too much
+				Steer = -y
+			elseif -y > 0 then -- Otherwise we'll go to the max speed
+				Steer = 1
+			elseif -y < 0 then -- Otherwise we'll go to the max speed
+				Steer = -1
+			end
+		end
+	end)
+end
+
+UserInputService.InputBegan:connect(function(Key,ProcessedEvent)
+	if WeldObject.Value ~= nil then
+		
+		-- Hop off segway if press Spacebar, Backspace or controller A button
+		if Key.KeyCode == Enum.KeyCode.Space or Key.KeyCode == Enum.KeyCode.Backspace or Key.KeyCode == Enum.KeyCode.ButtonA then	
+			Hopoff()
+		end
+		
+		--Forward
+		if Key.KeyCode == Enum.KeyCode.W or Key.KeyCode == Enum.KeyCode.Up or Key.KeyCode == Enum.KeyCode.ButtonR2 then
+			if Direction ~= 1 then
+			Direction = 1
+			end
+		end
+		
+		--Backward
+		if Key.KeyCode == Enum.KeyCode.S or Key.KeyCode == Enum.KeyCode.Down or Key.KeyCode == Enum.KeyCode.ButtonL2 then
+			if Direction ~= -1 then
+			Direction = -1
+			end
+		end
+		
+		--Left
+		if Key.KeyCode == Enum.KeyCode.D or Key.KeyCode == Enum.KeyCode.Right then
+			if Steer ~= 1 then
+			Steer = 1
+			end
+		end
+		
+		--Right
+		if Key.KeyCode == Enum.KeyCode.A or Key.KeyCode == Enum.KeyCode.Left then
+			if Steer ~= -1 then
+			Steer = -1
+			end
+		end
+	end
+end)
+
+--Mobile control
+function CheckMobile()
+	if UserInputService.TouchEnabled == true and UseGyroSteering.Value == false then -- Won't show mobile guis if gyro is enabled
+		UserInputService.ModalEnabled = true
+		GuiControls.Parent = PlayerGui
+	end
+end
+
+function CheckVR()
+	if UserInputService.VREnabled then
+		UpdateVRPos()
+		
+		-- Hide tool UI using VR
+		if PlayerGui and PlayerGui:FindFirstChild("DisplayGui") and PlayerGui:FindFirstChild("ColorGui") then
+			PlayerGui:FindFirstChild("DisplayGui").Enabled = false
+			PlayerGui:FindFirstChild("ColorGui").Enabled = false
+		end
+		UpdateCharTrans(1,0)	
+	end
+end
+
+UserInputService.InputEnded:connect(function(Key)
+	if WeldObject.Value ~= nil then
+		--Ends Accelerate
+		if Key.KeyCode == Enum.KeyCode.W or Key.KeyCode == Enum.KeyCode.Up or Key.KeyCode == Enum.KeyCode.ButtonR2 then
+			if Direction == 1 then
+			Direction = 0
+			end
+		end
+		if Key.KeyCode == Enum.KeyCode.S or Key.KeyCode == Enum.KeyCode.Down or Key.KeyCode == Enum.KeyCode.ButtonL2 then
+			if Direction == -1 then
+			Direction = 0
+			end
+		end
+			--Ends Steer
+			if Key.KeyCode == Enum.KeyCode.D or Key.KeyCode == Enum.KeyCode.Right then
+				if Steer == 1 then
+				Steer = 0
+				end
+			end
+			if Key.KeyCode == Enum.KeyCode.A or Key.KeyCode == Enum.KeyCode.Left then
+				if Steer == -1 then
+				Steer = 0
+				end
+			end
+	end
+end)
+
+-- Must have hopped on a segway
+SegwayObject.Changed:connect(function()
+	if SegwayObject.Value ~= nil and SegwayObject.Value.Parent then
+		if UserInputService.VREnabled then
+			Camera.CameraType = "Scriptable"
+		else
+			Camera.CameraType = "Follow"
+		end
+		Lights = SegwayObject.Value:WaitForChild("Lights")
+		Notifiers = SegwayObject.Value:WaitForChild("Notifiers")
+		Character = Player.Character
+		Humanoid = Character:WaitForChild("Humanoid")
+		PlayerGui = Player.PlayerGui
+		SitListener = Humanoid.Seated:connect(function()Hopoff(Character)end)
+		JumpListener = UserInputService.JumpRequest:connect(function()Hopoff(Character)end)
+		ConfigLights:FireServer(0,"Cyan",true,"Neon",Lights,Notifiers)
+		CheckMobile()
+		CheckVR()
+		IsOnSegway = true
+	end
+end)
+
+SetGuiButtons()
+
+while game:GetService("RunService").RenderStepped:wait() do
+	
+	-- Update segway's bottom direction
+	CastToGround()
+	
+	if SegwayObject.Value and SegwayObject.Value.Parent and SeaterObject.Value and Thruster.Value and TiltMotor.Value then
+	
+		-- Move segway
+		Accelerate()
+			
+		-- Change sound of segway
+		Sound()
+			
+		-- Tilts the segway
+		Tilt()
+		
+		UpdateVRPos()
+	
+	elseif IsOnSegway then
+		IsOnSegway = false
+		UpdateCharTrans(0,0)
+	end
+	
+end
+-- Segway control script
+-- By Q_Q
+end))
+UnionOperation319.Name = "ColorablePart"
+UnionOperation319.Parent = Tool1
+UnionOperation319.CFrame = CFrame.new(-33.9297981, 2.36497259, 77.3129883, -0.999995232, -7.85595621e-05, 3.05907264e-08, -7.8562327e-05, 0.999995232, -7.0252284e-09, -3.06863264e-08, -7.52171303e-09, -1)
+UnionOperation319.Orientation = Vector3.new(0, 180, 0)
+UnionOperation319.Position = Vector3.new(-33.9297981, 2.36497259, 77.3129883)
+UnionOperation319.Rotation = Vector3.new(180, 0, 180)
+UnionOperation319.Color = Color3.new(1, 0, 0)
+UnionOperation319.Size = Vector3.new(1.09302855, 0.407623321, 0.8779037)
+UnionOperation319.BrickColor = BrickColor.new("Really red")
+UnionOperation319.CanCollide = false
+UnionOperation319.Material = Enum.Material.SmoothPlastic
+UnionOperation319.Reflectance = 0.20000000298023
+UnionOperation319.brickColor = BrickColor.new("Really red")
+UnionOperation319.UsePartColor = true
+Weld320.Parent = UnionOperation319
+Weld320.C0 = CFrame.new(0.516348898, -17.8066444, -22.416605, 1, 2.98465146e-08, 2.38738291e-08, -2.98465181e-08, 1, 7.27595051e-09, -2.38738309e-08, -7.27595051e-09, 1)
+Weld320.C1 = CFrame.new(-0.589638472, -17.8066444, -22.416605, 1, 2.98610665e-08, 2.38738274e-08, -2.98610701e-08, 1, 7.27595273e-09, -2.38738291e-08, -7.27595451e-09, 1)
+Weld320.Part0 = UnionOperation319
+Weld320.Part1 = UnionOperation321
+Weld320.part1 = UnionOperation321
+UnionOperation321.Name = "ColorablePart"
+UnionOperation321.Parent = Tool1
+UnionOperation321.CFrame = CFrame.new(-35.0357819, 2.36488581, 77.3129883, -0.999995232, -7.85595475e-05, 3.05907264e-08, -7.85623124e-05, 0.999995232, -7.02523151e-09, -3.06863228e-08, -7.52171658e-09, -1)
+UnionOperation321.Orientation = Vector3.new(0, 180, 0)
+UnionOperation321.Position = Vector3.new(-35.0357819, 2.36488581, 77.3129883)
+UnionOperation321.Rotation = Vector3.new(180, 0, 180)
+UnionOperation321.Color = Color3.new(1, 0, 0)
+UnionOperation321.Size = Vector3.new(1.09302855, 0.407623231, 0.877905726)
+UnionOperation321.BrickColor = BrickColor.new("Really red")
+UnionOperation321.CanCollide = false
+UnionOperation321.Material = Enum.Material.SmoothPlastic
+UnionOperation321.Reflectance = 0.20000000298023
+UnionOperation321.brickColor = BrickColor.new("Really red")
+UnionOperation321.UsePartColor = true
+Weld322.Parent = UnionOperation321
+Weld322.C0 = CFrame.new(-0.589638412, -17.8066444, -22.416605, 1, 2.9861063e-08, 2.38738256e-08, -2.98610736e-08, 1, 7.27595362e-09, -2.38738309e-08, -7.27595362e-09, 1)
+Weld322.C1 = CFrame.new(0.748568118, 22.8495235, -17.8196182, 1, 4.11287647e-06, 8.13441056e-06, 8.1342796e-06, 3.18018137e-05, -1, -4.11313522e-06, 1, 3.1801781e-05)
+Weld322.Part0 = UnionOperation321
+Weld322.Part1 = UnionOperation323
+Weld322.part1 = UnionOperation323
+UnionOperation323.Parent = Tool1
+UnionOperation323.CFrame = CFrame.new(-33.6973228, 2.37723422, 76.879509, -0.999995232, -8.14345549e-06, -7.44762947e-05, -7.44793142e-05, 3.18007733e-05, 0.999995232, -8.14122268e-06, 1, -3.18020284e-05)
+UnionOperation323.Orientation = Vector3.new(-89.8199997, -113.119995, -66.8799973)
+UnionOperation323.Position = Vector3.new(-33.6973228, 2.37723422, 76.879509)
+UnionOperation323.Rotation = Vector3.new(-90, 0, 180)
+UnionOperation323.Color = Color3.new(0.792157, 0.796079, 0.819608)
+UnionOperation323.Size = Vector3.new(0.0719999969, 0.0600000024, 0.0719999969)
+UnionOperation323.BrickColor = BrickColor.new("Ghost grey")
+UnionOperation323.CanCollide = false
+UnionOperation323.Material = Enum.Material.SmoothPlastic
+UnionOperation323.Reflectance = 0.69999998807907
+UnionOperation323.brickColor = BrickColor.new("Ghost grey")
+Weld324.Parent = UnionOperation323
+Weld324.C0 = CFrame.new(0.748568118, 22.8495235, -17.8196182, 1, 4.11287647e-06, 8.13441056e-06, 8.1342796e-06, 3.18018137e-05, -1, -4.11313522e-06, 1, 3.1801781e-05)
+Weld324.C1 = CFrame.new(-18.0493774, 1.16318786, 22.4087772, -7.28647001e-06, 1, 4.01816033e-05, 1, 7.28604027e-06, 1.07048754e-05, 1.07045826e-05, 4.01816797e-05, -1)
+Weld324.Part0 = UnionOperation323
+Weld324.Part1 = UnionOperation325
+Weld324.part1 = UnionOperation325
+UnionOperation325.Name = "ColorablePart"
+UnionOperation325.Parent = Tool1
+UnionOperation325.CFrame = CFrame.new(-33.2826118, 2.60684848, 77.3200989, -7.13029731e-05, -0.999995232, -1.07144042e-05, 0.999995232, -7.13061672e-05, 4.01803954e-05, -4.01818506e-05, -1.07116875e-05, 1)
+UnionOperation325.Orientation = Vector3.new(0, 0, 90)
+UnionOperation325.Position = Vector3.new(-33.2826118, 2.60684848, 77.3200989)
+UnionOperation325.Rotation = Vector3.new(0, 0, 90)
+UnionOperation325.Color = Color3.new(1, 0, 0)
+UnionOperation325.Size = Vector3.new(0.64549464, 0.234000012, 0.954753518)
+UnionOperation325.BrickColor = BrickColor.new("Really red")
+UnionOperation325.CanCollide = false
+UnionOperation325.Material = Enum.Material.SmoothPlastic
+UnionOperation325.Reflectance = 0.20000000298023
+UnionOperation325.brickColor = BrickColor.new("Really red")
+UnionOperation325.UsePartColor = true
+Weld326.Parent = UnionOperation325
+Weld326.C0 = CFrame.new(-18.0493774, 1.16318786, 22.4087772, -7.28647001e-06, 1, 4.01816033e-05, 1, 7.28604027e-06, 1.07048754e-05, 1.07045826e-05, 4.01816797e-05, -1)
+Weld326.C1 = CFrame.new(-18.048481, 1.23792553, -22.4094639, 2.82819437e-05, 1, 6.20449612e-07, -1, 2.82819474e-05, -6.81040228e-06, -6.81041956e-06, -6.20256969e-07, 1)
+Weld326.Part0 = UnionOperation325
+Weld326.Part1 = UnionOperation327
+Weld326.part1 = UnionOperation327
+UnionOperation327.Name = "ColorablePart"
+UnionOperation327.Parent = Tool1
+UnionOperation327.CFrame = CFrame.new(-35.6844444, 2.60662389, 77.3201065, -0.000106871215, 0.999995232, 6.81715073e-06, 0.999995232, 0.000106873988, -6.19464117e-07, -6.2070103e-07, 6.81721531e-06, -1)
+UnionOperation327.Orientation = Vector3.new(0, 180, 89.9899979)
+UnionOperation327.Position = Vector3.new(-35.6844444, 2.60662389, 77.3201065)
+UnionOperation327.Rotation = Vector3.new(180, 0, -90.0099945)
+UnionOperation327.Color = Color3.new(1, 0, 0)
+UnionOperation327.Size = Vector3.new(0.64549464, 0.234000012, 0.954753518)
+UnionOperation327.BrickColor = BrickColor.new("Really red")
+UnionOperation327.CanCollide = false
+UnionOperation327.Material = Enum.Material.SmoothPlastic
+UnionOperation327.Reflectance = 0.20000000298023
+UnionOperation327.brickColor = BrickColor.new("Really red")
+UnionOperation327.UsePartColor = true
+Weld328.Parent = UnionOperation327
+Weld328.C0 = CFrame.new(-18.048481, 1.23792553, -22.4094639, 2.82819456e-05, 1, 6.20453648e-07, -1, 2.82819474e-05, -6.81040319e-06, -6.81041956e-06, -6.20253559e-07, 1)
+Weld328.C1 = CFrame.new(-1.19356155, -17.9077053, 22.4097099, -0.999999762, -5.17321688e-08, 5.86535407e-08, -5.18737338e-08, 0.999999762, -2.22753442e-07, -5.86558144e-08, -2.22760718e-07, -1)
+Weld328.Part0 = UnionOperation327
+Weld328.Part1 = UnionOperation329
+Weld328.part1 = UnionOperation329
+UnionOperation329.Parent = Tool1
+UnionOperation329.CFrame = CFrame.new(-33.2526016, 2.46608973, 77.3198853, 0.999994993, -7.85375087e-05, 5.19594323e-08, 7.85404191e-05, 0.999994993, -2.23013728e-07, -5.18402885e-08, 2.22498784e-07, 1)
+UnionOperation329.Position = Vector3.new(-33.2526016, 2.46608973, 77.3198853)
+UnionOperation329.Color = Color3.new(0.105882, 0.164706, 0.207843)
+UnionOperation329.Size = Vector3.new(0.242488712, 0.831778049, 0.831778049)
+UnionOperation329.BrickColor = BrickColor.new("Black")
+UnionOperation329.CanCollide = false
+UnionOperation329.Material = Enum.Material.SmoothPlastic
+UnionOperation329.brickColor = BrickColor.new("Black")
+Weld330.Parent = UnionOperation329
+Weld330.C0 = CFrame.new(-1.1935612, -17.9076977, 22.409708, -0.999999762, -5.17344994e-08, 5.86524038e-08, -5.18718366e-08, 0.999999762, -2.22745996e-07, -5.86569513e-08, -2.22768165e-07, -1)
+Weld330.C1 = CFrame.new(-1.26767325, -17.9077129, -22.40942, 0.999999762, 3.16935775e-08, -5.86537681e-08, -3.72330824e-08, 1.00000012, -2.23284587e-07, 5.88077e-08, 2.23284587e-07, 1.00000012)
+Weld330.Part0 = UnionOperation329
+Weld330.Part1 = UnionOperation331
+Weld330.part1 = UnionOperation331
+UnionOperation331.Parent = Tool1
+UnionOperation331.CFrame = CFrame.new(-35.7138214, 2.46590972, 77.3201752, -0.999994516, -7.85520024e-05, -5.21147676e-08, -7.85605589e-05, 0.999994874, 2.23552249e-07, 5.1837084e-08, 2.23015149e-07, -1.00000012)
+UnionOperation331.Orientation = Vector3.new(0, -180, 0)
+UnionOperation331.Position = Vector3.new(-35.7138214, 2.46590972, 77.3201752)
+UnionOperation331.Rotation = Vector3.new(-180, 0, 180)
+UnionOperation331.Color = Color3.new(0.105882, 0.164706, 0.207843)
+UnionOperation331.Size = Vector3.new(0.242488712, 0.831778049, 0.831778049)
+UnionOperation331.BrickColor = BrickColor.new("Black")
+UnionOperation331.CanCollide = false
+UnionOperation331.Material = Enum.Material.SmoothPlastic
+UnionOperation331.brickColor = BrickColor.new("Black")
+Weld332.Parent = UnionOperation331
+Weld332.C0 = CFrame.new(-1.26767087, -17.9077091, -22.4094238, 0.999999285, 3.15562367e-08, -5.86491957e-08, -3.73703877e-08, 0.999999642, -2.23262361e-07, 5.8812244e-08, 2.23306699e-07, 1.00000012)
+Weld332.C1 = CFrame.new(0.757799923, -18.0153313, 22.4123611, -1, 3.17551821e-05, -3.41290752e-06, 3.17551858e-05, 1, -1.40606062e-06, 3.41286318e-06, -1.40616908e-06, -1)
+Weld332.Part0 = UnionOperation331
+Weld332.Part1 = UnionOperation333
+Weld332.part1 = UnionOperation333
+UnionOperation333.Parent = Tool1
+UnionOperation333.CFrame = CFrame.new(-35.2044563, 2.57356763, 77.3172531, 0.999993801, -0.000110338515, -3.41928308e-06, 0.000110352878, 0.999994516, -1.40672535e-06, 3.41988357e-06, 1.40576901e-06, 1.00000024)
+UnionOperation333.Orientation = Vector3.new(0, 0, 0.00999999978)
+UnionOperation333.Position = Vector3.new(-35.2044563, 2.57356763, 77.3172531)
+UnionOperation333.Rotation = Vector3.new(0, 0, 0.00999999978)
+UnionOperation333.Color = Color3.new(0.105882, 0.164706, 0.207843)
+UnionOperation333.Size = Vector3.new(0.600000024, 0.108002767, 0.701999962)
+UnionOperation333.BrickColor = BrickColor.new("Black")
+UnionOperation333.CanCollide = false
+UnionOperation333.Material = Enum.Material.SmoothPlastic
+UnionOperation333.brickColor = BrickColor.new("Black")
+UnionOperation333.UsePartColor = true
+Weld334.Parent = UnionOperation333
+Weld334.C0 = CFrame.new(0.757799506, -18.0153179, 22.4123669, -0.999998569, 3.17609738e-05, -3.41307168e-06, 3.17493286e-05, 0.999999285, -1.40601639e-06, 3.41269515e-06, -1.4062125e-06, -1.00000024)
+Weld334.C1 = CFrame.new(0.681143403, -18.0161152, -22.4117622, 1, 4.12777808e-06, 8.63360401e-06, -4.12806548e-06, 1, 3.32676136e-05, -8.63346759e-06, -3.32676536e-05, 1)
+Weld334.Part0 = UnionOperation333
+Weld334.Part1 = UnionOperation335
+Weld334.part1 = UnionOperation335
+UnionOperation335.Parent = Tool1
+UnionOperation335.CFrame = CFrame.new(-33.7647591, 2.57370925, 77.3172379, -0.999992371, -7.4449621e-05, 8.64240428e-06, -7.44758145e-05, 0.999993801, -3.32664276e-05, -8.64074627e-06, -3.32679665e-05, -1.00000048)
+UnionOperation335.Orientation = Vector3.new(0, 180, 0)
+UnionOperation335.Position = Vector3.new(-33.7647591, 2.57370925, 77.3172379)
+UnionOperation335.Rotation = Vector3.new(180, 0, 180)
+UnionOperation335.Color = Color3.new(0.105882, 0.164706, 0.207843)
+UnionOperation335.Size = Vector3.new(0.600000024, 0.108002767, 0.701999962)
+UnionOperation335.BrickColor = BrickColor.new("Black")
+UnionOperation335.CanCollide = false
+UnionOperation335.Material = Enum.Material.SmoothPlastic
+UnionOperation335.brickColor = BrickColor.new("Black")
+UnionOperation335.UsePartColor = true
+Weld336.Parent = UnionOperation335
+Weld336.C0 = CFrame.new(0.681137621, -18.0160885, -22.4117737, 0.999997139, 4.11614383e-06, 8.63393416e-06, -4.13967973e-06, 0.999998569, 3.32677191e-05, -8.63311652e-06, -3.32675118e-05, 1.00000048)
+Weld336.C1 = CFrame.new(-17.8153744, -21.9899998, -0.882928967, 3.18283564e-05, 1, -1.37625852e-06, -3.34807214e-06, 1.37636505e-06, 1, 1, -3.18283528e-05, 3.3481158e-06)
+Weld336.Part0 = UnionOperation335
+Weld336.Part1 = UnionOperation337
+Weld336.part1 = UnionOperation337
+UnionOperation337.Parent = Tool1
+UnionOperation337.CFrame = CFrame.new(-35.3295555, 2.37359953, 77.7396164, -0.000110393936, 3.35399272e-06, -0.99998951, 0.999992371, 1.37704774e-06, -0.000110443078, 1.37583629e-06, -1.00000095, -3.35558161e-06)
+UnionOperation337.Orientation = Vector3.new(0.00999999978, -90, 90)
+UnionOperation337.Position = Vector3.new(-35.3295555, 2.37359953, 77.7396164)
+UnionOperation337.Rotation = Vector3.new(91.7399979, -89.7399979, -178.259995)
+UnionOperation337.Color = Color3.new(0, 0.560784, 0.611765)
+UnionOperation337.Transparency = 0.30000001192093
+UnionOperation337.Size = Vector3.new(0.126000002, 0.120000005, 0.330000013)
+UnionOperation337.BrickColor = BrickColor.new("Bright bluish green")
+UnionOperation337.CanCollide = false
+UnionOperation337.Material = Enum.Material.SmoothPlastic
+UnionOperation337.Reflectance = 0.20000000298023
+UnionOperation337.brickColor = BrickColor.new("Bright bluish green")
+UnionOperation337.UsePartColor = true
+Weld338.Parent = UnionOperation337
+Weld338.C0 = CFrame.new(-17.8153267, -21.9900169, -0.882914484, 3.18049206e-05, 0.999997139, -1.37608367e-06, -3.34740207e-06, 1.37654206e-06, 1.00000095, 0.999994278, -3.18515122e-05, 3.3487695e-06)
+Weld338.C1 = CFrame.new(-17.8159924, 21.9894409, -0.784225464, -4.15728573e-06, 1, 3.21649532e-05, 8.21935009e-06, 3.21649895e-05, -1, -1, -4.15702152e-06, -8.21948379e-06)
+Weld338.Part0 = UnionOperation337
+Weld338.Part1 = UnionOperation339
+Weld338.part1 = UnionOperation339
+UnionOperation339.Parent = Tool1
+UnionOperation339.CFrame = CFrame.new(-33.6616898, 2.37363124, 77.7395859, -7.43852288e-05, -8.2271572e-06, 0.999983788, 0.99998951, 3.21634034e-05, 7.44807912e-05, -3.21656189e-05, 1.00000191, 8.22761285e-06)
+UnionOperation339.Orientation = Vector3.new(0, 90, 90)
+UnionOperation339.Position = Vector3.new(-33.6616898, 2.37363124, 77.7395859)
+UnionOperation339.Rotation = Vector3.new(-83.6999969, 89.6699982, 173.690002)
+UnionOperation339.Color = Color3.new(0, 0.560784, 0.611765)
+UnionOperation339.Transparency = 0.30000001192093
+UnionOperation339.Size = Vector3.new(0.126000002, 0.120000005, 0.330000013)
+UnionOperation339.BrickColor = BrickColor.new("Bright bluish green")
+UnionOperation339.CanCollide = false
+UnionOperation339.Material = Enum.Material.SmoothPlastic
+UnionOperation339.Reflectance = 0.20000000298023
+UnionOperation339.brickColor = BrickColor.new("Bright bluish green")
+UnionOperation339.UsePartColor = true
+Weld340.Parent = UnionOperation339
+Weld340.C0 = CFrame.new(-17.8158913, 21.9894829, -0.784198165, -4.20378728e-06, 1, 3.21646039e-05, 8.2180477e-06, 3.21646367e-05, -1, -1, -4.20352308e-06, -8.21818321e-06)
+Weld340.C1 = CFrame.new(-18.011467, -22.4086914, -0.174129546, 3.16793448e-05, 1, -1.88288857e-06, -3.53363839e-06, 1.88300055e-06, 1, 1, -3.16793412e-05, 3.53369842e-06)
+Weld340.Part0 = UnionOperation339
+Weld340.Part1 = UnionOperation341
+Weld340.part1 = UnionOperation341
+UnionOperation341.Parent = Tool1
+UnionOperation341.CFrame = CFrame.new(-34.6207657, 2.56987715, 77.3209763, -0.000110267778, 3.54014765e-06, -0.999983788, 0.99998951, 1.8835093e-06, -0.000110363282, 1.88193678e-06, -1.00000191, -3.54311896e-06)
+UnionOperation341.Orientation = Vector3.new(0.00999999978, -90, 90)
+UnionOperation341.Position = Vector3.new(-34.6207657, 2.56987715, 77.3209763)
+UnionOperation341.Rotation = Vector3.new(91.8399963, -89.6699982, -178.159988)
+UnionOperation341.Color = Color3.new(0.0666667, 0.0666667, 0.0666667)
+UnionOperation341.Size = Vector3.new(0.0419999994, 0.300000012, 0.24000001)
+UnionOperation341.BrickColor = BrickColor.new("Really black")
+UnionOperation341.CanCollide = false
+UnionOperation341.Material = Enum.Material.SmoothPlastic
+UnionOperation341.Reflectance = 0.059999998658895
+UnionOperation341.brickColor = BrickColor.new("Really black")
+UnionOperation341.UsePartColor = true
+Weld342.Parent = UnionOperation341
+Weld342.C0 = CFrame.new(-18.0114632, -22.4086914, -0.174107552, 3.16793485e-05, 1, -1.88288823e-06, -3.53363839e-06, 1.88300021e-06, 1, 1, -3.16793412e-05, 3.53369796e-06)
+Weld342.C1 = CFrame.new(-18.0122414, 22.4080925, -0.097760573, -4.15728573e-06, 1, 3.24331668e-05, 8.67659219e-06, 3.24332068e-05, -1, -1, -4.15700424e-06, -8.67672679e-06)
+Weld342.Part0 = UnionOperation341
+Weld342.Part1 = UnionOperation343
+Weld342.part1 = UnionOperation343
+UnionOperation343.Parent = Tool1
+UnionOperation343.CFrame = CFrame.new(-34.3481407, 2.56991291, 77.320961, -7.44317222e-05, -8.68571442e-06, 0.999983788, 0.99998951, 3.24319335e-05, 7.45273064e-05, -3.24341818e-05, 1.00000191, 8.68615825e-06)
+UnionOperation343.Orientation = Vector3.new(0, 90, 90)
+UnionOperation343.Position = Vector3.new(-34.3481407, 2.56991291, 77.320961)
+UnionOperation343.Rotation = Vector3.new(-83.3499985, 89.6699982, 173.339996)
+UnionOperation343.Color = Color3.new(0.0666667, 0.0666667, 0.0666667)
+UnionOperation343.Size = Vector3.new(0.0419999994, 0.300000012, 0.24000001)
+UnionOperation343.BrickColor = BrickColor.new("Really black")
+UnionOperation343.CanCollide = false
+UnionOperation343.Material = Enum.Material.SmoothPlastic
+UnionOperation343.Reflectance = 0.059999998658895
+UnionOperation343.brickColor = BrickColor.new("Really black")
+UnionOperation343.UsePartColor = true
+Camera344.Name = "ThumbnailCamera"
+Camera344.Parent = Model0
+Camera344.CFrame = CFrame.new(83.0627289, 29.2050552, 345.710938, 0.820313752, 0.117328718, -0.559749424, -7.4505806e-09, 0.97873044, 0.205151051, 0.571913779, -0.168288231, 0.802865982)
+Camera344.CoordinateFrame = CFrame.new(83.0627289, 29.2050552, 345.710938, 0.820313752, 0.117328718, -0.559749424, -7.4505806e-09, 0.97873044, 0.205151051, 0.571913779, -0.168288231, 0.802865982)
+Camera344.FieldOfView = 39.999999303284
+Camera344.Focus = CFrame.new(84.1822357, 28.7947502, 344.105194, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+Camera344.focus = CFrame.new(84.1822357, 28.7947502, 344.105194, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+for i,v in pairs(mas:GetChildren()) do
+	v.Parent = workspace
+	pcall(function() v:MakeJoints() end)
+end
+mas:Destroy()
+for i,v in pairs(cors) do
+	spawn(function()
+		pcall(v)
+	end)
+end
